@@ -1,10 +1,10 @@
 ---
 layout: page
-title: project 1
+title: Consulenza psicologica individuale
 description: a project with a background image
 img: assets/img/12.jpg
 importance: 1
-category: work
+category: psi
 related_publications: true
 ---
 
