@@ -5,7 +5,6 @@ description:
 img: assets/img/consulenza2.png
 importance: 2
 category: psi
-giscus_comments: true
 ---
 
 Benvenuto nella mia pagina di consulenza psicologica di coppia. Sono un professionista dedicato, con una solida formazione in psicologia clinica, e il mio obiettivo è aiutarti a navigare attraverso le sfide della vita di coppia.
