@@ -1,10 +1,10 @@
 ---
 layout: page
-title: project 4
-description: another without an image
-img:
+title: Valutazione e diagnosi clinica
+description:
+img: assets/img/consulenza4.png
 importance: 3
-category: fun
+category: psi
 ---
 
 Every project has a beautiful feature showcase page.
