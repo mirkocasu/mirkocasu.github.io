@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Collaborazione di ricerca
+title: Collaborazione di ricerca clinica
 description:
 img: /assets/img/consulenza6.png
 importance: 4
