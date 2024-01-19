@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Collaborazione di ricerca clinica
+title: Consulenza per dipendenze da tecnologia
 description:
-img: /assets/img/consulenza6.png
+img: /assets/img/inf2.png
 importance: 4
-category: psi
+category: inf
 ---
 
 Every project has a beautiful feature showcase page.
