@@ -1,11 +1,11 @@
 ---
 layout: cv
 permalink: /cv/
-title: curriculum vitae (in inglese)
+title: cv
 nav: true
 nav_order: 5
 cv_pdf: mirkocasuCVgen24.pdf
-description: Ultimo aggiornamento CV, Gennaio 2024.
+description: Ultimo aggiornamento CV in PDF, Gennaio 2024. Di sotto, CV in lingua inglese.
 toc:
   sidebar: 
 ---
