@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Consulenza di coppia
+title: Consulenza psicologica di coppia
 description:
 img: assets/img/consulenza2.png
 importance: 2
