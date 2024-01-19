@@ -5,7 +5,6 @@ description:
 img: assets/img/consulenza1.png
 importance: 1
 category: psi
-related_publications: true
 ---
 
 Benvenuto nella mia pagina di consulenza psicologica individuale. Sono un professionista dedicato, con una solida formazione in psicologia clinica, e il mio obiettivo è aiutarti a navigare attraverso le sfide della vita.
