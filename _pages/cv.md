@@ -1,7 +1,7 @@
 ---
 layout: cv
 permalink: /cv/
-title: cv
+title: curriculum vitae (in inglese)
 nav: true
 nav_order: 5
 cv_pdf: mirkocasuCVgen24.pdf
