@@ -1,28 +1,43 @@
 {
   "basics": {
-    "nome": "Mirko Casu",
-    "qualifica": "Psicoterapeuta in formazione, dottorando di ricerca",
+    "name": "Mirko Casu",
+    "label": "Psychotherapist-in-training, PhD Student",
     "image": "",
-    "email": "mirko.casu@phd.unict",
-    "sito": "https://mirkocasu.github.io/",
+    "email": "mirko.casu@phd.unict.it",
+    "phone": "",
+    "url": "https://mirkocasu.github.io",
     "summary": "",
     "location": {
-      "indirizzo": "Viale Andrea Doria, 6",
-      "codice postale": "CT 95125",
-      "città": "Catania",
-      "provincia": "CT",
-      "località": "Sicilia, Italia"
+      "address": "Viale Andrea Doria, 6",
+      "postalCode": "CT 95125",
+      "city": "Catania",
+      "countryCode": "CT",
+      "region": "Sicily, Italy"
     },
+    "profiles": [
+    ]
+  },
   "work": [
     {
-      "name": "Institute for Advanced Study, Princeton University",
-      "position": "Professor of Theoretical Physics",
-      "url": "https://example.com",
-      "startDate": "1933-01-01",
-      "endDate": "1955-01-01",
-      "summary": "Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.",
-      "highlights": ["Relativity"]
+      "name": "Associazione per la psicoanalisi applicata alla clinica alla ricerca e alla formazione",
+      "position": "Trainee",
+      "url": "https://www.associazionepsicoanalisiapplicata.it/",
+      "startDate": "2021-11",
+      "endDate": "2022-02",
+      "summary": "Active participation in tutors' activities during an external university internship, including critical analysis of texts and films, involvement in group activities and seminars, linking theory to practice through the Lacanian psychoanalytic approach.",
+      "highlights": []
     }
+
+    {
+      "name": "ECLAT SRL",
+      "position": "Videomaker",
+      "url": "https://www.eclatrbc.it/",
+      "startDate": "2021-10",
+      "endDate": "2021-11",
+      "summary": "Director and editor of video tutorial explaining the Chester Step Test, included within the Project Genesis produced by ECLAT SRL in collaboration with CoEHAR.",
+      "highlights": []
+    }, 
+    
   ],
   "volunteer": [
     {
