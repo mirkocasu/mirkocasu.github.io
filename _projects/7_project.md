@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Supporto con Realtà Virtuale
+title: Supporto psicologico con Realtà Virtuale
 description:
 img: /assets/img/inf1.png
 importance: 4
