@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: su di me
 permalink: /
 subtitle: <a href='https://unict.it'>Università di Catania</a>
 
