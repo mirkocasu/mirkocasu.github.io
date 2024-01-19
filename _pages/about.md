@@ -9,8 +9,7 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>Dipartimento di Matematica</p>
-    <p>e Informatica</p>
+    <p>Dipartimento di Matematica e Informatica</p>
     <p>Ufficio:</p>
     <p>Stanza 35, II blocco</p>
 
