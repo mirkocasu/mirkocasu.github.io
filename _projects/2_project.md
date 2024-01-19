@@ -1,10 +1,10 @@
 ---
 layout: page
-title: project 2
-description: a project with a background image and giscus comments
-img: assets/img/3.jpg
+title: Consulenza di coppia
+description:
+img: assets/img/consulenza2.png
 importance: 2
-category: work
+category: psi
 giscus_comments: true
 ---
 
