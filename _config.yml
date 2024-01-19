@@ -2,7 +2,7 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: blank # the website title (if blank, full name will be used instead)
+title: Dr. Mirko Casu, Cyberpsicologo # the website title (if blank, full name will be used instead)
 first_name: Mirko
 middle_name:
 last_name: Casu
@@ -166,7 +166,7 @@ collections:
   news:
     defaults:
       layout: post
-    output: true
+    output: false
     permalink: /news/:path/
   projects:
     output: true
