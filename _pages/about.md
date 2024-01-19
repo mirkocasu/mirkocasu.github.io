@@ -19,8 +19,8 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-bibbunz
+Ho conseguito una Laurea Triennale in Scienze e tecniche psicologiche dei processi cognitivi nel dicembre 2019, presso l'Università degli Studi di Sassari, completando la mia formazione psicologica accademica nel 2023 con la Laurea Magistrale in Psicologia clinica e riabilitativa presso l'Università di Catania, con Lode. Ho svolto i tirocini formativi con approccio psicoanalitico lacaniano, cognitivo-comportamentale e sistemico-relazionale.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+Al momento, sono Psicoterapeuta con approccio integrato in formazione. Sono convinto che il modo migliore di aiutare sia personalizzare il trattamento sulla base della necessità del richiedente, integrando modelli e concetti utili selezionati dai differenti approcci, con l'obiettivo finale di fornire al richiedente il miglior esito.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+Mi occupo inoltre, in qualità di dottorando in Informatica, di ricerca e applicazione nel progetto SiciliAn MicronanOTecH Research And Innovation CEnter – SAMOTHRACE, in particolare nello sviluppo di algoritmi di Intelligenza Artificiale da implementare in dispositivi indossabili ad alta tecnologia, nonché di ricerca sui bias cognitivi in ambito forense e deepfake. 
