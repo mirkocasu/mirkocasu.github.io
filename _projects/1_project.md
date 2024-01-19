@@ -8,8 +8,6 @@ category: psi
 related_publications: true
 ---
 
-# Consulenza Psicologica Individuale
-
 Benvenuto nella mia pagina di consulenza psicologica individuale. Sono un professionista dedicato, con una solida formazione in psicologia clinica, e il mio obiettivo è aiutarti a navigare attraverso le sfide della vita.
 
 ## Cosa Offro
