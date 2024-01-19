@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Collaborazione di ricerca clinica
+title: Supporto con Realtà Virtuale
 description:
-img: /assets/img/consulenza6.png
+img: /assets/img/inf1.png
 importance: 4
-category: psi
+category: inf
 ---
 
 Every project has a beautiful feature showcase page.
