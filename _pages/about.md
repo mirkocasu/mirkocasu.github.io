@@ -8,7 +8,7 @@ profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
-  address: >
+  more info: >
     <p>Department of Mathematics</p>
     <p>and Computer Science</p>
     <p>Office address:</p>
