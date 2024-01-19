@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Consulenza per app per smartphone
+title: Consulenza clinica per app per smartphone
 description:
 img: /assets/img/inf3.png
 importance: 4
