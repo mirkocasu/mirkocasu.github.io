@@ -2,17 +2,17 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='https://unict.it'>University of Catania</a>
+subtitle: <a href='https://unict.it'>Università di Catania</a>
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>Department of Mathematics</p>
-    <p>and Computer Science</p>
-    <p>Office address:</p>
-    <p>Stanza 200, I blocco</p>
+    <p>Dipartimento di Matematica</p>
+    <p>e Informatica</p>
+    <p>Ufficio:</p>
+    <p>Stanza 35, II blocco</p>
 
 news: true # includes a list of news items
 latest_posts: true # includes a list of the newest posts
