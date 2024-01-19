@@ -5,7 +5,7 @@ permalink: /servizi/
 description: Qui troverai i servizi che offro come professionista. La mia missione è migliorare la qualità di vita di chi mi sceglie, mettendo tutto me stesso per soddisfare le sue necessità. Lavoro a Catania e nelle zone limitrofe, ma estendo i miei servizi anche in modalità online. Non esitare a contattarmi.
 nav: true
 nav_order: 3
-display_categories: [work, fun]
+display_categories: [psi, inf]
 horizontal: false
 ---
 
