@@ -7,7 +7,7 @@ importance: 4
 category: psi
 ---
 
-Benvenuto nella mia pagina di collaborazione di ricerca clinica. Sono un professionista dedicato, con una solida formazione in psicologia clinica, e il mio obiettivo è contribuire alla comprensione e al miglioramento della salute mentale.
+<img src="/assets/img/consulenza6horiz.jpg" alt="example image" class="img-fluid rounded z-depth-1" />
 
 ## Cosa Offro
 
