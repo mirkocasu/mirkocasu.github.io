@@ -7,11 +7,7 @@ importance: 1
 category: psi
 ---
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/consulenza1horiz.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
+<img src="/assets/img/consulenza1horiz.jpg" alt="example image" class="img-fluid rounded z-depth-1" />
 
 ## Cosa Offro
 
