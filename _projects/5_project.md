@@ -7,7 +7,7 @@ importance: 3
 category: psi
 ---
 
-Benvenuto nella mia pagina di supporto alla crescita personale. Sono un professionista dedicato, con una solida formazione in psicologia clinica, e il mio obiettivo è aiutarti a sbocciare e a raggiungere il tuo pieno potenziale.
+<img src="/assets/img/consulenza5horiz.jpg" alt="example image" class="img-fluid rounded z-depth-1" />
 
 ## Cosa Offro
 
