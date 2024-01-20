@@ -7,7 +7,7 @@ importance: 4
 category: inf
 ---
 
-Benvenuto nella mia pagina di supporto psicologico con realtà virtuale. Sono un professionista dedicato, con una solida formazione in psicologia clinica e un dottorando in informatica, e il mio obiettivo è utilizzare la tecnologia per migliorare il benessere mentale.
+<img src="/assets/img/consulenza7inf.jpg" alt="example image" class="img-fluid rounded z-depth-1" />
 
 ## Cosa Offro
 
