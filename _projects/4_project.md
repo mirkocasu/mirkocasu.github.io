@@ -11,7 +11,7 @@ category: psi
 
 ## Cosa Offro
 
-Offro un servizio di valutazione e diagnosi clinica, personalizzato per rispondere alle tue esigenze uniche. Il mio approccio è integrato, combinando diverse tecniche e teorie per fornire un supporto completo.
+La valutazione e diagnosi clinica psicologica è un servizio che offro a chi ha bisogno di una **valutazione** del proprio funzionamento psicologico, di una **diagnosi** di eventuali disturbi psicologici, di una **indicazione** del percorso terapeutico più adeguato.
 
 Durante le sessioni, lavoreremo insieme per esplorare i tuoi pensieri, sentimenti ed esperienze, cercando di comprendere meglio te stesso e il tuo mondo interiore. Il mio obiettivo è fornirti una diagnosi accurata e un piano di trattamento personalizzato.
 
@@ -19,12 +19,19 @@ Durante le sessioni, lavoreremo insieme per esplorare i tuoi pensieri, sentiment
 
 La valutazione e diagnosi clinica è adatta a chiunque stia attraversando un periodo difficile o si trovi di fronte a sfide personali o professionali. Che tu stia affrontando stress, ansia, depressione, problemi di relazione, o semplicemente desideri un luogo sicuro per esplorare i tuoi pensieri e sentimenti, sono qui per aiutarti.
 
+Una valutazione e diagnosi clinica psicologica può aiutarti a:
+
+- Conoscere meglio te stesso e il tuo funzionamento psicologico
+- Identificare i tuoi punti di forza e le tue aree di miglioramento
+- Ricevere una diagnosi affidabile e condivisa dei tuoi disturbi psicologici
+- Orientarti verso il trattamento psicologico più efficace per te
+
 ## Come Funziona
 
-Le sessioni di valutazione e diagnosi si svolgono in un ambiente confortevole e riservato, dove potrai esprimerti liberamente e senza giudizio. Ogni sessione dura circa 50 minuti e la frequenza delle sessioni sarà concordata insieme, in base alle tue esigenze.
+La valutazione e diagnosi clinica psicologica si basa su un **colloquio clinico** e su una **batteria di test** psicometrici, che permettono di esplorare le dimensioni cognitive, emotive, comportamentali e relazionali della persona. Ha una **durata variabile**, in genere tra le 3 e le 6 sedute, e si conclude con la **redazione di una relazione** scritta, che riporta i risultati della valutazione, la diagnosi e le raccomandazioni terapeutiche.
 
 ## Contattami
 
-Se sei interessato a saperne di più o desideri prenotare una sessione, non esitare a contattarmi. Sarò lieto di rispondere a tutte le tue domande e di discutere di come posso aiutarti.
+Se sei interessato a saperne di più o desideri prenotare una sessione, non esitare a contattarmi tramite mail o i miei social. Sarò lieto di rispondere a tutte le tue domande e di discutere di come posso aiutarti.
 
 Ricorda, il viaggio verso il benessere inizia con un piccolo passo. Spero di poter fare questo viaggio insieme a te.
