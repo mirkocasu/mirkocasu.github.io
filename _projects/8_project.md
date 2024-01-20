@@ -7,7 +7,7 @@ importance: 4
 category: inf
 ---
 
-Benvenuto nella mia pagina di consulenza per dipendenze da tecnologia. Sono un professionista dedicato, con una solida formazione in psicologia clinica e un dottorando in informatica, e il mio obiettivo è aiutarti a gestire e superare le dipendenze da tecnologia.
+<img src="/assets/img/consulenza8inf.jpg" alt="example image" class="img-fluid rounded z-depth-1" />
 
 ## Cosa Offro
 
