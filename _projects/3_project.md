@@ -7,7 +7,7 @@ importance: 3
 category: psi
 ---
 
-Benvenuto nella mia pagina di consulenza psicologica online. Sono un professionista dedicato, con una solida formazione in psicologia clinica, e il mio obiettivo è aiutarti a navigare attraverso le sfide della vita, ovunque tu sia.
+<img src="/assets/img/consulenza3horiz.jpg" alt="example image" class="img-fluid rounded z-depth-1" />
 
 ## Cosa Offro
 
