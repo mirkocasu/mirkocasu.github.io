@@ -1,3 +1,11 @@
+<style>
+@media (max-width: 600px) {
+  .grid-item {
+    width: 50%;
+  }
+}
+</style>
+
 <div class="grid-sizer"></div>
 <div class="grid-item">
   <a href="{% if project.redirect %}{{ project.redirect }}{% else %}{{ project.url | relative_url }}{% endif %}">
@@ -6,12 +14,12 @@
         {%
           include figure.liquid
           path=project.img
-          sizes = "(max-width: 600px) 150px, 250px"
+          sizes = "(max-width: 600px) 100px, 250px"
           alt="project thumbnail"
         %}
       {% endif %}
       <div class="card-body">
-        <h2 class="card-title text-lowercase">{{ project.title }}</h2>
+        <h2 class="card-title text-lowercase" style="font-size: (max-width: 600px) 14px, 18px">{{ project.title }}</h2>
         <p class="card-text">{{ project.description }}</p>
         <div class="row ml-1 mr-1 p-0">
           {% if project.github %}
