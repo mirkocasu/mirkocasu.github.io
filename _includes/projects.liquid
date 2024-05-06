@@ -3,6 +3,14 @@
   .grid-item {
     width: 50%;
   }
+  .card-title {
+    font-size: 14px;
+  }
+}
+@media (min-width: 601px) {
+  .card-title {
+    font-size: 18px;
+  }
 }
 </style>
 
@@ -22,7 +30,7 @@
       {% endif %}
       <div class="card-body">
         <!-- prettier-ignore -->
-        <h2 class="card-title text-lowercase" style="font-size: (max-width: 600px) 14px, 18px">{{ project.title }}</h2>
+        <h2 class="card-title text-lowercase">{{ project.title }}</h2>
         <p class="card-text">{{ project.description }}</p>
         <div class="row ml-1 mr-1 p-0">
           <!-- prettier-ignore -->
