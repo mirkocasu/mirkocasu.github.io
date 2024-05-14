@@ -1,45 +1,35 @@
 <style>
-@media (max-width: 600px) {
-  .grid-item {
-    width: 50%;
+  @media (max-width: 600px) {
+   .grid-item {
+      width: 50%;
+    }
+   .card-title {
+      font-size: 14px;
+    }
   }
-  .card-title {
-    font-size: 14px;
+  @media (min-width: 601px) {
+   .card-title {
+      font-size: 18px;
+    }
   }
-}
-@media (min-width: 601px) {
-  .card-title {
-    font-size: 18px;
-  }
-}
 </style>
 
 <div class="grid-sizer"></div>
 <div class="grid-item">
-  <!-- prettier-ignore -->
   <a href="{% if project.redirect %}{{ project.redirect }}{% else %}{{ project.url | relative_url }}{% endif %}">
     <div class="card hoverable">
-      <!-- prettier-ignore -->
       {% if project.img %}
-        {%
-          include figure.liquid
-          path=project.img
-          sizes = "(max-width: 600px) 100px, 250px"
-          alt="project thumbnail"
-        %}
+        {% include figure.liquid path=project.img sizes="(max-width: 600px) 100px, 250px" alt="project thumbnail" %}
       {% endif %}
       <div class="card-body">
-        <!-- prettier-ignore -->
         <h2 class="card-title text-lowercase">{{ project.title }}</h2>
         <p class="card-text">{{ project.description }}</p>
         <div class="row ml-1 mr-1 p-0">
-          <!-- prettier-ignore -->
           {% if project.github %}
             <div class="github-icon">
               <div class="icon" data-toggle="tooltip" title="Code Repository">
                 <a href="{{ project.github }}"><i class="fa-brands fa-github gh-icon"></i></a>
               </div>
-              <!-- prettier-ignore -->
               {% if project.github_stars %}
                 <span class="stars" data-toggle="tooltip" title="GitHub Stars">
                   <i class="fa-solid fa-star"></i>
