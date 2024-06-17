@@ -2,9 +2,6 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-exclude:
-  - _pages/projects.md
-
 title: blank # the website title (if blank, full name will be used instead)
 first_name: Mirko
 middle_name:
