@@ -1,7 +1,7 @@
 ---
 layout: page
 title: servizi
-permalink: /servizi/
+permalink: /services/
 description: Qui troverai i servizi che offro come professionista. La mia missione è migliorare la qualità di vita di chi mi sceglie, mettendo tutto me stesso per soddisfare le sue necessità. Lavoro a Catania e nelle zone limitrofe, ma estendo i miei servizi anche in modalità online. Non esitare a contattarmi.
 nav: true
 nav_order: 3
