@@ -8,10 +8,10 @@ middle_name:
 last_name: Casu
 email: mirko.casu@phd.unict.it
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Sito web del Dr. Mirko Casu, psicoterapeuta in formazione e dottorando in Informatica.
+  Website of Dr. Mirko Casu, psychotherapist-in-training and PhD student in Computer Science.
 footer_text:
 keywords: psicologia, cyberpsicologia, psicologia clinica, IA, informatica, realtà virtuale, realtà aumentata # add your own keywords or leave empty
-lang: it # the language of your site (for example: en, fr, cn, ru, etc.)
+lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: 🧠 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
 url: https://mirkocasu.github.io # the base hostname & protocol for your site
@@ -101,7 +101,7 @@ zotero_username: # your zotero username
 wechat_qr: # filename of your wechat qr-code saved as an image (e.g., wechat-qr.png if saved to assets/img/wechat-qr.png)
 
 contact_note: >
-  * È preferito il contatto via e-mail o Instagram.
+  * Email or Instagram contact is preferred.
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
