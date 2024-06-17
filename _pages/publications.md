@@ -1,8 +1,8 @@
 ---
 layout: page
-permalink: /pubblicazioni/
-title: pubblicazioni
-description: pubblicazioni per categorie in ordine cronologico invertito.
+permalink: /publications/
+title: publications
+description: publications by categories in reverse chronological order.
 nav: true
 nav_order: 2
 ---
