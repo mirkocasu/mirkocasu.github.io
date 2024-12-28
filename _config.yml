@@ -10,7 +10,7 @@ middle_name:
 last_name: Casu
 email: mirko.casu@phd.unict.it
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Website of Dr. Mirko Casu, psychotherapist-in-training and PhD student in Computer Science.
+  Website of Dr. Mirko Casu, Psychologist and PhD student in Computer Science.
 footer_text:
 keywords: psicologia, cyberpsicologia, psicologia clinica, IA, informatica, realtà virtuale, realtà aumentata # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
