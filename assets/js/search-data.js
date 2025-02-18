@@ -16,35 +16,7 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "nav-cv",
-          title: "cv",
-          description: "This is a description of the page. You can modify it in &#39;_pages/cv.md&#39;. You can also change or remove the top pdf download button.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/cv/";
-          },
-        },{id: "nav-teaching",
-          title: "teaching",
-          description: "Materials for courses you taught. Replace this text with your description.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/teaching/";
-          },
-        },{id: "nav-people",
-          title: "people",
-          description: "members of the lab or group",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/people/";
-          },
-        },{id: "dropdown-publications",
-              title: "publications",
-              description: "",
-              section: "Dropdown",
-              handler: () => {
-                window.location.href = "";
-              },
-            },{id: "news-at-ieee-metroxraine-2024-in-st-albans-i-had-the-honor-of-presenting-our-paper-on-using-hypnosis-and-vr-in-psychological-partner-violence-a-case-study-from-my-postgraduate-internship",
+        },{id: "news-at-ieee-metroxraine-2024-in-st-albans-i-had-the-honor-of-presenting-our-paper-on-using-hypnosis-and-vr-in-psychological-partner-violence-a-case-study-from-my-postgraduate-internship",
           title: 'At IEEE MetroXRAINE 2024 in St Albans, I had the honor of presenting...',
           description: "",
           section: "News",},{id: "news-at-the-first-ever-welcome-phd-day-at-the-università-di-catania-i-had-the-opportunity-to-present-my-research-on-impostor-bias-a-newly-identified-cognitive-bias-in-generative-ai",
