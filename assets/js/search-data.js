@@ -16,10 +16,16 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "news-at-ieee-metroxraine-2024-in-st-albans-i-had-the-honor-of-presenting-our-paper-on-using-hypnosis-and-vr-in-psychological-partner-violence-a-case-study-from-my-postgraduate-internship",
+        },{id: "news-i-had-the-pleasure-of-joining-medics-in-tech-podcast-to-discuss-how-ai-is-transforming-addiction-treatment-from-detecting-smoking-behavior-to-leveraging-vr-and-smartphone-apps",
+          title: 'I had the pleasure of joining Medics in Tech podcast to discuss how...',
+          description: "",
+          section: "News",},{id: "news-at-psicologia-in-cantiere-in-palermo-i-had-the-pleasure-of-presenting-my-research-on-impostor-bias-alongside-its-ongoing-validation",
+          title: 'At Psicologia in Cantiere in Palermo, I had the pleasure of presenting my...',
+          description: "",
+          section: "News",},{id: "news-at-ieee-metroxraine-2024-in-st-albans-i-had-the-honor-of-presenting-our-paper-on-using-hypnosis-and-vr-in-psychological-partner-violence-a-case-study-from-my-postgraduate-internship",
           title: 'At IEEE MetroXRAINE 2024 in St Albans, I had the honor of presenting...',
           description: "",
-          section: "News",},{id: "news-at-the-first-ever-welcome-phd-day-at-the-università-di-catania-i-had-the-opportunity-to-present-my-research-on-impostor-bias-a-newly-identified-cognitive-bias-in-generative-ai",
+          section: "News",},{id: "news-at-the-first-ever-welcome-phd-day-at-the-università-di-catania-i-had-the-opportunity-to-present-my-research-on-impostor-bias",
           title: 'At the first-ever Welcome PhD Day at the Università di Catania, I had...',
           description: "",
           section: "News",},{id: "news-my-paper-ai-chatbots-for-mental-health-a-scoping-review-published-in-july-2024-was-cited-by-the-uk-parliament-s-post-report-on-ai-and-mental-healthcare",
