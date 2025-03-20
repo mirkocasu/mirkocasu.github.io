@@ -31,8 +31,8 @@ ninja.data = [{
           section: "News",},{id: "news-my-paper-ai-chatbots-for-mental-health-a-scoping-review-published-in-july-2024-was-cited-by-the-uk-parliament-s-post-report-on-ai-and-mental-healthcare",
           title: 'My paper, AI Chatbots for Mental Health: A Scoping Review, published in July...',
           description: "",
-          section: "News",},{id: "news-our-scoping-review-smoking-detection-and-cessation-an-updated-scoping-review-of-digital-and-mobile-health-technologies-has-been-published-on-the-ieee-journal-of-biomedical-and-health-informatics-q1-computer-science-amp-amp-health-informatics-if-6-7",
-          title: 'Our scoping review, Smoking Detection and Cessation: An Updated Scoping Review of Digital...',
+          section: "News",},{id: "news-our-latest-scoping-review-smoking-detection-and-cessation-an-updated-scoping-review-of-digital-and-mobile-health-technologies-has-been-published-in-ieee-journal-of-biomedical-and-health-informatics-q1-in-computer-science-amp-amp-health-informatics-if-6-7",
+          title: 'Our latest scoping review, Smoking Detection and Cessation: An Updated Scoping Review of...',
           description: "",
           section: "News",},{
         id: 'social-email',
