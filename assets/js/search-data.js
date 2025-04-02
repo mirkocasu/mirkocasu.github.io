@@ -34,6 +34,9 @@ ninja.data = [{
           section: "News",},{id: "news-our-latest-scoping-review-smoking-detection-and-cessation-an-updated-scoping-review-of-digital-and-mobile-health-technologies-has-been-published-in-ieee-journal-of-biomedical-and-health-informatics-q1-in-computer-science-amp-amp-health-informatics-if-6-7",
           title: 'Our latest scoping review, Smoking Detection and Cessation: An Updated Scoping Review of...',
           description: "",
+          section: "News",},{id: "news-i-ve-been-interviewed-for-the-new-nxwss-article-by-emanuele-fornito-which-explores-ai-from-a-psychological-perspective-my-insights-are-in-the-second-part",
+          title: 'I’ve been interviewed for the new Nxwss article by Emanuele Fornito, which explores...',
+          description: "",
           section: "News",},{
         id: 'social-email',
         title: 'email',
