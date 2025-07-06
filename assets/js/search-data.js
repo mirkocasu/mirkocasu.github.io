@@ -38,13 +38,6 @@ ninja.data = [{
           title: 'I’ve been interviewed for the new Nxwss article by Emanuele Fornito, which explores...',
           description: "",
           section: "News",},{
-        id: 'social-email',
-        title: 'email',
-        section: 'Socials',
-        handler: () => {
-          window.open("mailto:%6D%69%72%6B%6F.%63%61%73%75@%70%68%64.%75%6E%69%63%74.%69%74", "_blank");
-        },
-      },{
         id: 'social-linkedin',
         title: 'LinkedIn',
         section: 'Socials',
@@ -78,6 +71,13 @@ ninja.data = [{
         section: 'Socials',
         handler: () => {
           window.open("https://www.scopus.com/authid/detail.uri?authorId=57374838700", "_blank");
+        },
+      },{
+        id: 'social-work',
+        title: 'Work',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://web.dmi.unict.it/dottorandi/mirko.casu", "_blank");
         },
       },{
       id: 'light-theme',
