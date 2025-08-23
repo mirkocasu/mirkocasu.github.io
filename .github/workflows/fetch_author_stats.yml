@@ -1,0 +1,45 @@
+name: Fetch author stats
+
+on:
+  schedule:
+    - cron: '0 6 * * *' # daily at 06:00 UTC
+  workflow_dispatch:
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      - name: Install requirements
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - name: Install node dev dependencies
+        run: |
+          npm ci
+      - name: Run fetch script (Semantic Scholar only)
+        run: |
+          python bin/fetch_author_stats.py
+
+      - name: Prettier check
+        run: |
+          npx prettier --check .
+
+      - name: Prettier format (write)
+        run: |
+          npx prettier --write .
+      - name: Commit updated stats
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "chore: update author_stats.json [skip ci]"
+          file_pattern: "_data/author_stats.json"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,0 +1,31 @@
+{%- assign stats = site.data.author_stats -%}
+<section id="author-metrics" class="author-metrics" aria-label="Author metrics">
+  <h2>author metrics</h2>
+
+  {% if stats and stats.last_updated and stats.semantic_scholar %}
+    <div class="metrics-grid">
+      <div class="metric">
+        <div class="metric-value">{{ stats.semantic_scholar.citations | default: 0 }}</div>
+        <div class="metric-label">Semantic Scholar citations</div>
+      </div>
+
+      <div class="metric">
+        <div class="metric-value">{{ stats.semantic_scholar.h_index | default: 0 }}</div>
+        <div class="metric-label">Semantic Scholar h-index</div>
+      </div>
+
+      <div class="metric">
+        <div class="metric-value">{{ stats.semantic_scholar.papers | default: 0 }}</div>
+        <div class="metric-label">Publications (Semantic Scholar)</div>
+      </div>
+    </div>
+
+    <div class="metrics-meta">last updated: {{ stats.last_updated }}</div>
+  {% else %}
+    <p>No metrics available yet. Run the fetch script to populate <code>_data/author_stats.json</code> (Semantic Scholar only).</p>
+  {% endif %}
+
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="{{ '/assets/js/author_metrics.js' | relative_url }}"></script>

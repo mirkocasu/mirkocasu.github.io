@@ -1,0 +1,424 @@
+/* Liquid glass utilities and components for iOS26-like look */
+@use "sass:color";
+
+// Mixin: glass surface
+@mixin glass-surface($bg: null, $blur: $glass-blur, $trans: $glass-translucency, $radius: $glass-radius) {
+  @if $bg == null {
+    // Use CSS variable when available so themes can override to solid white
+    background-color: var(--global-card-bg-color, rgba(255,255,255,$trans));
+  } @else {
+    background-color: $bg;
+  }
+  // Preferred: use backdrop-filter for true glass effect
+  backdrop-filter: blur($blur) saturate(1.2);
+  -webkit-backdrop-filter: blur($blur) saturate(1.2);
+
+  // Fallback for browsers without backdrop-filter: use semi-transparent gradient
+  @supports not ((-webkit-backdrop-filter: blur($blur)) or (backdrop-filter: blur($blur))) {
+    background-image: linear-gradient(180deg, rgba(255,255,255,($trans - 0.08)) 0%, rgba(255,255,255,($trans - 0.12)) 100%);
+    /* Slight inner shadow to suggest depth */
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.15), $glass-elev-shadow;
+  }
+  border-radius: $radius;
+  border: 1px solid $glass-border-color;
+  box-shadow: $glass-elev-shadow;
+}
+
+/* ...existing code continues... */
+
+
+// Accent overlay for subtle color tint
+%glass-accent {
+  position: relative;
+  overflow: hidden;
+
+  &:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(135deg, rgba(10,188,239,$glass-accent-opacity) 0%, rgba(255,255,255,0) 60%);
+    mix-blend-mode: overlay;
+    opacity: 0.95;
+  }
+      box-shadow: none !important;
+
+// Utility classes
+.glass {
+  @include glass-surface();
+}
+
+.glass-soft {
+  @include glass-surface($blur: 10px, $trans: 0.48, $radius: 10px);
+}
+
+        box-shadow: none !important;
+  @extend %glass-accent;
+}
+
+// Nav and card specific adjustments
+.navbar.glass {
+  @include glass-surface($blur: 10px, $trans: 0.65, $radius: 8px);
+  background-clip: padding-box;
+  /* Only round bottom corners (keep top corners square) */
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.card.glass {
+  @include glass-surface($blur: 14px, $trans: 0.6, $radius: 12px);
+}
+
+// Buttons and icon treatments
+.btn.glass {
+  @include glass-surface($blur: 10px, $trans: 0.28, $radius: 12px);
+  color: var(--global-text-color);
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: 0.5rem 0.9rem;
+  display: inline-flex;
+  gap: 0.5rem;
+  align-items: center;
+  transition: transform $ui-transition-duration ease, box-shadow $ui-transition-duration ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 36px rgba(10,10,15,0.12);
+  }
+}
+
+/* Keep accessibility-friendly focus styles for interactive elements */
+:focus {
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(10,188,239,0.18);
+}
+
+.icon-glass {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  @include glass-surface($blur: 8px, $trans: 0.28, $radius: 10px);
+}
+
+/* Publication action links (PDF / DOI / HTML / poster) */
+/* Publication action links (PDF / DOI / HTML / poster) */
+// Mix-in for compact publication/action buttons (simplified — no border/gradients)
+@mixin custom-button-style() {
+  // CSS variables for easy overrides
+  --txt: #eaeaea;
+
+  /* Minimal, compact style: no decorative border, no heavy shadows */
+  background: transparent;
+  color: var(--txt);
+  padding: 4px 6px;
+  border: none !important;
+  border-radius: 10px;
+  box-shadow: none;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: 0.08rem;
+  cursor: pointer;
+  transition: transform 120ms ease, color 120ms ease, opacity 120ms ease;
+
+  &:hover {
+    transform: translateY(-1px);
+    color: var(--global-theme-color);
+    opacity: 0.95;
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+
+  &:focus-visible {
+    outline: 2px solid rgba(255,255,255,0.18);
+    outline-offset: 2px;
+  }
+}
+
+.custom-button {
+  /* Pill-shaped fumetto button per azioni pubblicazioni */
+  background-color: #2C2C2C;
+  color: #E0E0E0;
+  font-family: sans-serif;
+  padding: 8px 14px;
+  border: 1px solid transparent;
+  border-radius: 9999px; /* pill */
+
+  background-image:
+    linear-gradient(180deg, #2c2c2c, #232323),
+    linear-gradient(135deg, rgba(255,255,255,.55) 0%, rgba(255,255,255,.25) 25%, rgba(255,255,255,.08) 45%, rgba(255,255,255,0) 60%);
+  background-origin: padding-box, border-box;
+  background-clip: padding-box, border-box;
+
+  box-shadow:
+    inset 1px 1px 0 rgba(255,255,255,.15),
+    inset -1px -1px 0 rgba(0,0,0,.35),
+    0 2px 6px rgba(0,0,0,.35);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: filter 140ms ease, transform 140ms ease;
+
+  &:hover {
+    filter: brightness(1.06);
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+
+  &:focus-visible {
+    outline: 2px solid rgba(255,255,255,0.18);
+    outline-offset: 2px;
+  }
+}
+
+publications {
+  .list-group-item {
+    a {
+      /* compact, borderless publication action links (PDF / DOI / HTML / ABS / BIB / Poster)
+         smaller, less rounded, non-bold, narrow appearance as requested */
+      background: transparent;
+      color: var(--global-text-color);
+      padding: 3px 6px;
+      border: none !important;
+      border-radius: 6px; /* less smussato */
+      box-shadow: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      font-size: 0.82rem;
+      font-weight: 400; /* non bold */
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      letter-spacing: 0.01em;
+      text-decoration: none;
+      margin-left: 0.08rem;
+      cursor: pointer;
+      transition: color 120ms ease, opacity 120ms ease, transform 120ms ease;
+      text-transform: none;
+      white-space: nowrap;
+
+      i, svg {
+        font-size: 0.78rem;
+        line-height: 1;
+      }
+
+      &:hover {
+        color: var(--global-theme-color);
+        transform: translateY(-1px);
+        opacity: 0.95;
+      }
+
+      &:active {
+        transform: translateY(0);
+      }
+
+      &:focus-visible {
+        outline: 2px solid rgba(255,255,255,0.12);
+        outline-offset: 2px;
+      }
+    }
+
+    a[href*="doi.org"] {
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+  }
+}
+
+/* ...existing code continues... */
+
+/* Publication links/buttons: compact, borderless defaults to match original theme */
+.publications .links a.btn,
+.publications .links a.btn-glass,
+.publications ol.bibliography li .links a.btn {
+  background-color: #262626; /* slightly lighter dark gray */
+  color: #E8E8E8;
+  padding: 2px 6px; /* a touch smaller */
+  border: none !important;
+  border-radius: 6px;
+  box-shadow: none;
+  font-size: 0.80rem; /* reduced */
+  font-weight: 500; /* slightly bolder for legibility */
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-left: 0.08rem;
+  transition: color 120ms ease, transform 120ms ease;
+}
+
+.publications .links a.btn:hover,
+.publications .links a.btn-glass:hover,
+.publications ol.bibliography li .links a.btn:hover {
+  color: var(--global-theme-color);
+  transform: translateY(-1px);
+}
+
+/* Force publication titles (bibliography and distill-generated lists) to be bold everywhere */
+.publications ol.bibliography li .title,
+.publications .list-group-item .title,
+.publications .title,
+.references .title,
+d-citation-list .references .title,
+.d-citation-list .references .title,
+.bib .title,
+ol.bibliography .title,
+.title {
+  font-weight: 700 !important;
+}
+
+/* Surname in header/about should not be bold (user requested last name not bold) */
+.surname {
+  font-weight: 400 !important;
+}
+
+/* Ensure hover / link color matches new highlight for publication action links */
+.publications .links a.btn:hover,
+.publications .links a.btn-glass:hover,
+.publications ol.bibliography li .links a.btn:hover {
+  color: #43BEAA !important;
+}
+
+/* --- Publications: remove inter-item dashed separators and color only the large year heading --- */
+/* Remove dashed / bottom borders that appear between authors / list items / hidden blocks. */
+.publications ol.bibliography li .author a,
+.publications ol.bibliography li .author > span.more-authors {
+  /* keep inline author link separators removed as previously requested */
+  border: none !important;
+  border-bottom: none !important;
+}
+
+/* Hidden detail boxes (abstract / award) should keep a visible, solid box with
+   rounded corners matching publication action buttons and use the publication
+   action color. They remain collapsible via the existing `.hidden` / `.hidden.open` rules. */
+.publications ol.bibliography li div.abstract.hidden,
+.publications ol.bibliography li div.award.hidden {
+  /* Completely hide closed boxes: remove border, padding and pointer events so they don't occupy space */
+  border: none !important;
+  padding: 0 !important;
+  max-height: 0 !important;
+  overflow: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+.publications ol.bibliography li div.abstract.hidden.open,
+.publications ol.bibliography li div.award.hidden.open {
+  /* When opened, show the solid rounded box matching publication action buttons */
+  border: 1px solid var(--publication-action-bg) !important;
+  border-radius: 6px !important;
+  padding: 0.6rem !important;
+  max-height: 100em !important;
+  overflow: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  transition: all 160ms ease;
+  background-clip: padding-box;
+}
+
+/* Ensure the list items themselves don't draw separators */
+.publications ol.bibliography li,
+.publications ol.bibliography > li {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Color only the large chronological year/group heading generated as h2.bibliography. */
+.publications h2.bibliography {
+  color: var(--publication-action-bg) !important;
+  border-top-color: var(--publication-action-bg) !important;
+}
+
+/* Leave .periodical and inline month/year labels untouched so they keep the regular text color. */
+
+/* --- User requested navbar interactions --- */
+
+/* Remove box that appears when clicking navbar items (suppress background flash on active/click) */
+.navbar .nav-link,
+.navbar .dropdown-item {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Restore original hover/active color behavior: default white/neutral, hovered -> theme color, active -> theme color */
+.navbar.navbar-light .navbar-nav .nav-item .nav-link {
+  color: #fff !important; /* default when not active; force to override base rules */
+  transition: color 0.18s ease;
+}
+.navbar.navbar-light .navbar-nav .nav-item .nav-link:hover,
+.navbar.navbar-light .navbar-nav .nav-item .nav-link:focus {
+  color: var(--global-theme-color) !important;
+}
+.navbar.navbar-light .navbar-nav .nav-item.active > .nav-link {
+  color: var(--global-theme-color) !important;
+}
+
+/* Toggle-specific rules removed (site is dark-only). */
+
+/* Slightly thinner navbar */
+.navbar {
+  padding-top: 0.45rem;
+  padding-bottom: 0.45rem;
+}
+
+/* Hide background/border of brand button when on publications page (handled by conditional class in header.liquid), ensure no residual padding */
+.navbar .navbar-brand {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+
+/* Dark mode tweaks */
+@media (prefers-color-scheme: dark) {
+  .glass, .glass-soft, .glass-accent, .card.glass, .navbar.glass, .btn.glass, .icon-glass, .content-glass-wrapper {
+    color: var(--global-text-color);
+    /* stronger backdrop and darker tint */
+    background-color: rgba(18,20,24,0.78) !important;
+    border: 1px solid rgba(255,255,255,0.04) !important;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.6) !important;
+  }
+
+  .btn.glass {
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.06);
+    background-color: rgba(255,255,255,0.03);
+  }
+
+  .icon-glass {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+  }
+}
+
+// Focus ring that fits iOS aesthetics
+:focus {
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(10,188,239,0.18);
+  transition: box-shadow $ui-transition-duration ease;
+}
+
+// Reduced motion
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+}

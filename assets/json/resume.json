@@ -1,0 +1,165 @@
+{
+  "basics": {
+    "name": "Mirko Casu",
+    "label": "Clinical Psychologist, PhD Student in Computer Science",
+    "image": "",
+    "email": "mirko.casu@phd.unict.it",
+    "phone": "",
+    "url": "https://mirkocasu.github.io/",
+    "summary": "A clinical psychologist and PhD student in Computer Science at the University of Catania, specializing in digital health, AI, deepfake, and cognitive bias research.",
+    "location": {
+      "address": "Viale Andrea Doria, 6",
+      "postalCode": "95123",
+      "city": "Catania",
+      "countryCode": "CT",
+      "region": "Sicily"
+    },
+    "profiles": [
+      {
+        "network": "X",
+        "username": "bricioladigelo",
+        "url": "https://x.com/bricioladigelo"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "APA Associazione per la Psicoanalisi Applicata, alla clinica, alla ricerca e alla formazione",
+      "location": "Catania, Italy",
+      "position": "Trainee",
+      "url": "https://www.associazionepsicoanalisiapplicata.it/",
+      "startDate": "2021-11",
+      "endDate": "2022-02",
+      "summary": "Active participation in tutors' activities during an external university internship, including critical analysis of texts and films, involvement in group activities and seminars, linking theory to practice through the Lacanian psychoanalytic approach.",
+      "highlights": ["Learning Lacanian psychodynamic concepts"]
+    },
+    {
+      "name": "ECLAT SRL",
+      "location": "Catania, Italy",
+      "position": "Videomaker",
+      "url": "https://www.eclatrbc.it/",
+      "startDate": "2021-10",
+      "endDate": "2021-11",
+      "summary": "Director and editor of video tutorial explaining the Chester Step Test, included within the Project Genesis produced by ECLAT SRL in collaboration with CoEHAR.",
+      "highlights": []
+    },
+    {
+      "name": "University of Catania",
+      "location": "Catania, Italy",
+      "position": "Videomaker",
+      "url": "https://www.unict.it/",
+      "startDate": "2022-03",
+      "endDate": "2022-03",
+      "summary": "Creation, production, recording and editing of video lectures on behalf of Catania University. Video lectures intended for screening at CUNY, The City University of New York.",
+      "highlights": []
+    },
+    {
+      "name": "APA Associazione per la Psicoanalisi Applicata, alla clinica, alla ricerca e alla formazione",
+      "location": "Catania, Italy",
+      "position": "Trainee",
+      "url": "https://www.associazionepsicoanalisiapplicata.it/",
+      "startDate": "2022-09",
+      "endDate": "2023-02",
+      "summary": "Active participation in tutors' activities during an external university internship, including critical analysis of texts and films, involvement in group activities and seminars, linking theory to practice through the Lacanian psychoanalytic approach.",
+      "highlights": ["Learning Lacanian psychodynamic concepts"]
+    },
+    {
+      "name": "I Girasoli – Società Cooperativa Sociale e di Solidarietà",
+      "location": "Catania, Italy",
+      "position": "Specialist Assistant for Autonomy and Communication",
+      "url": "https://cooperativaigirasoli.wixsite.com/igirasoli",
+      "startDate": "2022-10",
+      "endDate": "2023-06",
+      "summary": "Taking charge of and managing pupils with mild and severe disabilities in school settings, working alongside the support teacher and promoting the pupil's autonomy and communication.",
+      "highlights": []
+    },
+    {
+      "name": "Open Exploration",
+      "position": "Guest Editor",
+      "url": "https://www.explorationpub.com/",
+      "startDate": "2023-11",
+      "endDate": "",
+      "summary": "Guest Editor activities for the Special Issue 'Digital Health Innovations in the Battle Against Psychological Problems. Psychological Problems: Progress, Obstacles, and Prospects.",
+      "highlights": []
+    },
+    {
+      "name": "Open Exploration",
+      "position": "Academic Editor",
+      "url": "https://www.explorationpub.com/",
+      "startDate": "2024-11",
+      "endDate": "",
+      "summary": "Academic Editor activities for the Special Issue 'Digital Health Innovations in the Battle Against Psychological Problems. Psychological Problems: Progress, Obstacles, and Prospects.",
+      "highlights": []
+    }
+  ],
+  "volunteer": [],
+  "education": [
+    {
+      "institution": "University of Catania, Sicily, Italy",
+      "location": "Catania, Italy",
+      "url": "https://unict.it",
+      "area": "Computer Science",
+      "studyType": "PhD",
+      "startDate": "2023-08-01",
+      "endDate": "",
+      "score": "",
+      "courses": []
+    },
+    {
+      "institution": "University of Catania, Sicily, Italy",
+      "location": "Catania, Italy",
+      "url": "https://unict.it",
+      "area": "Clinical Psychology",
+      "studyType": "Master's degree",
+      "startDate": "2020-10",
+      "endDate": "2023-04",
+      "score": "110/110 with honors",
+      "courses": []
+    },
+    {
+      "institution": "University of Sassari, Sardinia, Italy",
+      "location": "Sassari, Italy",
+      "url": "https://uniss.it",
+      "area": "Psychological sciences and techniques of cognitive processes",
+      "studyType": "Bachelor's degree",
+      "startDate": "2016-10",
+      "endDate": "2019-12",
+      "score": "105/110",
+      "courses": []
+    }
+  ],
+  "awards": [],
+  "certificates": [
+    {
+      "name": "IELTS Academic 7 (C1)",
+      "date": "2023-05",
+      "issuer": "IELTS",
+      "url": "https://ielts.org/",
+      "icon": "fa-solid fa-clipboard-check"
+    },
+    {
+      "name": "Licensed psychologist",
+      "date": "2024-09",
+      "issuer": "CNOP",
+      "url": "https://areariservata.psy.it/albo/iscritto/mirko_casu_218564",
+      "icon": "fa-solid fa-calendar"
+    }
+  ],
+  "publications": [],
+  "skills": [],
+  "languages": [
+    {
+      "language": "Italian",
+      "fluency": "Native speaker",
+      "icon": ""
+    },
+    {
+      "language": "English",
+      "fluency": "Fluent",
+      "icon": ""
+    }
+  ],
+  "interests": [],
+  "references": [],
+  "projects": []
+}

@@ -1,0 +1,108 @@
+/******************************************************************************
+ * Content
+ ******************************************************************************/
+
+body {
+  padding-bottom: 70px;
+  color: var(--global-text-color);
+  background-color: var(--global-bg-color);
+  /* subtle layered gradients to suggest depth */
+  background-image: linear-gradient(180deg, rgba(255,255,255,0.02) 0%, rgba(0,0,0,0.01) 100%);
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    scroll-margin-top: 66px;
+  }
+}
+
+body.fixed-top-nav {
+  // Add some padding for the nav-bar.
+  padding-top: 56px;
+}
+
+body.sticky-bottom-footer {
+  // Remove padding below footer.
+  padding-bottom: 0;
+}
+
+.container {
+  /* Slightly wider central container for better balance */
+  max-width: calc($max-content-width + 80px);
+}
+
+/* Main content wrapper to show glass card */
+.content-glass-wrapper {
+  margin: 2rem auto;
+  padding: 2.25rem;
+  /* prefer light theme solid background where appropriate */
+  @include glass-surface($blur: $glass-blur, $trans: 0.55, $radius: 16px);
+}
+
+.content-glass-wrapper,
+.card.glass {
+  color: var(--global-text-color);
+  a { color: var(--global-theme-color); }
+}
+
+html[data-theme="dark"] .content-glass-wrapper,
+html[data-theme="dark"] .card.glass {
+  color: var(--global-text-color);
+}
+
+// Profile
+.profile {
+  img {
+    width: 100%;
+  }
+}
+
+// News
+.news-item {
+  color: var(--global-text-color); /* Imposta il colore del testo delle news */
+}
+
+// TODO: redefine content layout.
+
+/******************************************************************************
+ * Publications
+ ******************************************************************************/
+
+// TODO: redefine publications layout.
+
+/*****************************************************************************
+* Projects
+*****************************************************************************/
+
+// TODO: redefine projects layout.
+
+/******************************************************************************
+ * Footer
+ ******************************************************************************/
+
+.site-footer {
+  margin-top: auto; /* Spazio sopra il footer per spingerlo in fondo */
+  margin-bottom: 0; /* Nessuno spazio sotto il footer */
+  font-size: 0.5em; /* Dimensione del testo */
+  text-align: center; /* Testo centrato */
+  padding: 10px 0; /* Spaziatura interna */
+  background-color: transparent; /* Sfondo trasparente */
+  width: 100%; /* Larghezza del footer */
+  flex-shrink: 0; /* Impedisci al footer di ridursi */
+}
+
+.footer-text {
+  font-size: 0.8em; /* Riduci la dimensione del testo del footer */
+}
+
+/******************************************************************************
+ * Bibliography
+ ******************************************************************************/
+
+.bibliography-abbr {
+  color: var(--global-text-color); /* Imposta il colore del testo per l'abbr */
+  font-weight: bold; /* Opzionale: rendi il testo in grassetto */
+}

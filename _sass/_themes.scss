@@ -1,0 +1,117 @@
+/*******************************************************************************
+ * Themes
+ ******************************************************************************/
+
+@use "sass:color";
+@import "glass";
+
+:root {
+  /* Light theme base colors for glass aesthetics */
+  --global-bg-color: rgba(245,247,250,1); /* soft near-white */
+  --global-code-bg-color: #{$code-bg-color-light};
+  --global-text-color: rgba(17,24,39,0.95); /* dark slate */
+  --global-text-color-light: rgba(99,102,120,0.8);
+  /* Accent color / hover color set to user's requested highlight */
+  --global-theme-color: #43BEAA; /* accent */
+  --global-hover-color: #43BEAA;
+  --global-hover-text-color: #{$white-color};
+  --global-footer-bg-color: rgba(255,255,255,0.08);
+  --global-footer-text-color: rgba(17,24,39,0.6);
+  --global-footer-link-color: #{$cyan-color};
+  --global-distill-app-color: #{$grey-color};
+  --global-divider-color: rgba(15,23,42,0.06);
+  --global-card-bg-color: rgba(255,255,255,0.62); /* translucent cards */
+  /* Make light theme card backgrounds fully white for better readability */
+  --global-card-bg-color-solid: rgba(255,255,255,1);
+  --global-highlight-color: #43BEAA;
+  /* color used for publication action buttons (PDF / DOI / HTML / etc.) */
+  --publication-action-bg: #262626;
+  --global-back-to-top-bg-color: rgba(10,10,15,0.06);
+  --global-back-to-top-text-color: #{$black-color};
+  --global-newsletter-bg-color: rgba(255,255,255,0.6);
+  --global-newsletter-text-color: rgba(17,24,39,0.95);
+
+  --global-tip-block: #42b983;
+  --global-tip-block-bg: #e2f5ec;
+  --global-tip-block-text: #215d42;
+  --global-tip-block-title: #359469;
+  --global-warning-block: #e7c000;
+  --global-warning-block-bg: #fff8d8;
+  --global-warning-block-text: #6b5900;
+  --global-warning-block-title: #b29400;
+  --global-danger-block: #c00;
+  --global-danger-block-bg: #ffe0e0;
+  --global-danger-block-text: #600;
+  --global-danger-block-title: #c00;
+
+  /* theme toggle icons removed; use .only-light/.only-dark classes where needed */
+
+  .only-light {
+    display: block;
+  }
+
+  .only-dark {
+    display: none;
+  }
+
+  #back-to-top {
+    color: var(--global-back-to-top-text-color);
+    background: var(--global-back-to-top-bg-color);
+    bottom: $back-to-top-bottom;
+    right: $back-to-top-right;
+    height: $back-to-top-height;
+    width: $back-to-top-width;
+    z-index: $back-to-top-z-index;
+  }
+}
+
+html[data-theme="dark"] {
+  /* Dark theme adjustments for glass effect */
+  --global-bg-color: rgba(10,12,14,1);
+  --global-code-bg-color: #{$code-bg-color-dark};
+  --global-text-color: rgba(229,231,235,0.95);
+  --global-text-color-light: rgba(148,163,184,0.7);
+  /* Force accent/hover to match requested highlight */
+  --global-theme-color: #43BEAA;
+  --global-hover-color: #43BEAA;
+  --global-hover-text-color: #{$black-color};
+  --global-footer-bg-color: rgba(255,255,255,0.04);
+  --global-footer-text-color: rgba(148,163,184,0.7);
+  --global-footer-link-color: #{$cyan-color};
+  --global-distill-app-color: #{$grey-color-light};
+  --global-divider-color: rgba(255,255,255,0.04);
+  --global-card-bg-color: rgba(18,20,24,0.75); /* darker and more opaque for better contrast */
+  --global-back-to-top-bg-color: rgba(255,255,255,0.04);
+  --global-back-to-top-text-color: #{$white-color};
+  --global-newsletter-bg-color: rgba(255,255,255,0.04);
+  --global-newsletter-text-color: rgba(229,231,235,0.95);
+
+  --global-tip-block: #42b983;
+  --global-tip-block-bg: #e2f5ec;
+  --global-tip-block-text: #215d42;
+  --global-tip-block-title: #359469;
+  --global-warning-block: #e7c000;
+  --global-warning-block-bg: #fff8d8;
+  --global-warning-block-text: #6b5900;
+  --global-warning-block-title: #b29400;
+  --global-danger-block: #c00;
+  --global-danger-block-bg: #ffe0e0;
+  --global-danger-block-text: #600;
+  --global-danger-block-title: #c00;
+
+  .only-light {
+    display: none;
+  }
+
+  .only-dark {
+    display: block;
+  }
+}
+
+html[data-theme-setting="dark"] {
+  /* site locked to dark; keep back-to-top styling */
+  #back-to-top {
+    color: var(--global-back-to-top-text-color);
+    background: var(--global-back-to-top-bg-color);
+  }
+}
