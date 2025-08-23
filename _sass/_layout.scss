@@ -5,9 +5,13 @@
 body {
   padding-bottom: 70px;
   color: var(--global-text-color);
-  background-color: var(--global-bg-color);
-  /* subtle layered gradients to suggest depth */
-  background-image: linear-gradient(180deg, rgba(255,255,255,0.02) 0%, rgba(0,0,0,0.01) 100%);
+  background-color: #0F1114 !important;
+  background-image: none !important;
+  background-size: auto !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: scroll !important;
+  background-blend-mode: normal !important;
 
   h1,
   h2,
@@ -39,7 +43,12 @@ body.sticky-bottom-footer {
   margin: 2rem auto;
   padding: 2.25rem;
   /* prefer light theme solid background where appropriate */
-  @include glass-surface($blur: $glass-blur, $trans: 0.55, $radius: 16px);
+  /* Make solid background and remove glass effects */
+  background-color: #0F1114 !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  border-radius: 0 !important;
 }
 
 .content-glass-wrapper,
@@ -59,6 +68,121 @@ html[data-theme="dark"] .card.glass {
     width: 100%;
   }
 }
+
+/* Author metrics - liquid glass cards */
+/* Wrapper that places the section title outside the glass panel */
+.author-metrics-wrap {
+  margin-top: 1.5rem;
+
+  .section-title {
+  margin: 0 0 0.9rem 0;
+  /* restore previous prominent h2 size */
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--global-text-color);
+  }
+
+   #author-metrics {
+   /* Make the large wrapper visually transparent; keep spacing minimal.
+     Borders and background are applied only to the individual metric boxes. */
+   padding: 0.5rem 0;
+   background: transparent !important;
+   background-image: none !important;
+   box-shadow: none !important;
+   border: none !important;
+
+   .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.9rem;
+      align-items: center;
+    }
+
+    .metrics-meta {
+      display: flex;
+      gap: 1rem;
+      justify-content: flex-end;
+      align-items: center;
+      font-size: 0.9rem;
+      color: var(--global-muted-color);
+
+  .metrics-source { text-transform: none; color: #5D6062; font-weight: 400; }
+  /* ensure child spans (like #ss-source) inherit same color/weight */
+  .metrics-source span, .metrics-source #ss-source { color: #5D6062; font-weight: 400; }
+  /* Semantic Scholar link styling - high specificity to avoid global overrides */
+  .author-metrics-wrap #author-metrics .metrics-source .metrics-source-link {
+    color: #FFFFFF !important;
+    font-weight: 600 !important; /* semi-bold */
+    text-decoration: none !important;
+    display: inline-block;
+  }
+  .author-metrics-wrap #author-metrics .metrics-source .metrics-source-link:hover {
+    color: #F3D25E !important;
+  }
+  .metrics-updated { color: #5D6062; font-size: 0.88rem; }
+  .metrics-updated #ss-last-updated { color: #5D6062; font-weight: 600; }
+    }
+
+    .metric {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem 0.8rem;
+      @include glass-surface($blur: 6px, $trans: 0.18, $radius: 10px);
+      border: 1px solid rgba(255,255,255,0.06);
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      transition: transform 180ms ease, background-color 180ms ease;
+
+      position: relative;
+
+      .metric-value {
+        font-size: 1.75rem;
+        font-weight: 800;
+        color: var(--global-text-color);
+        letter-spacing: -0.02em;
+        margin-bottom: 0.2rem;
+      }
+
+      .metric-label {
+        font-size: 0.88rem;
+        color: var(--global-muted-color);
+      }
+
+      /* remove shadows on metric boxes */
+      box-shadow: none !important;
+
+      /* colored top accent (partial) */
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 8px;
+        right: 8px;
+        height: 6px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        pointer-events: none;
+        opacity: 0.95;
+      }
+
+  &:hover { transform: translateY(-4px); }
+    }
+
+    .metrics-meta { margin-top: 0.7rem; font-size: 0.85rem; color: var(--global-muted-color); text-align: right; }
+    .metrics-loading { margin-top: 0.6rem; color: var(--global-muted-color); font-style: italic; }
+
+    @media (max-width: 760px) {
+      .metrics-grid { grid-template-columns: 1fr; }
+      text-align: center; .metrics-meta { text-align: center; }
+    }
+  }
+}
+
+/* assign colors to the three metric boxes */
+.author-metrics-wrap #author-metrics .metric:nth-child(1):before { background: #1F3C73; }
+.author-metrics-wrap #author-metrics .metric:nth-child(2):before { background: #2C5BA8; }
+.author-metrics-wrap #author-metrics .metric:nth-child(3):before { background: #638BC8; }
 
 // News
 .news-item {
@@ -89,7 +213,9 @@ html[data-theme="dark"] .card.glass {
   font-size: 0.5em; /* Dimensione del testo */
   text-align: center; /* Testo centrato */
   padding: 10px 0; /* Spaziatura interna */
-  background-color: transparent; /* Sfondo trasparente */
+  background-color: #0F1114 !important; /* Solid background per footer */
+  box-shadow: none !important;
+  border: none !important;
   width: 100%; /* Larghezza del footer */
   flex-shrink: 0; /* Impedisci al footer di ridursi */
 }
@@ -106,3 +232,32 @@ html[data-theme="dark"] .card.glass {
   color: var(--global-text-color); /* Imposta il colore del testo per l'abbr */
   font-weight: bold; /* Opzionale: rendi il testo in grassetto */
 }
+
+/* Force navbar to be part of document flow (not fixed) and remove body padding
+   that would be added for fixed navbars. This is a defensive override so that
+   even if vendor CSS adds `.fixed-top` or the body receives `fixed-top-nav`,
+   the navbar will scroll away and no extra top padding is applied. */
+#navbar, nav#navbar, .navbar {
+  position: static !important;
+  top: auto !important;
+  left: auto !important;
+  right: auto !important;
+  z-index: auto !important;
+}
+
+/* Remove the layout padding added for fixed navbars when we want non-fixed */
+body.fixed-top-nav {
+  padding-top: 0 !important;
+}
+
+/* Small top spacing for the "selected publications" title on mobile */
+@media (max-width: 576px) {
+  .selected-pubs-title { margin-top: 8px; }
+}
+
+/* Language switcher basic styles */
+.lang-switch { display: inline-flex; align-items: center; position: relative; margin-left: 0.5rem; height: 100%; }
+.lang-current { background: transparent; border: none; color: var(--global-text-color); font-size: 1.05rem; cursor: pointer; padding: 0.15rem 0.4rem; line-height: 1; display: inline-flex; align-items: center; height: 100%; }
+.lang-options { position: absolute; right: 0; top: 110%; background: var(--global-bg-color, #0F1114); border: 1px solid rgba(255,255,255,0.06); box-shadow: 0 6px 18px rgba(0,0,0,0.45); border-radius: 6px; padding: 0.25rem; z-index: 1200; }
+.lang-option { display: block; background: transparent; border: none; color: var(--global-text-color); padding: 0.4rem 0.6rem; text-align: left; width: 100%; cursor: pointer; }
+.lang-option:hover { background: rgba(255,255,255,0.02); }

@@ -14,6 +14,12 @@ layout: default
     <p class="desc">{{ page.subtitle }}</p>
   </header>
 
+  {% assign current_lang = page.lang | default: 'en' %}
+  {% if current_lang == 'en' %}
+    {% assign lang_prefix = '' %}
+  {% else %}
+    {% assign lang_prefix = '/' | append: current_lang %}
+  {% endif %}
   <article>
     {% if page.profile %}
       <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
@@ -49,7 +55,8 @@ layout: default
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}
       <h2>
-        <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
+        {% assign news_path = lang_prefix | append: '/news/' %}
+        <a href="{{ news_path | relative_url }}" style="color: inherit">news</a>
       </h2>
       {% include news.liquid limit=true %}
     {% endif %}
@@ -57,15 +64,17 @@ layout: default
     <!-- Latest posts -->
     {% if page.latest_posts and page.latest_posts.enabled %}
       <h2>
-        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
+        {% assign blog_path = lang_prefix | append: '/blog/' %}
+        <a href="{{ blog_path | relative_url }}" style="color: inherit">latest posts</a>
       </h2>
       {% include latest_posts.liquid %}
     {% endif %}
 
     <!-- Selected papers -->
     {% if page.selected_papers %}
-      <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
+      <h2 class="selected-pubs-title">
+        {% assign pubs_path = lang_prefix | append: '/publications/' %}
+        <a href="{{ pubs_path | relative_url }}" style="color: inherit">{% if current_lang == 'it' %}pubblicazioni selezionate{% elsif current_lang == 'fr' %}publications sélectionnées{% else %}selected publications{% endif %}</a>
       </h2>
       {% include selected_papers.liquid %}
     {% endif %}

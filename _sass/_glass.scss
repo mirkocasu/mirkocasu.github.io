@@ -58,13 +58,10 @@
 
 // Nav and card specific adjustments
 .navbar.glass {
-  @include glass-surface($blur: 10px, $trans: 0.65, $radius: 8px);
+  @include glass-surface($blur: 10px, $trans: 0.65, $radius: 0);
   background-clip: padding-box;
-  /* Only round bottom corners (keep top corners square) */
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  /* Force completely square corners for navbar glass */
+  border-radius: 0 !important;
 }
 
 .card.glass {
@@ -102,6 +99,13 @@
   height: 38px;
   border-radius: 10px;
   @include glass-surface($blur: 8px, $trans: 0.28, $radius: 10px);
+}
+
+/* Ensure navbar and footer have square corners across the theme */
+.navbar,
+.navbar.glass,
+.site-footer {
+  border-radius: 0 !important;
 }
 
 /* Publication action links (PDF / DOI / HTML / poster) */
@@ -421,4 +425,42 @@ ol.bibliography .title,
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
   }
+}
+
+/* User override: make the main content box, navbar, footer and related glass components
+   solid dark (#0F1114) with no transparency, borders or shadows as requested. */
+.content-glass-wrapper,
+.navbar,
+.navbar.glass,
+.site-footer,
+.glass,
+.glass-soft,
+.card.glass {
+  background-color: #0F1114 !important;
+  background-image: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  color: var(--global-text-color) !important;
+}
+
+/* Ensure author metrics/cards also follow the solid look */
+.author-metrics-wrap #author-metrics,
+.author-metrics-wrap #author-metrics .metric {
+  /* restore glass-style boxes for author metrics (user asked to restore these) */
+  @include glass-surface($blur: 10px, $trans: 0.48, $radius: 12px);
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: none !important; /* keep minimal shadow as requested earlier */
+}
+
+/* Hide the progress bar element if present (fallback for JS-driven progress) */
+#progress,
+.progress-container,
+.progress-bar,
+.progress {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
 }

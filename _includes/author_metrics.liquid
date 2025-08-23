@@ -1,31 +1,77 @@
 {%- assign stats = site.data.author_stats -%}
-<section id="author-metrics" class="author-metrics" aria-label="Author metrics">
-  <h2>author metrics</h2>
+{%- assign current_lang = page.lang | default: 'en' -%}
+<div class="author-metrics-wrap">
+  <h2 class="section-title">{% if current_lang == 'it' %}metriche autore{% elsif current_lang == 'fr' %}métriques de l'auteur{% else %}author metrics{% endif %}</h2>
+  <section id="author-metrics" class="author-metrics" aria-label="Author metrics">
 
-  {% if stats and stats.last_updated and stats.semantic_scholar %}
-    <div class="metrics-grid">
-      <div class="metric">
-        <div class="metric-value">{{ stats.semantic_scholar.citations | default: 0 }}</div>
-        <div class="metric-label">Semantic Scholar citations</div>
+  <!-- Render placeholders (will be updated client-side from Semantic Scholar API on each page load) -->
+
+  <div class="metrics-grid">
+    <div class="metric">
+      <div id="ss-citations" class="metric-value">{{ stats.semantic_scholar.citations | default: "—" }}</div>
+  <div class="metric-label">{% if current_lang == 'it' %}Citazioni{% elsif current_lang == 'fr' %}Citations{% else %}Citations{% endif %}</div>
+    </div>
+
+    <div class="metric">
+      <div id="ss-hindex" class="metric-value">{{ stats.semantic_scholar.h_index | default: "—" }}</div>
+  <div class="metric-label">h-index</div>
+    </div>
+
+    <div class="metric">
+      <div id="ss-papers" class="metric-value">{{ stats.semantic_scholar.papers | default: "—" }}</div>
+  <div class="metric-label">{% if current_lang == 'it' %}Pubblicazioni{% elsif current_lang == 'fr' %}Publications{% else %}Publications{% endif %}</div>
+    </div>
+  </div>
+    <div class="metrics-meta" style="display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;font-size:0.95rem">
+      <div class="metrics-meta-left" style="flex:1 1 0;min-width:0;text-align:left">
+  <span class="metrics-source" style="display:inline-block;white-space:nowrap;">{% if current_lang == 'it' %}fonte{% elsif current_lang == 'fr' %}source{% else %}source{% endif %}: <a id="ss-source" class="metrics-source-link" href="https://www.semanticscholar.org/author/Mirko-Casu/2146586547" target="_blank" rel="noopener" style="color:#FFFFFF;font-weight:600;text-decoration:none;display:inline-block;transition:color .12s;" onmouseover="this.style.color='#F3D25E'" onmouseout="this.style.color='#FFFFFF'">Semantic Scholar</a></span>
       </div>
-
-      <div class="metric">
-        <div class="metric-value">{{ stats.semantic_scholar.h_index | default: 0 }}</div>
-        <div class="metric-label">Semantic Scholar h-index</div>
-      </div>
-
-      <div class="metric">
-        <div class="metric-value">{{ stats.semantic_scholar.papers | default: 0 }}</div>
-        <div class="metric-label">Publications (Semantic Scholar)</div>
+      <div class="metrics-meta-right" style="flex:1 1 0;min-width:0;text-align:right">
+        <span class="metrics-updated" style="display:inline-block;white-space:nowrap;">{% if current_lang == 'it' %}ultimo aggiornamento{% elsif current_lang == 'fr' %}dernière mise à jour{% else %}last updated{% endif %}: <span id="ss-last-updated">{{ stats.last_updated | default: "—" }}</span></span>
       </div>
     </div>
 
-    <div class="metrics-meta">last updated: {{ stats.last_updated }}</div>
-  {% else %}
-    <p>No metrics available yet. Run the fetch script to populate <code>_data/author_stats.json</code> (Semantic Scholar only).</p>
-  {% endif %}
+  <div id="ss-loading" class="metrics-loading">{% if current_lang == 'it' %}Aggiornamento metriche…{% elsif current_lang == 'fr' %}Mise à jour des métriques…{% else %}Updating metrics…{% endif %}</div>
 
-</section>
+  </section>
+</div>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="{{ '/assets/js/author_metrics.js' | relative_url }}"></script>
+<!-- Client-side retrieval from Semantic Scholar Graph API (no server-side scripts). Updates on every page refresh. -->
+<script>
+  (function() {
+    const authorId = '2146586547'; // Mirko Casu Semantic Scholar author id
+    const endpoint = `https://api.semanticscholar.org/graph/v1/author/${authorId}?fields=name,citationCount,hIndex,paperCount`;
+
+    async function updateMetrics() {
+      const elCitations = document.getElementById('ss-citations');
+      const elH = document.getElementById('ss-hindex');
+      const elPapers = document.getElementById('ss-papers');
+      const elLast = document.getElementById('ss-last-updated');
+      const elLoading = document.getElementById('ss-loading');
+
+      if (!elCitations || !elH || !elPapers || !elLast) return;
+
+      try {
+        const res = await fetch(endpoint, { headers: { 'Accept': 'application/json' } });
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const data = await res.json();
+
+        elCitations.textContent = (data.citationCount != null) ? data.citationCount : '0';
+        elH.textContent = (data.hIndex != null) ? data.hIndex : '0';
+        elPapers.textContent = (data.paperCount != null) ? data.paperCount : '0';
+        elLast.textContent = new Date().toLocaleString();
+        if (elLoading) elLoading.remove();
+      } catch (err) {
+        if (elLoading) elLoading.textContent = 'Unable to fetch Semantic Scholar metrics';
+        console.error('Author metrics fetch failed:', err);
+      }
+    }
+
+    // Run on DOMContentLoaded so it works even when included in head/footer
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', updateMetrics);
+    } else {
+      updateMetrics();
+    }
+  })();
+</script>

@@ -33,8 +33,41 @@ def fetch_semantic_scholar(author_id: str):
         print('Error fetching Semantic Scholar:', e)
         return {}
 
+
+def fetch_wos(researcher_id: str, api_url: str, api_key: str):
+    """
+    Optional fetch from Web of Science API.
+    The function expects an API endpoint and key provided via environment variables.
+    The exact payload depends on the WOS API you have access to; this implementation
+    uses a generic GET with Authorization header and expects JSON with citationCount/hIndex/paperCount-ish fields.
+    If your WOS API returns different keys, adapt accordingly.
+    """
+    try:
+        headers = {'Authorization': f'Bearer {api_key}', 'Accept': 'application/json'}
+        params = {'researcherId': researcher_id}
+        r = requests.get(api_url, headers=headers, params=params, timeout=20)
+        r.raise_for_status()
+        data = r.json()
+
+        # Try multiple common keys
+        citations = data.get('citationCount') or data.get('citations') or data.get('timesCited') or 0
+        h_index = data.get('hIndex') or data.get('h_index') or data.get('hindex') or 0
+        papers = data.get('paperCount') or data.get('publications') or data.get('worksCount') or 0
+
+        return {
+            'citations': int(citations),
+            'h_index': int(h_index),
+            'papers': int(papers),
+        }
+    except Exception as e:
+        print('Error fetching Web of Science:', e)
+        return {}
+
 def main():
     semantic_id = os.getenv('SEMANTIC_SCHOLAR_AUTHOR_ID', '2146586547')  # Mirko Casu
+    wos_id = os.getenv('WOS_RESEARCHER_ID', 'HMD-8254-2023')
+    wos_api_url = os.getenv('WOS_API_URL')
+    wos_api_key = os.getenv('WOS_API_KEY')
 
     out = {'last_updated': datetime.datetime.utcnow().isoformat()}
 
@@ -42,6 +75,13 @@ def main():
     ss = fetch_semantic_scholar(semantic_id)
     if ss:
         out['semantic_scholar'] = ss
+
+    # Optionally fetch Web of Science metrics if API details are provided
+    if wos_api_url and wos_api_key:
+        print('Fetching Web of Science metrics...')
+        wos = fetch_wos(wos_id, wos_api_url, wos_api_key)
+        if wos:
+            out['web_of_science'] = wos
 
     OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     with OUT_PATH.open('w', encoding='utf8') as f:

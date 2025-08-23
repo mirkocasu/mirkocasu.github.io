@@ -1,8 +1,8 @@
 <header>
   <!-- Nav Bar -->
-  <nav id="navbar" class="navbar navbar-light navbar-expand-sm glass {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}" role="navigation">
+  <nav id="navbar" class="navbar navbar-light navbar-expand-sm glass {% if site.navbar_fixed %}fixed-top{% endif %}" role="navigation">
     <div class="container">
-      {% if page.permalink != '/' %}
+  {% if page.permalink != '/' and page.permalink != '/it/' and page.permalink != '/fr/' %}
   <a class="navbar-brand title font-weight-lighter {% unless page.url contains '/publications' %}glass{% endunless %}" href="{{ site.baseurl }}/">
           {% if site.title == 'blank' %}
             {% if site.first_name %}
@@ -20,7 +20,7 @@
             {{- site.title -}}
           {% endif %}
         </a>
-      {% elsif site.enable_navbar_social %}
+  {% elsif site.enable_navbar_social %}
         <!-- Social Icons -->
         <div class="navbar-brand social">{% include social.liquid %}</div>
       {% endif %}
@@ -28,7 +28,7 @@
       <button
         class="navbar-toggler collapsed ml-auto glass"
         type="button"
-        data-toggle="collapse"
+          class="navbar-toggler collapsed ml-auto glass"
         data-target="#navbarNav"
         aria-controls="navbarNav"
         aria-expanded="false"
@@ -41,7 +41,8 @@
       </button>
 
       <div class="collapse navbar-collapse text-right" id="navbarNav">
-        <ul class="navbar-nav ml-auto flex-nowrap">
+  <ul class="navbar-nav ml-auto flex-nowrap">
+
           {% for page in site.pages %}
             {% if page.permalink == '/' %} {% assign about_title = page.title %} {% endif %}
           {% endfor %}
@@ -57,9 +58,14 @@
           </li>
 
           <!-- Other pages -->
+          {% assign current_lang = page.lang | default: 'en' %}
           {% assign sorted_pages = site.pages | sort: 'nav_order' %}
           {% for p in sorted_pages %}
             {% if p.nav and p.autogen == null %}
+              {% assign p_lang = p.lang | default: 'en' %}
+              {% if p_lang != current_lang %}
+                {% continue %}
+              {% endif %}
               {% if p.dropdown %}
                 {% assign has_active_child = false %}
                 {% for child in p.children %}
@@ -108,7 +114,12 @@
                     {%- assign url = p.url -%}
                   {%- endif %}
                   <a class="nav-link" href="{{ url | relative_url }}">
-                    {{- p.title }}
+                    {%- assign link_path = url | relative_url -%}
+                    {%- if link_path contains 'publications' -%}
+                      {%- if current_lang == 'it' -%}pubblicazioni{% elsif current_lang == 'fr' -%}publications{% else -%}publications{% endif -%}
+                    {%- else -%}
+                      {{- p.title -}}
+                    {%- endif -%}
                     {% if page.url contains p.url %}
                       <span class="sr-only">(current)</span>
                     {% endif %}
@@ -128,6 +139,23 @@
           {% if site.enable_darkmode %}
             <!-- Theme toggle removed: site is dark-only -->
           {% endif %}
+          <!-- Language switcher as last nav item (link-based for pre-translated sites) -->
+          <li class="nav-item">
+            <div id="lang-switch" class="lang-switch" aria-label="Language switch">
+              {% if current_lang == 'it' %}
+                <a id="lang-current" class="lang-current" href="/it/">&#127470;&#127481;</a>
+              {% elsif current_lang == 'fr' %}
+                <a id="lang-current" class="lang-current" href="/fr/">&#127467;&#127479;</a>
+              {% else %}
+                <a id="lang-current" class="lang-current" href="/">&#127468;&#127463;</a>
+              {% endif %}
+              <div id="lang-options" class="lang-options" style="display:none; position:absolute; right:0; background:var(--glass-bg);">
+                <a class="lang-option" href="/">&#127468;&#127463; English</a>
+                <a class="lang-option" href="/it/">&#127470;&#127481; Italiano</a>
+                <a class="lang-option" href="/fr/">&#127467;&#127479; Français</a>
+              </div>
+            </div>
+          </li>
         </ul>
       </div>
     </div>
@@ -141,3 +169,24 @@
     </progress>
   {% endif %}
 </header>
+
+<script>
+  // Minimal toggle for the language dropdown: hidden by default, shown when clicking the current flag.
+  (function(){
+    document.addEventListener('DOMContentLoaded', function(){
+      var current = document.getElementById('lang-current');
+      var opts = document.getElementById('lang-options');
+      if (!current || !opts) return;
+      current.addEventListener('click', function(e){
+        e.preventDefault();
+        opts.style.display = (opts.style.display === 'none' || opts.style.display === '') ? 'block' : 'none';
+      });
+      // Close when clicking outside
+      document.addEventListener('click', function(e){
+        if (!opts.contains(e.target) && e.target !== current) {
+          opts.style.display = 'none';
+        }
+      });
+    });
+  })();
+</script>
