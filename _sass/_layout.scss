@@ -174,7 +174,19 @@ html[data-theme="dark"] .card.glass {
 
     @media (max-width: 760px) {
       .metrics-grid { grid-template-columns: 1fr; }
-      text-align: center; .metrics-meta { text-align: center; }
+      text-align: center;
+      .metrics-meta {
+        text-align: center;
+        /* stack the small metadata items on narrow viewports to avoid overlap and horizontal overflow */
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+        justify-content: center;
+        align-items: center;
+      }
+      /* ensure the source link and updated timestamp are full-width/stacked */
+      .author-metrics-wrap #author-metrics .metrics-source,
+      .author-metrics-wrap #author-metrics .metrics-updated { display: block; }
     }
   }
 }
@@ -258,6 +270,115 @@ body.fixed-top-nav {
 /* Language switcher basic styles */
 .lang-switch { display: inline-flex; align-items: center; position: relative; margin-left: 0.5rem; height: 100%; }
 .lang-current { background: transparent; border: none; color: var(--global-text-color); font-size: 1.05rem; cursor: pointer; padding: 0.15rem 0.4rem; line-height: 1; display: inline-flex; align-items: center; height: 100%; }
-.lang-options { position: absolute; right: 0; top: 110%; background: var(--global-bg-color, #0F1114); border: 1px solid rgba(255,255,255,0.06); box-shadow: 0 6px 18px rgba(0,0,0,0.45); border-radius: 6px; padding: 0.25rem; z-index: 1200; }
+.lang-options { position: absolute; right: 0; top: 110%; background: var(--global-bg-color, #0F1114); border: 1px solid rgba(255,255,255,0.06); box-shadow: 0 6px 18px rgba(0,0,0,0.45); border-radius: 6px; padding: 0.25rem; z-index: 1200; display: none; }
+.lang-options.open { display: block; }
 .lang-option { display: block; background: transparent; border: none; color: var(--global-text-color); padding: 0.4rem 0.6rem; text-align: left; width: 100%; cursor: pointer; }
 .lang-option:hover { background: rgba(255,255,255,0.02); }
+
+/* Mobile-specific fixes: enlarge hamburger touch target and ensure navbar is on top */
+@media (max-width: 767px) {
+  /* Make the toggler easier to tap and keep it above other elements */
+  .navbar .navbar-toggler {
+    position: relative;
+    z-index: 1300 !important;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 0.4rem 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Ensure the navbar container doesn't sit under fixed elements */
+  #navbar, nav#navbar, .navbar {
+    z-index: 1299 !important;
+  }
+
+  /* Slight vertical nudge if the toggler is visually too high */
+  .navbar .navbar-toggler { margin-top: 24px; margin-bottom: 2px; }
+}
+
+/* Ensure language switch sits above the navbar toggler on small screens */
+@media (max-width: 767px) {
+  #lang-switch, .lang-switch {
+    position: relative; /* ensure z-index takes effect */
+    z-index: 1400 !important;
+    pointer-events: auto !important;
+  }
+}
+
+/* Language options: on small screens show as horizontal row instead of vertical column */
+@media (max-width: 576px) {
+  .lang-options {
+    /* Center the popup in the viewport on very small screens */
+    position: fixed;
+  left: 46%;
+  right: auto;
+  transform: translateX(-50%);
+  top: 140px; /* moved a bit up and to the left */
+    display: none; /* default hidden on mobile */
+    flex-direction: row;
+    gap: 0.25rem;
+    padding: 0.25rem 0.35rem;
+    white-space: nowrap;
+  overflow-x: auto;
+  min-width: 0; /* allow shrinking on narrow screens */
+  max-width: calc(100% - 32px); /* keep a margin from viewport edges */
+  width: auto;
+  box-sizing: border-box;
+    border-radius: 8px;
+    z-index: 1600;
+  }
+
+  .lang-option { display: inline-block; padding: 0.4rem 0.6rem; }
+}
+
+/* Ensure language options inside collapsed mobile navbar are full-width and not absolutely positioned */
+@media (max-width: 767px) {
+  .navbar-collapse .nav-item .lang-options {
+  position: static !important; 
+  display: none !important; /* hidden unless .open */
+  flex-direction: row; 
+  width: 100% !important; 
+  margin-top: 6px; 
+  padding: 0.25rem 0.5rem !important; 
+  box-sizing: border-box; 
+  justify-content: center; /* center options inside the collapsed menu */
+  }
+
+  .navbar-collapse .nav-item .lang-option {
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+  }
+    
+    /* Show horizontal language options inside the opened collapse only when explicitly opened */
+    .navbar-collapse .nav-item .lang-options.open {
+      display: flex !important;
+      justify-content: center !important;
+    }
+}
+
+/* Force the language popup to be viewport-centered on very small screens
+   regardless of its DOM parent (ignore toggle position). This overrides the
+   static rule above when width <= 576px so the popup appears centered. */
+@media (max-width: 576px) {
+  .navbar-collapse .nav-item .lang-options,
+  .lang-options {
+    position: fixed !important;
+  left: 46% !important;
+  right: auto !important;
+  transform: translateX(-50%) !important;
+  top: 140px !important;
+    display: none !important;
+    max-width: calc(100% - 32px) !important;
+    width: auto !important;
+    box-sizing: border-box !important;
+    z-index: 2000 !important;
+  }
+
+  .navbar-collapse .nav-item .lang-options.open,
+  .lang-options.open {
+    display: flex !important;
+    justify-content: center !important;
+  }
+}

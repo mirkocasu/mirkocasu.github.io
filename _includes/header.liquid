@@ -28,7 +28,7 @@
       <button
         class="navbar-toggler collapsed ml-auto glass"
         type="button"
-          class="navbar-toggler collapsed ml-auto glass"
+        data-toggle="collapse"
         data-target="#navbarNav"
         aria-controls="navbarNav"
         aria-expanded="false"
@@ -40,7 +40,7 @@
         <span class="icon-bar bottom-bar"></span>
       </button>
 
-      <div class="collapse navbar-collapse text-right" id="navbarNav">
+    <div class="collapse navbar-collapse text-right" id="navbarNav">
   <ul class="navbar-nav ml-auto flex-nowrap">
 
           {% for page in site.pages %}
@@ -149,7 +149,7 @@
               {% else %}
                 <a id="lang-current" class="lang-current" href="/">&#127468;&#127463;</a>
               {% endif %}
-              <div id="lang-options" class="lang-options" style="display:none; position:absolute; right:0; background:var(--glass-bg);">
+              <div id="lang-options" class="lang-options" role="menu" aria-hidden="true">
                 <a class="lang-option" href="/">&#127468;&#127463; English</a>
                 <a class="lang-option" href="/it/">&#127470;&#127481; Italiano</a>
                 <a class="lang-option" href="/fr/">&#127467;&#127479; Français</a>
@@ -179,14 +179,65 @@
       if (!current || !opts) return;
       current.addEventListener('click', function(e){
         e.preventDefault();
-        opts.style.display = (opts.style.display === 'none' || opts.style.display === '') ? 'block' : 'none';
+        e.stopPropagation();
+        // toggle open class instead of relying on inline style
+        var isOpen = opts.classList.toggle('open');
+        opts.setAttribute('aria-hidden', !isOpen);
+      });
+      // Prevent clicks inside the options from bubbling and being closed immediately
+      opts.addEventListener('click', function(e){
+        e.stopPropagation();
       });
       // Close when clicking outside
       document.addEventListener('click', function(e){
         if (!opts.contains(e.target) && e.target !== current) {
-          opts.style.display = 'none';
+          if (opts.classList.contains('open')) {
+            opts.classList.remove('open');
+            opts.setAttribute('aria-hidden', 'true');
+          }
         }
       });
+
+      // Centralized closer for the language options
+      function closeLangOptions() {
+        if (!opts) return;
+        if (opts.classList.contains('open')) {
+          opts.classList.remove('open');
+          opts.setAttribute('aria-hidden', 'true');
+        }
+      }
+
+      // If the mobile navbar collapse opens, ensure the language popup is closed.
+      var navCollapse = document.getElementById('navbarNav');
+      var navToggler = document.querySelector('.navbar-toggler');
+      if (navCollapse) {
+        // Prefer binding to Bootstrap events via jQuery if available (reliable).
+        if (window.jQuery && typeof window.jQuery === 'function') {
+          try {
+            window.jQuery(navCollapse).on('show.bs.collapse', closeLangOptions);
+          } catch (err) {
+            // ignore and fall back
+          }
+        }
+        // Also bind a click handler on the toggler as a simple fallback.
+        if (navToggler) {
+          navToggler.addEventListener('click', function(){
+            // close immediately so the popup isn't visible when the navbar expands
+            closeLangOptions();
+          });
+        }
+        // Existing MutationObserver fallback (keeps previous behavior)
+        var mo = new MutationObserver(function(mutations){
+          mutations.forEach(function(m){
+            if (m.attributeName === 'class') {
+              if (navCollapse.classList.contains('show')) {
+                closeLangOptions();
+              }
+            }
+          });
+        });
+        mo.observe(navCollapse, { attributes: true, attributeFilter: ['class'] });
+      }
     });
   })();
 </script>

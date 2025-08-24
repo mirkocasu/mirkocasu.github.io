@@ -357,6 +357,13 @@ ul.task-list input[type="checkbox"] {
 }
 
 .navbar-toggler {
+  /* keep bars stacked vertically and spaced */
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 0.35rem 0.4rem;
   .icon-bar {
     display: block;
     width: 22px;
@@ -368,8 +375,26 @@ ul.task-list input[type="checkbox"] {
   }
 
   .top-bar {
+    /* default: horizontal bar */
+  transform: rotate(0);
+  /* center rotation so X is symmetrical */
+  transform-origin: 50% 50%;
+  }
+
+  .middle-bar {
+    opacity: 1;
+  }
+
+  .bottom-bar {
+  transform: rotate(0);
+  transform-origin: 50% 50%;
+  }
+}
+
+/* When the toggler is in the "open" state (not collapsed), show X */
+.navbar-toggler:not(.collapsed) {
+  .top-bar {
     transform: rotate(45deg);
-    transform-origin: 10% 10%;
   }
 
   .middle-bar {
@@ -378,21 +403,13 @@ ul.task-list input[type="checkbox"] {
 
   .bottom-bar {
     transform: rotate(-45deg);
-    transform-origin: 10% 90%;
   }
 }
 
-.navbar-toggler.collapsed {
-  .top-bar {
-    transform: rotate(0);
-  }
-
-  .middle-bar {
-    opacity: 1;
-  }
-
-  .bottom-bar {
-    transform: rotate(0);
+@media (max-width: 767px) {
+  .navbar-toggler .icon-bar {
+    width: 26px; /* slightly larger on mobile */
+    height: 3px;
   }
 }
 
@@ -741,8 +758,7 @@ footer.sticky-bottom {
     li {
       margin-bottom: 1rem;
 
-      .preview {
-      }
+  // .preview previously had styles here; removed empty rule to satisfy linter
 
       .abbr {
         margin-bottom: 0.5rem;
