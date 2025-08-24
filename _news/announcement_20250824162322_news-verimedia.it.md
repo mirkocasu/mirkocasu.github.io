@@ -5,4 +5,5 @@ inline: true
 related_posts: false
 lang: it
 ---
-Ad [IJCNN 2025](https://2025.ijcnn.org/), abbiamo presentato il nostro progetto [WILD](https://arxiv.org/abs/2504.19595), un ampio set di dati per l'attribuzione di immagini sintetiche, al workshop VERIMEDIA.
+
+Al workshop VERIMEDIA di [IJCNN 2025](https://2025.ijcnn.org/), abbiamo presentato il nostro progetto [WILD](https://arxiv.org/abs/2504.19595), un ampio set di dati per l'attribuzione di immagini sintetiche.
