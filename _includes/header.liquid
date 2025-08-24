@@ -2,8 +2,11 @@
   <!-- Nav Bar -->
   <nav id="navbar" class="navbar navbar-light navbar-expand-sm glass {% if site.navbar_fixed %}fixed-top{% endif %}" role="navigation">
     <div class="container">
-  {% if page.permalink != '/' and page.permalink != '/it/' and page.permalink != '/fr/' %}
-  <a class="navbar-brand title font-weight-lighter {% unless page.url contains '/publications' %}glass{% endunless %}" href="{{ site.baseurl }}/">
+      {% if page.permalink != '/' and page.permalink != '/it/' and page.permalink != '/fr/' %}
+        <a
+          class="navbar-brand title font-weight-lighter {% unless page.url contains '/publications' %}glass{% endunless %}"
+          href="{{ site.baseurl }}/"
+        >
           {% if site.title == 'blank' %}
             {% if site.first_name %}
               <span class="font-weight-bold">
@@ -20,7 +23,7 @@
             {{- site.title -}}
           {% endif %}
         </a>
-  {% elsif site.enable_navbar_social %}
+      {% elsif site.enable_navbar_social %}
         <!-- Social Icons -->
         <div class="navbar-brand social">{% include social.liquid %}</div>
       {% endif %}
@@ -40,9 +43,8 @@
         <span class="icon-bar bottom-bar"></span>
       </button>
 
-    <div class="collapse navbar-collapse text-right" id="navbarNav">
-  <ul class="navbar-nav ml-auto flex-nowrap">
-
+      <div class="collapse navbar-collapse text-right" id="navbarNav">
+        <ul class="navbar-nav ml-auto flex-nowrap">
           {% for page in site.pages %}
             {% if page.permalink == '/' %} {% assign about_title = page.title %} {% endif %}
           {% endfor %}
@@ -172,12 +174,12 @@
 
 <script>
   // Minimal toggle for the language dropdown: hidden by default, shown when clicking the current flag.
-  (function(){
-    document.addEventListener('DOMContentLoaded', function(){
+  (function () {
+    document.addEventListener('DOMContentLoaded', function () {
       var current = document.getElementById('lang-current');
       var opts = document.getElementById('lang-options');
       if (!current || !opts) return;
-      current.addEventListener('click', function(e){
+      current.addEventListener('click', function (e) {
         e.preventDefault();
         e.stopPropagation();
         // toggle open class instead of relying on inline style
@@ -185,11 +187,11 @@
         opts.setAttribute('aria-hidden', !isOpen);
       });
       // Prevent clicks inside the options from bubbling and being closed immediately
-      opts.addEventListener('click', function(e){
+      opts.addEventListener('click', function (e) {
         e.stopPropagation();
       });
       // Close when clicking outside
-      document.addEventListener('click', function(e){
+      document.addEventListener('click', function (e) {
         if (!opts.contains(e.target) && e.target !== current) {
           if (opts.classList.contains('open')) {
             opts.classList.remove('open');
@@ -221,14 +223,14 @@
         }
         // Also bind a click handler on the toggler as a simple fallback.
         if (navToggler) {
-          navToggler.addEventListener('click', function(){
+          navToggler.addEventListener('click', function () {
             // close immediately so the popup isn't visible when the navbar expands
             closeLangOptions();
           });
         }
         // Existing MutationObserver fallback (keeps previous behavior)
-        var mo = new MutationObserver(function(mutations){
-          mutations.forEach(function(m){
+        var mo = new MutationObserver(function (mutations) {
+          mutations.forEach(function (m) {
             if (m.attributeName === 'class') {
               if (navCollapse.classList.contains('show')) {
                 closeLangOptions();

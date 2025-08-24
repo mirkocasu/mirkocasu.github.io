@@ -7,29 +7,29 @@
 
 :root {
   /* Light theme base colors for glass aesthetics */
-  --global-bg-color: rgba(245,247,250,1); /* soft near-white */
+  --global-bg-color: rgba(245, 247, 250, 1); /* soft near-white */
   --global-code-bg-color: #{$code-bg-color-light};
-  --global-text-color: rgba(17,24,39,0.95); /* dark slate */
-  --global-text-color-light: rgba(99,102,120,0.8);
+  --global-text-color: rgba(17, 24, 39, 0.95); /* dark slate */
+  --global-text-color-light: rgba(99, 102, 120, 0.8);
   /* Accent color / hover color set to user's requested highlight */
-  --global-theme-color: #43BEAA; /* accent */
-  --global-hover-color: #43BEAA;
+  --global-theme-color: #43beaa; /* accent */
+  --global-hover-color: #43beaa;
   --global-hover-text-color: #{$white-color};
-  --global-footer-bg-color: rgba(255,255,255,0.08);
-  --global-footer-text-color: rgba(17,24,39,0.6);
+  --global-footer-bg-color: rgba(255, 255, 255, 0.08);
+  --global-footer-text-color: rgba(17, 24, 39, 0.6);
   --global-footer-link-color: #{$cyan-color};
   --global-distill-app-color: #{$grey-color};
-  --global-divider-color: rgba(15,23,42,0.06);
-  --global-card-bg-color: rgba(255,255,255,0.62); /* translucent cards */
+  --global-divider-color: rgba(15, 23, 42, 0.06);
+  --global-card-bg-color: rgba(255, 255, 255, 0.62); /* translucent cards */
   /* Make light theme card backgrounds fully white for better readability */
-  --global-card-bg-color-solid: rgba(255,255,255,1);
-  --global-highlight-color: #43BEAA;
+  --global-card-bg-color-solid: rgba(255, 255, 255, 1);
+  --global-highlight-color: #43beaa;
   /* color used for publication action buttons (PDF / DOI / HTML / etc.) */
   --publication-action-bg: #262626;
-  --global-back-to-top-bg-color: rgba(10,10,15,0.06);
+  --global-back-to-top-bg-color: rgba(10, 10, 15, 0.06);
   --global-back-to-top-text-color: #{$black-color};
-  --global-newsletter-bg-color: rgba(255,255,255,0.6);
-  --global-newsletter-text-color: rgba(17,24,39,0.95);
+  --global-newsletter-bg-color: rgba(255, 255, 255, 0.6);
+  --global-newsletter-text-color: rgba(17, 24, 39, 0.95);
 
   --global-tip-block: #42b983;
   --global-tip-block-bg: #e2f5ec;
@@ -67,24 +67,24 @@
 
 html[data-theme="dark"] {
   /* Dark theme adjustments for glass effect */
-  --global-bg-color: rgba(10,12,14,1);
+  --global-bg-color: rgba(10, 12, 14, 1);
   --global-code-bg-color: #{$code-bg-color-dark};
-  --global-text-color: rgba(229,231,235,0.95);
-  --global-text-color-light: rgba(148,163,184,0.7);
+  --global-text-color: rgba(229, 231, 235, 0.95);
+  --global-text-color-light: rgba(148, 163, 184, 0.7);
   /* Force accent/hover to match requested highlight */
-  --global-theme-color: #43BEAA;
-  --global-hover-color: #43BEAA;
+  --global-theme-color: #43beaa;
+  --global-hover-color: #43beaa;
   --global-hover-text-color: #{$black-color};
-  --global-footer-bg-color: rgba(255,255,255,0.04);
-  --global-footer-text-color: rgba(148,163,184,0.7);
+  --global-footer-bg-color: rgba(255, 255, 255, 0.04);
+  --global-footer-text-color: rgba(148, 163, 184, 0.7);
   --global-footer-link-color: #{$cyan-color};
   --global-distill-app-color: #{$grey-color-light};
-  --global-divider-color: rgba(255,255,255,0.04);
-  --global-card-bg-color: rgba(18,20,24,0.75); /* darker and more opaque for better contrast */
-  --global-back-to-top-bg-color: rgba(255,255,255,0.04);
+  --global-divider-color: rgba(255, 255, 255, 0.04);
+  --global-card-bg-color: rgba(18, 20, 24, 0.75); /* darker and more opaque for better contrast */
+  --global-back-to-top-bg-color: rgba(255, 255, 255, 0.04);
   --global-back-to-top-text-color: #{$white-color};
-  --global-newsletter-bg-color: rgba(255,255,255,0.04);
-  --global-newsletter-text-color: rgba(229,231,235,0.95);
+  --global-newsletter-bg-color: rgba(255, 255, 255, 0.04);
+  --global-newsletter-text-color: rgba(229, 231, 235, 0.95);
 
   --global-tip-block: #42b983;
   --global-tip-block-bg: #e2f5ec;

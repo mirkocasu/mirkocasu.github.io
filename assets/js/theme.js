@@ -228,28 +228,26 @@ let initTheme = () => {
 // This ensures buttons (ABS/HTML/PDF/DOI/Poster) receive the fumetto styling even when
 // they are injected by client-side scripts.
 let applyCustomButtonClassToPublications = () => {
-  const selectors = [
-    '.publications .links a',
-    '.publications .list-group-item a',
-    '.publications ol.bibliography li .links a.btn',
-  ];
+  const selectors = [".publications .links a", ".publications .list-group-item a", ".publications ol.bibliography li .links a.btn"];
 
   const applyClass = () => {
     selectors.forEach((sel) => {
       document.querySelectorAll(sel).forEach((el) => {
-        if (!el.classList.contains('custom-button')) {
-          el.classList.add('custom-button');
+        if (!el.classList.contains("custom-button")) {
+          el.classList.add("custom-button");
         }
       });
     });
   };
 
   // Run once now, and again after DOMContentLoaded to catch late-inserted elements.
-  try { applyClass(); } catch (e) {}
-  document.addEventListener('DOMContentLoaded', () => {
+  try {
+    applyClass();
+  } catch (e) {}
+  document.addEventListener("DOMContentLoaded", () => {
     applyClass();
     // Also observe the publications list for mutations (some elements are injected later)
-    const pub = document.querySelector('.publications');
+    const pub = document.querySelector(".publications");
     if (!pub) return;
     const obs = new MutationObserver((mutations) => {
       applyClass();

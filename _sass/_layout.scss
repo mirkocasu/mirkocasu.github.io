@@ -5,7 +5,7 @@
 body {
   padding-bottom: 40px; /* reduce global bottom padding */
   color: var(--global-text-color);
-  background-color: #0F1114 !important;
+  background-color: #0f1114 !important;
   background-image: none !important;
   background-size: auto !important;
   background-position: center center !important;
@@ -44,7 +44,7 @@ body.sticky-bottom-footer {
   padding: 2.25rem;
   /* prefer light theme solid background where appropriate */
   /* Make solid background and remove glass effects */
-  background-color: #0F1114 !important;
+  background-color: #0f1114 !important;
   background-image: none !important;
   box-shadow: none !important;
   border: none !important;
@@ -54,7 +54,9 @@ body.sticky-bottom-footer {
 .content-glass-wrapper,
 .card.glass {
   color: var(--global-text-color);
-  a { color: var(--global-theme-color); }
+  a {
+    color: var(--global-theme-color);
+  }
 }
 
 html[data-theme="dark"] .content-glass-wrapper,
@@ -75,23 +77,23 @@ html[data-theme="dark"] .card.glass {
   margin-top: 1.5rem;
 
   .section-title {
-  margin: 0 0 0.9rem 0;
-  /* restore previous prominent h2 size */
-  font-size: 2rem;
-  font-weight: 600;
-  color: var(--global-text-color);
+    margin: 0 0 0.9rem 0;
+    /* restore previous prominent h2 size */
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--global-text-color);
   }
 
-   #author-metrics {
-   /* Make the large wrapper visually transparent; keep spacing minimal.
+  #author-metrics {
+    /* Make the large wrapper visually transparent; keep spacing minimal.
      Borders and background are applied only to the individual metric boxes. */
-   padding: 0.5rem 0;
-   background: transparent !important;
-   background-image: none !important;
-   box-shadow: none !important;
-   border: none !important;
+    padding: 0.5rem 0;
+    background: transparent !important;
+    background-image: none !important;
+    box-shadow: none !important;
+    border: none !important;
 
-   .metrics-grid {
+    .metrics-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 0.9rem;
@@ -106,21 +108,35 @@ html[data-theme="dark"] .card.glass {
       font-size: 0.9rem;
       color: var(--global-muted-color);
 
-  .metrics-source { text-transform: none; color: #5D6062; font-weight: 400; }
-  /* ensure child spans (like #ss-source) inherit same color/weight */
-  .metrics-source span, .metrics-source #ss-source { color: #5D6062; font-weight: 400; }
-  /* Semantic Scholar link styling - high specificity to avoid global overrides */
-  .author-metrics-wrap #author-metrics .metrics-source .metrics-source-link {
-    color: #FFFFFF !important;
-    font-weight: 600 !important; /* semi-bold */
-    text-decoration: none !important;
-    display: inline-block;
-  }
-  .author-metrics-wrap #author-metrics .metrics-source .metrics-source-link:hover {
-    color: #F3D25E !important;
-  }
-  .metrics-updated { color: #5D6062; font-size: 0.88rem; }
-  .metrics-updated #ss-last-updated { color: #5D6062; font-weight: 600; }
+      .metrics-source {
+        text-transform: none;
+        color: #5d6062;
+        font-weight: 400;
+      }
+      /* ensure child spans (like #ss-source) inherit same color/weight */
+      .metrics-source span,
+      .metrics-source #ss-source {
+        color: #5d6062;
+        font-weight: 400;
+      }
+      /* Semantic Scholar link styling - high specificity to avoid global overrides */
+      .author-metrics-wrap #author-metrics .metrics-source .metrics-source-link {
+        color: #ffffff !important;
+        font-weight: 600 !important; /* semi-bold */
+        text-decoration: none !important;
+        display: inline-block;
+      }
+      .author-metrics-wrap #author-metrics .metrics-source .metrics-source-link:hover {
+        color: #f3d25e !important;
+      }
+      .metrics-updated {
+        color: #5d6062;
+        font-size: 0.88rem;
+      }
+      .metrics-updated #ss-last-updated {
+        color: #5d6062;
+        font-weight: 600;
+      }
     }
 
     .metric {
@@ -130,9 +146,11 @@ html[data-theme="dark"] .card.glass {
       justify-content: center;
       padding: 1rem 0.8rem;
       @include glass-surface($blur: 6px, $trans: 0.18, $radius: 10px);
-      border: 1px solid rgba(255,255,255,0.06);
-      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      transition: transform 180ms ease, background-color 180ms ease;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+      transition:
+        transform 180ms ease,
+        background-color 180ms ease;
 
       position: relative;
 
@@ -166,26 +184,41 @@ html[data-theme="dark"] .card.glass {
         opacity: 0.95;
       }
 
-  &:hover { transform: translateY(-4px); }
+      &:hover {
+        transform: translateY(-4px);
+      }
     }
 
-    .metrics-meta { margin-top: 0.7rem; font-size: 0.85rem; color: var(--global-muted-color); text-align: right; }
-    .metrics-loading { margin-top: 0.6rem; color: var(--global-muted-color); font-style: italic; }
+    .metrics-meta {
+      margin-top: 0.7rem;
+      font-size: 0.85rem;
+      color: var(--global-muted-color);
+      text-align: right;
+    }
+    .metrics-loading {
+      margin-top: 0.6rem;
+      color: var(--global-muted-color);
+      font-style: italic;
+    }
 
     @media (max-width: 760px) {
-      .metrics-grid { grid-template-columns: 1fr; }
+      .metrics-grid {
+        grid-template-columns: 1fr;
+      }
       text-align: center;
       .metrics-meta {
         text-align: center;
         /* stack the small metadata items on narrow viewports to avoid overlap and horizontal overflow */
         display: flex;
-      /* reduce vertical spacing on very small screens so content follows navbar closely */
-      body {
-        padding-top: 4px; /* if any top padding remains, keep it minimal */
-       padding-bottom: 12px;
-      }
+        /* reduce vertical spacing on very small screens so content follows navbar closely */
+        body {
+          padding-top: 4px; /* if any top padding remains, keep it minimal */
+          padding-bottom: 12px;
+        }
 
-     .content-glass-wrapper { margin: 0.4rem auto; }
+        .content-glass-wrapper {
+          margin: 0.4rem auto;
+        }
         flex-direction: column;
         gap: 0.25rem;
         justify-content: center;
@@ -193,15 +226,23 @@ html[data-theme="dark"] .card.glass {
       }
       /* ensure the source link and updated timestamp are full-width/stacked */
       .author-metrics-wrap #author-metrics .metrics-source,
-      .author-metrics-wrap #author-metrics .metrics-updated { display: block; }
+      .author-metrics-wrap #author-metrics .metrics-updated {
+        display: block;
+      }
     }
   }
 }
 
 /* assign colors to the three metric boxes */
-.author-metrics-wrap #author-metrics .metric:nth-child(1):before { background: #1F3C73; }
-.author-metrics-wrap #author-metrics .metric:nth-child(2):before { background: #2C5BA8; }
-.author-metrics-wrap #author-metrics .metric:nth-child(3):before { background: #638BC8; }
+.author-metrics-wrap #author-metrics .metric:nth-child(1):before {
+  background: #1f3c73;
+}
+.author-metrics-wrap #author-metrics .metric:nth-child(2):before {
+  background: #2c5ba8;
+}
+.author-metrics-wrap #author-metrics .metric:nth-child(3):before {
+  background: #638bc8;
+}
 
 // News
 .news-item {
@@ -232,7 +273,7 @@ html[data-theme="dark"] .card.glass {
   font-size: 0.5em; /* Dimensione del testo */
   text-align: center; /* Testo centrato */
   padding: 10px 0; /* Spaziatura interna */
-  background-color: #0F1114 !important; /* Solid background per footer */
+  background-color: #0f1114 !important; /* Solid background per footer */
   box-shadow: none !important;
   border: none !important;
   width: 100%; /* Larghezza del footer */
@@ -256,7 +297,9 @@ html[data-theme="dark"] .card.glass {
    that would be added for fixed navbars. This is a defensive override so that
    even if vendor CSS adds `.fixed-top` or the body receives `fixed-top-nav`,
    the navbar will scroll away and no extra top padding is applied. */
-#navbar, nav#navbar, .navbar {
+#navbar,
+nav#navbar,
+.navbar {
   position: static !important;
   top: auto !important;
   left: auto !important;
@@ -271,16 +314,36 @@ body.fixed-top-nav {
 
 /* Small top spacing for the "selected publications" title on mobile */
 @media (max-width: 576px) {
-  .selected-pubs-title { margin-top: 8px; }
+  .selected-pubs-title {
+    margin-top: 8px;
+  }
 }
 
 /* Language switcher basic styles */
-.lang-switch { display: inline-flex; align-items: center; position: relative; margin-left: 0.5rem; height: 100%; }
-.lang-current { background: transparent; border: none; color: var(--global-text-color); font-size: 1.05rem; cursor: pointer; padding: 0.15rem 0.4rem; line-height: 1; display: inline-flex; align-items: center; height: 100%;
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  margin-left: 0.5rem;
+  height: 100%;
+}
+.lang-current {
+  background: transparent;
+  border: none;
+  color: var(--global-text-color);
+  font-size: 1.05rem;
+  cursor: pointer;
+  padding: 0.15rem 0.4rem;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
   /* remove default focus ring and use a subtle brightness change instead */
   outline: none !important;
   box-shadow: none !important;
-  transition: filter 120ms ease, transform 120ms ease;
+  transition:
+    filter 120ms ease,
+    transform 120ms ease;
 
   &:hover {
     filter: brightness(1.06);
@@ -293,10 +356,34 @@ body.fixed-top-nav {
     box-shadow: none !important;
   }
 }
-.lang-options { position: absolute; right: 0; top: 110%; background: var(--global-bg-color, #0F1114); border: 1px solid rgba(255,255,255,0.06); box-shadow: 0 6px 18px rgba(0,0,0,0.45); border-radius: 6px; padding: 0.25rem; z-index: 1200; display: none; }
-.lang-options.open { display: block; }
-.lang-option { display: block; background: transparent; border: none; color: var(--global-text-color); padding: 0.4rem 0.6rem; text-align: left; width: 100%; cursor: pointer; }
-.lang-option:hover { background: rgba(255,255,255,0.02); }
+.lang-options {
+  position: absolute;
+  right: 0;
+  top: 110%;
+  background: var(--global-bg-color, #0f1114);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+  border-radius: 6px;
+  padding: 0.25rem;
+  z-index: 1200;
+  display: none;
+}
+.lang-options.open {
+  display: block;
+}
+.lang-option {
+  display: block;
+  background: transparent;
+  border: none;
+  color: var(--global-text-color);
+  padding: 0.4rem 0.6rem;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+}
+.lang-option:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
 
 /* Mobile-specific fixes: enlarge hamburger touch target and ensure navbar is on top */
 @media (max-width: 767px) {
@@ -306,24 +393,30 @@ body.fixed-top-nav {
     z-index: 1300 !important;
     min-width: 44px;
     min-height: 44px;
-    padding: 0.4rem 0.5rem; 
-    display: inline-flex; 
-    align-items: center; 
-    justify-content: center; 
+    padding: 0.4rem 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
 
   /* Ensure the navbar container doesn't sit under fixed elements */
-  #navbar, nav#navbar, .navbar {
+  #navbar,
+  nav#navbar,
+  .navbar {
     z-index: 1299 !important;
   }
 
   /* Slight vertical nudge if the toggler is visually too high */
-  .navbar .navbar-toggler { margin-top: 8px; margin-bottom: 0; }
+  .navbar .navbar-toggler {
+    margin-top: 8px;
+    margin-bottom: 0;
+  }
 }
 
 /* Ensure language switch sits above the navbar toggler on small screens */
 @media (max-width: 767px) {
-  #lang-switch, .lang-switch {
+  #lang-switch,
+  .lang-switch {
     position: relative; /* ensure z-index takes effect */
     z-index: 1400 !important;
     pointer-events: auto !important;
@@ -335,50 +428,53 @@ body.fixed-top-nav {
   .lang-options {
     /* Center the popup in the viewport on very small screens */
     position: fixed;
-  left: 45%;
-  right: auto;
-  transform: translateX(-50%);
-  top: 130px; /* moved slightly lower on mobile */
+    left: 45%;
+    right: auto;
+    transform: translateX(-50%);
+    top: 130px; /* moved slightly lower on mobile */
     display: none; /* default hidden on mobile */
     flex-direction: row;
     gap: 0.25rem;
     padding: 0.25rem 0.35rem;
     white-space: nowrap;
-  overflow-x: auto;
-  min-width: 0; /* allow shrinking on narrow screens */
-  max-width: calc(100% - 32px); /* keep a margin from viewport edges */
-  width: auto;
-  box-sizing: border-box;
+    overflow-x: auto;
+    min-width: 0; /* allow shrinking on narrow screens */
+    max-width: calc(100% - 32px); /* keep a margin from viewport edges */
+    width: auto;
+    box-sizing: border-box;
     border-radius: 8px;
     z-index: 1600;
   }
 
-  .lang-option { display: inline-block; padding: 0.4rem 0.6rem; }
+  .lang-option {
+    display: inline-block;
+    padding: 0.4rem 0.6rem;
+  }
 }
 
 /* Ensure language options inside collapsed mobile navbar are full-width and not absolutely positioned */
 @media (max-width: 767px) {
   .navbar-collapse .nav-item .lang-options {
-  position: static !important; 
-  display: none !important; /* hidden unless .open */
-  flex-direction: row; 
-  width: 100% !important; 
-  margin-top: 6px; 
-  padding: 0.25rem 0.5rem !important; 
-  box-sizing: border-box; 
-  justify-content: center; /* center options inside the collapsed menu */
+    position: static !important;
+    display: none !important; /* hidden unless .open */
+    flex-direction: row;
+    width: 100% !important;
+    margin-top: 6px;
+    padding: 0.25rem 0.5rem !important;
+    box-sizing: border-box;
+    justify-content: center; /* center options inside the collapsed menu */
   }
 
   .navbar-collapse .nav-item .lang-option {
     padding-left: 0.6rem;
     padding-right: 0.6rem;
   }
-    
-    /* Show horizontal language options inside the opened collapse only when explicitly opened */
-    .navbar-collapse .nav-item .lang-options.open {
-      display: flex !important;
-      justify-content: center !important;
-    }
+
+  /* Show horizontal language options inside the opened collapse only when explicitly opened */
+  .navbar-collapse .nav-item .lang-options.open {
+    display: flex !important;
+    justify-content: center !important;
+  }
 }
 
 /* Force the language popup to be viewport-centered on very small screens
@@ -388,7 +484,7 @@ body.fixed-top-nav {
   .navbar-collapse .nav-item .lang-options,
   .lang-options {
     position: fixed !important;
-  left: 45% !important;
+    left: 45% !important;
     right: auto !important;
     transform: translateX(-50%) !important;
     top: 130px !important;

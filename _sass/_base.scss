@@ -20,13 +20,19 @@ strong {
 }
 
 // System font stack similar to iOS SF Pro
-html, body {
+html,
+body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, system-ui;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 600;
   color: var(--global-text-color);
   letter-spacing: -0.01em;
@@ -367,32 +373,36 @@ ul.task-list input[type="checkbox"] {
   gap: 2px;
   padding: 0.35rem 0.4rem;
   .icon-bar {
-  display: block;
-  width: 24px;
-  height: 2px;
-  background-color: var(--global-text-color);
-  border-radius: 1px;
-  margin: 0; /* spacing handled by gap on the container */
-  transition: transform 0.22s ease, opacity 0.18s ease;
-  transform-origin: center;
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: var(--global-text-color);
+    border-radius: 1px;
+    margin: 0; /* spacing handled by gap on the container */
+    transition:
+      transform 0.22s ease,
+      opacity 0.18s ease;
+    transform-origin: center;
   }
 
   .top-bar {
     /* default: horizontal bar */
-  transform: rotate(0);
-  /* center rotation so X is symmetrical */
-  transform-origin: 50% 50%;
+    transform: rotate(0);
+    /* center rotation so X is symmetrical */
+    transform-origin: 50% 50%;
   }
 
   .middle-bar {
     opacity: 1;
     transform-origin: center;
-    transition: transform 0.18s ease, opacity 0.18s ease;
+    transition:
+      transform 0.18s ease,
+      opacity 0.18s ease;
   }
 
   .bottom-bar {
-  transform: rotate(0);
-  transform-origin: 50% 50%;
+    transform: rotate(0);
+    transform-origin: 50% 50%;
   }
 }
 
@@ -419,8 +429,8 @@ ul.task-list input[type="checkbox"] {
 
 @media (max-width: 767px) {
   .navbar-toggler .icon-bar {
-  width: 26px; /* slightly larger on mobile for better touch visibility */
-  height: 3px;
+    width: 26px; /* slightly larger on mobile for better touch visibility */
+    height: 3px;
   }
 }
 
@@ -769,7 +779,7 @@ footer.sticky-bottom {
     li {
       margin-bottom: 1rem;
 
-  // .preview previously had styles here; removed empty rule to satisfy linter
+      // .preview previously had styles here; removed empty rule to satisfy linter
 
       .abbr {
         margin-bottom: 0.5rem;

@@ -9,8 +9,8 @@
       {% endif %}
     >
       <table class="table table-sm table-borderless">
-  {% assign raw_news = site.news | reverse %}
-  {% assign news = raw_news %}
+        {% assign raw_news = site.news | reverse %}
+        {% assign news = raw_news %}
         {% if include.limit and page.announcements.limit %}
           {% assign news_limit = page.announcements.limit %}
         {% else %}
@@ -94,9 +94,16 @@
                 {% assign month = m_en %}
               {% endif %}
               {% if current_lang == 'it' or current_lang == 'fr' %}
-                <span class="news-date" data-i18n-date="{{ item.date | date_to_xmlschema }}">{{ day }} {{ month }} {{ year }}</span>
+                <span class="news-date" data-i18n-date="{{ item.date | date_to_xmlschema }}">
+                  {{- day }}
+                  {{ month }}
+                  {{ year -}}
+                </span>
               {% else %}
-                <span class="news-date" data-i18n-date="{{ item.date | date_to_xmlschema }}">{{ month }} {{ day }}, {{ year }}</span>
+                <span class="news-date" data-i18n-date="{{ item.date | date_to_xmlschema }}">
+                  {{- month }}
+                  {{ day }}, {{ year -}}
+                </span>
               {% endif %}
             </th>
             <td>

@@ -26,7 +26,9 @@
         {% if page.toc.sidebar == 'right' %}
           <div class="row">
             <!-- main content area -->
-            <div class="col-sm-9"><div class="content-glass-wrapper">{{ content }}</div></div>
+            <div class="col-sm-9">
+              <div class="content-glass-wrapper">{{ content }}</div>
+            </div>
             <!-- sidebar, which will move to the top on a small screen -->
             <div class="col-sm-3">
               <nav id="toc-sidebar" class="sticky-top"></nav>
@@ -39,7 +41,9 @@
               <nav id="toc-sidebar" class="sticky-top"></nav>
             </div>
             <!-- main content area -->
-            <div class="col-sm-9"><div class="content-glass-wrapper">{{ content }}</div></div>
+            <div class="col-sm-9">
+              <div class="content-glass-wrapper">{{ content }}</div>
+            </div>
           </div>
         {% endif %}
       {% else %}

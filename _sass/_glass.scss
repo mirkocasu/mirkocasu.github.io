@@ -5,7 +5,7 @@
 @mixin glass-surface($bg: null, $blur: $glass-blur, $trans: $glass-translucency, $radius: $glass-radius) {
   @if $bg == null {
     // Use CSS variable when available so themes can override to solid white
-    background-color: var(--global-card-bg-color, rgba(255,255,255,$trans));
+    background-color: var(--global-card-bg-color, rgba(255, 255, 255, $trans));
   } @else {
     background-color: $bg;
   }
@@ -15,9 +15,11 @@
 
   // Fallback for browsers without backdrop-filter: use semi-transparent gradient
   @supports not ((-webkit-backdrop-filter: blur($blur)) or (backdrop-filter: blur($blur))) {
-    background-image: linear-gradient(180deg, rgba(255,255,255,($trans - 0.08)) 0%, rgba(255,255,255,($trans - 0.12)) 100%);
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, ($trans - 0.08)) 0%, rgba(255, 255, 255, ($trans - 0.12)) 100%);
     /* Slight inner shadow to suggest depth */
-    box-shadow: inset 0 1px 0 rgba(255,255,255,0.15), $glass-elev-shadow;
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.15),
+      $glass-elev-shadow;
   }
   border-radius: $radius;
   border: 1px solid $glass-border-color;
@@ -25,7 +27,6 @@
 }
 
 /* ...existing code continues... */
-
 
 // Accent overlay for subtle color tint
 %glass-accent {
@@ -37,22 +38,22 @@
     position: absolute;
     inset: 0;
     pointer-events: none;
-    background: linear-gradient(135deg, rgba(10,188,239,$glass-accent-opacity) 0%, rgba(255,255,255,0) 60%);
+    background: linear-gradient(135deg, rgba(10, 188, 239, $glass-accent-opacity) 0%, rgba(255, 255, 255, 0) 60%);
     mix-blend-mode: overlay;
     opacity: 0.95;
   }
-      box-shadow: none !important;
+  box-shadow: none !important;
 
-// Utility classes
-.glass {
-  @include glass-surface();
-}
+  // Utility classes
+  .glass {
+    @include glass-surface();
+  }
 
-.glass-soft {
-  @include glass-surface($blur: 10px, $trans: 0.48, $radius: 10px);
-}
+  .glass-soft {
+    @include glass-surface($blur: 10px, $trans: 0.48, $radius: 10px);
+  }
 
-        box-shadow: none !important;
+  box-shadow: none !important;
   @extend %glass-accent;
 }
 
@@ -72,23 +73,25 @@
 .btn.glass {
   @include glass-surface($blur: 10px, $trans: 0.28, $radius: 12px);
   color: var(--global-text-color);
-  border: 1px solid rgba(255,255,255,0.12);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   padding: 0.5rem 0.9rem;
   display: inline-flex;
   gap: 0.5rem;
   align-items: center;
-  transition: transform $ui-transition-duration ease, box-shadow $ui-transition-duration ease;
+  transition:
+    transform $ui-transition-duration ease,
+    box-shadow $ui-transition-duration ease;
 
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 12px 36px rgba(10,10,15,0.12);
+    box-shadow: 0 12px 36px rgba(10, 10, 15, 0.12);
   }
 }
 
 /* Keep accessibility-friendly focus styles for interactive elements */
 :focus {
   outline: none !important;
-  box-shadow: 0 0 0 3px rgba(10,188,239,0.18);
+  box-shadow: 0 0 0 3px rgba(10, 188, 239, 0.18);
 }
 
 .icon-glass {
@@ -131,7 +134,10 @@
   text-decoration: none;
   margin-left: 0.08rem;
   cursor: pointer;
-  transition: transform 120ms ease, color 120ms ease, opacity 120ms ease;
+  transition:
+    transform 120ms ease,
+    color 120ms ease,
+    opacity 120ms ease;
 
   &:hover {
     transform: translateY(-1px);
@@ -144,37 +150,38 @@
   }
 
   &:focus-visible {
-    outline: 2px solid rgba(255,255,255,0.18);
+    outline: 2px solid rgba(255, 255, 255, 0.18);
     outline-offset: 2px;
   }
 }
 
 .custom-button {
   /* Pill-shaped fumetto button per azioni pubblicazioni */
-  background-color: #2C2C2C;
-  color: #E0E0E0;
+  background-color: #2c2c2c;
+  color: #e0e0e0;
   font-family: sans-serif;
   padding: 8px 14px;
   border: 1px solid transparent;
   border-radius: 9999px; /* pill */
 
-  background-image:
-    linear-gradient(180deg, #2c2c2c, #232323),
-    linear-gradient(135deg, rgba(255,255,255,.55) 0%, rgba(255,255,255,.25) 25%, rgba(255,255,255,.08) 45%, rgba(255,255,255,0) 60%);
+  background-image: linear-gradient(180deg, #2c2c2c, #232323),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0.25) 25%, rgba(255, 255, 255, 0.08) 45%, rgba(255, 255, 255, 0) 60%);
   background-origin: padding-box, border-box;
   background-clip: padding-box, border-box;
 
   box-shadow:
-    inset 1px 1px 0 rgba(255,255,255,.15),
-    inset -1px -1px 0 rgba(0,0,0,.35),
-    0 2px 6px rgba(0,0,0,.35);
+    inset 1px 1px 0 rgba(255, 255, 255, 0.15),
+    inset -1px -1px 0 rgba(0, 0, 0, 0.35),
+    0 2px 6px rgba(0, 0, 0, 0.35);
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
   font-weight: 600;
   text-decoration: none;
-  transition: filter 140ms ease, transform 140ms ease;
+  transition:
+    filter 140ms ease,
+    transform 140ms ease;
 
   &:hover {
     filter: brightness(1.06);
@@ -186,7 +193,7 @@
   }
 
   &:focus-visible {
-    outline: 2px solid rgba(255,255,255,0.18);
+    outline: 2px solid rgba(255, 255, 255, 0.18);
     outline-offset: 2px;
   }
 }
@@ -207,16 +214,27 @@ publications {
       gap: 0.25rem;
       font-size: 0.82rem;
       font-weight: 400; /* non bold */
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-family:
+        system-ui,
+        -apple-system,
+        "Segoe UI",
+        Roboto,
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
       letter-spacing: 0.01em;
       text-decoration: none;
       margin-left: 0.08rem;
       cursor: pointer;
-      transition: color 120ms ease, opacity 120ms ease, transform 120ms ease;
+      transition:
+        color 120ms ease,
+        opacity 120ms ease,
+        transform 120ms ease;
       text-transform: none;
       white-space: nowrap;
 
-      i, svg {
+      i,
+      svg {
         font-size: 0.78rem;
         line-height: 1;
       }
@@ -232,7 +250,7 @@ publications {
       }
 
       &:focus-visible {
-        outline: 2px solid rgba(255,255,255,0.12);
+        outline: 2px solid rgba(255, 255, 255, 0.12);
         outline-offset: 2px;
       }
     }
@@ -251,19 +269,21 @@ publications {
 .publications .links a.btn-glass,
 .publications ol.bibliography li .links a.btn {
   background-color: #262626; /* slightly lighter dark gray */
-  color: #E8E8E8;
+  color: #e8e8e8;
   padding: 2px 6px; /* a touch smaller */
   border: none !important;
   border-radius: 6px;
   box-shadow: none;
-  font-size: 0.80rem; /* reduced */
+  font-size: 0.8rem; /* reduced */
   font-weight: 500; /* slightly bolder for legibility */
   text-decoration: none;
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
   margin-left: 0.08rem;
-  transition: color 120ms ease, transform 120ms ease;
+  transition:
+    color 120ms ease,
+    transform 120ms ease;
 }
 
 .publications .links a.btn:hover,
@@ -295,7 +315,7 @@ ol.bibliography .title,
 .publications .links a.btn:hover,
 .publications .links a.btn-glass:hover,
 .publications ol.bibliography li .links a.btn:hover {
-  color: #43BEAA !important;
+  color: #43beaa !important;
 }
 
 /* --- Publications: remove inter-item dashed separators and color only the large year heading --- */
@@ -387,21 +407,27 @@ ol.bibliography .title,
   padding: 0;
 }
 
-
 /* Dark mode tweaks */
 @media (prefers-color-scheme: dark) {
-  .glass, .glass-soft, .glass-accent, .card.glass, .navbar.glass, .btn.glass, .icon-glass, .content-glass-wrapper {
+  .glass,
+  .glass-soft,
+  .glass-accent,
+  .card.glass,
+  .navbar.glass,
+  .btn.glass,
+  .icon-glass,
+  .content-glass-wrapper {
     color: var(--global-text-color);
     /* stronger backdrop and darker tint */
-    background-color: rgba(18,20,24,0.78) !important;
-    border: 1px solid rgba(255,255,255,0.04) !important;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.6) !important;
+    background-color: rgba(18, 20, 24, 0.78) !important;
+    border: 1px solid rgba(255, 255, 255, 0.04) !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6) !important;
   }
 
   .btn.glass {
     color: #fff;
-    border: 1px solid rgba(255,255,255,0.06);
-    background-color: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    background-color: rgba(255, 255, 255, 0.03);
   }
 
   .icon-glass {
@@ -414,7 +440,7 @@ ol.bibliography .title,
 // Focus ring that fits iOS aesthetics
 :focus {
   outline: none !important;
-  box-shadow: 0 0 0 3px rgba(10,188,239,0.18);
+  box-shadow: 0 0 0 3px rgba(10, 188, 239, 0.18);
   transition: box-shadow $ui-transition-duration ease;
 }
 
@@ -436,7 +462,7 @@ ol.bibliography .title,
 .glass,
 .glass-soft,
 .card.glass {
-  background-color: #0F1114 !important;
+  background-color: #0f1114 !important;
   background-image: none !important;
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
@@ -451,7 +477,7 @@ ol.bibliography .title,
 .author-metrics-wrap #author-metrics .metric {
   /* restore glass-style boxes for author metrics (user asked to restore these) */
   @include glass-surface($blur: 10px, $trans: 0.48, $radius: 12px);
-  border: 1px solid rgba(255,255,255,0.06);
+  border: 1px solid rgba(255, 255, 255, 0.06);
   box-shadow: none !important; /* keep minimal shadow as requested earlier */
 }
 

@@ -7,4 +7,3 @@ lang: it
 ---
 
 A [Psicologia in Cantiere](https://www.oprs.it/evento/psicologia-in-cantiere/) a Palermo, ho avuto il piacere di presentare la mia ricerca sull'_impostor bias_, insieme al suo processo di validazione in corso.
-
