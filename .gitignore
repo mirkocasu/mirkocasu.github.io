@@ -11,3 +11,18 @@ assets/libs/
 node_modules/
 vendor
 .idea
+# local dev / generated
+.venv/
+node_modules/
+_site/
+readme_preview/
+lighthouse_results/
+.DS_Store
+
+# local dev / generated
+.venv/
+node_modules/
+_site/
+readme_preview/
+lighthouse_results/
+.DS_Store
