@@ -362,16 +362,19 @@ ul.task-list input[type="checkbox"] {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 6px;
+  /* slightly tighter stacking so bars can overlap correctly when rotated */
+  /* tighter stacking so X overlaps cleanly */
+  gap: 2px;
   padding: 0.35rem 0.4rem;
   .icon-bar {
-    display: block;
-    width: 22px;
-    height: 2px;
-    background-color: var(--global-text-color);
-    border-radius: 1px;
-    margin-bottom: 4px;
-    transition: all 0.2s;
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--global-text-color);
+  border-radius: 1px;
+  margin: 0; /* spacing handled by gap on the container */
+  transition: transform 0.22s ease, opacity 0.18s ease;
+  transform-origin: center;
   }
 
   .top-bar {
@@ -383,6 +386,8 @@ ul.task-list input[type="checkbox"] {
 
   .middle-bar {
     opacity: 1;
+    transform-origin: center;
+    transition: transform 0.18s ease, opacity 0.18s ease;
   }
 
   .bottom-bar {
@@ -393,23 +398,29 @@ ul.task-list input[type="checkbox"] {
 
 /* When the toggler is in the "open" state (not collapsed), show X */
 .navbar-toggler:not(.collapsed) {
+  /* Move top and bottom bars to the center and rotate to form an X. The
+     translateY values match the stack gap + bar height so the two bars
+     overlap neatly. Middle bar is hidden via scale to avoid leaving a gap. */
   .top-bar {
-    transform: rotate(45deg);
+    /* tiny horizontal nudge + smaller vertical translate to visually balance arms */
+    transform: translateY(2px) translateX(0.5px) rotate(45deg);
   }
 
   .middle-bar {
     opacity: 0;
+    transform: scaleX(0);
   }
 
   .bottom-bar {
-    transform: rotate(-45deg);
+    /* raise the bottom->top diagonal slightly more (incremental tweak) */
+    transform: translateY(-8px) translateX(-0.5px) rotate(-45deg);
   }
 }
 
 @media (max-width: 767px) {
   .navbar-toggler .icon-bar {
-    width: 26px; /* slightly larger on mobile */
-    height: 3px;
+  width: 26px; /* slightly larger on mobile for better touch visibility */
+  height: 3px;
   }
 }
 

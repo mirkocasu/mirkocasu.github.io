@@ -3,7 +3,7 @@
  ******************************************************************************/
 
 body {
-  padding-bottom: 70px;
+  padding-bottom: 40px; /* reduce global bottom padding */
   color: var(--global-text-color);
   background-color: #0F1114 !important;
   background-image: none !important;
@@ -40,7 +40,7 @@ body.sticky-bottom-footer {
 
 /* Main content wrapper to show glass card */
 .content-glass-wrapper {
-  margin: 2rem auto;
+  margin: 1.25rem auto; /* reduce top space so page content sits closer to navbar */
   padding: 2.25rem;
   /* prefer light theme solid background where appropriate */
   /* Make solid background and remove glass effects */
@@ -179,6 +179,13 @@ html[data-theme="dark"] .card.glass {
         text-align: center;
         /* stack the small metadata items on narrow viewports to avoid overlap and horizontal overflow */
         display: flex;
+      /* reduce vertical spacing on very small screens so content follows navbar closely */
+      body {
+        padding-top: 4px; /* if any top padding remains, keep it minimal */
+       padding-bottom: 12px;
+      }
+
+     .content-glass-wrapper { margin: 0.4rem auto; }
         flex-direction: column;
         gap: 0.25rem;
         justify-content: center;
@@ -269,7 +276,23 @@ body.fixed-top-nav {
 
 /* Language switcher basic styles */
 .lang-switch { display: inline-flex; align-items: center; position: relative; margin-left: 0.5rem; height: 100%; }
-.lang-current { background: transparent; border: none; color: var(--global-text-color); font-size: 1.05rem; cursor: pointer; padding: 0.15rem 0.4rem; line-height: 1; display: inline-flex; align-items: center; height: 100%; }
+.lang-current { background: transparent; border: none; color: var(--global-text-color); font-size: 1.05rem; cursor: pointer; padding: 0.15rem 0.4rem; line-height: 1; display: inline-flex; align-items: center; height: 100%;
+  /* remove default focus ring and use a subtle brightness change instead */
+  outline: none !important;
+  box-shadow: none !important;
+  transition: filter 120ms ease, transform 120ms ease;
+
+  &:hover {
+    filter: brightness(1.06);
+  }
+
+  &:focus,
+  &:active {
+    filter: brightness(1.1);
+    outline: none !important;
+    box-shadow: none !important;
+  }
+}
 .lang-options { position: absolute; right: 0; top: 110%; background: var(--global-bg-color, #0F1114); border: 1px solid rgba(255,255,255,0.06); box-shadow: 0 6px 18px rgba(0,0,0,0.45); border-radius: 6px; padding: 0.25rem; z-index: 1200; display: none; }
 .lang-options.open { display: block; }
 .lang-option { display: block; background: transparent; border: none; color: var(--global-text-color); padding: 0.4rem 0.6rem; text-align: left; width: 100%; cursor: pointer; }
@@ -283,10 +306,10 @@ body.fixed-top-nav {
     z-index: 1300 !important;
     min-width: 44px;
     min-height: 44px;
-    padding: 0.4rem 0.5rem;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    padding: 0.4rem 0.5rem; 
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: center; 
   }
 
   /* Ensure the navbar container doesn't sit under fixed elements */
@@ -295,7 +318,7 @@ body.fixed-top-nav {
   }
 
   /* Slight vertical nudge if the toggler is visually too high */
-  .navbar .navbar-toggler { margin-top: 24px; margin-bottom: 2px; }
+  .navbar .navbar-toggler { margin-top: 8px; margin-bottom: 0; }
 }
 
 /* Ensure language switch sits above the navbar toggler on small screens */
@@ -312,10 +335,10 @@ body.fixed-top-nav {
   .lang-options {
     /* Center the popup in the viewport on very small screens */
     position: fixed;
-  left: 46%;
+  left: 45%;
   right: auto;
   transform: translateX(-50%);
-  top: 140px; /* moved a bit up and to the left */
+  top: 130px; /* moved slightly lower on mobile */
     display: none; /* default hidden on mobile */
     flex-direction: row;
     gap: 0.25rem;
@@ -365,12 +388,12 @@ body.fixed-top-nav {
   .navbar-collapse .nav-item .lang-options,
   .lang-options {
     position: fixed !important;
-  left: 46% !important;
-  right: auto !important;
-  transform: translateX(-50%) !important;
-  top: 140px !important;
+  left: 45% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+    top: 130px !important;
     display: none !important;
-    max-width: calc(100% - 32px) !important;
+    max-width: calc(100% - 24px) !important;
     width: auto !important;
     box-sizing: border-box !important;
     z-index: 2000 !important;
