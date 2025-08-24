@@ -1,18 +1,6 @@
 #!/usr/bin/env python3
-"""Create a new news item in `_news/` and push to the repo.
-
-Usage examples:
-  python tools/create_news.py --title "New paper" --body "My new paper..." --lang it --inline
-  python tools/create_news.py --file body.md --title "Announcement" --lang fr
-
-Requirements:
-- run in repository root
-- git remote set and authenticated (SSH key or credential helper)
-
-What it does:
-- creates `_news/announcement_<timestamp>.<lang>.md` with front-matter
-- runs `git add`, `git commit -m "Add news: <title>"` and `git push`
-
+"""
+python3 tools/create_news.py --title "slug-per-filename" --interactive --date "2025-08-24T12:00:00+02:00" --auto-push
 """
 import argparse
 import datetime
@@ -52,6 +40,7 @@ def main():
     parser.add_argument('--inline', action='store_true', help='Mark news as inline (rendered in about)')
     parser.add_argument('--related', action='store_true', help='related_posts: true')
     parser.add_argument('--push', action='store_true', help='Run git push after commit (disabled unless NEWS_ALLOW_PUSH=1)')
+    parser.add_argument('--auto-push', action='store_true', help='Automatically run git push after commit (no env var required)')
     parser.add_argument('--interactive', action='store_true', help='Interactive mode: edit bodies in your $EDITOR')
     parser.add_argument('--dry-run', action='store_true', help='Do not write or run git, just show what would be done')
     args = parser.parse_args()
@@ -99,7 +88,8 @@ def main():
             if use_editor in ('', 'y', 'yes'):
                 editor_env = os.getenv('EDITOR')
                 with tempfile.NamedTemporaryFile('w+', suffix=f'.{lang}.md', delete=False) as tf:
-                    tf.write(f'# {args.title}\n\n')
+                    # Do not prefill the title in the temp file; user will write only the body
+                    tf.write('')
                     tf.flush()
                     tfname = tf.name
                 try:
@@ -177,7 +167,6 @@ def main():
         escaped_title = title_local.replace('"', '\\"')
         front_matter = [
             '---',
-            f'title: "{escaped_title}"',
             'layout: post',
             f'date: "{date_str}"',
             f'inline: {"true" if inline_flag else "false"}',
@@ -213,14 +202,19 @@ def main():
     subprocess.run(['git', 'commit', '-m', commit_msg], check=True)
     print('Committed:', commit_msg)
 
-    if args.push:
+    # pushing behavior
+    if args.auto_push:
+        # auto-push requested: push unconditionally
+        subprocess.run(['git', 'push'], check=True)
+        print('Auto-pushed to remote')
+    elif args.push:
         # require explicit env var to allow push
         if os.getenv('NEWS_ALLOW_PUSH') == '1':
             subprocess.run(['git', 'push'], check=True)
             print('Pushed to remote')
         else:
             print('\nPush skipped: pushing is disabled by default for safety.')
-            print('If you really want to push from this tool, set environment variable NEWS_ALLOW_PUSH=1 and re-run with --push.')
+            print('If you really want to push from this tool, set environment variable NEWS_ALLOW_PUSH=1 and re-run with --push, or use --auto-push to force push.')
 
 
 if __name__ == '__main__':
