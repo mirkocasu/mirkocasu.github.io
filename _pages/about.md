@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Clinical Psychologist, PhD Student in Computer Science @ University of Catania.
+subtitle: <a href="https://areariservata.psy.it/albo/iscritto/mirko_casu_218564" target="_blank" rel="noopener">Clinical Psychologist</a>, PhD Student in Computer Science @ University of Catania.
 
 profile:
   align: right

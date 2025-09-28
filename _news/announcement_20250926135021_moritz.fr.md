@@ -5,4 +5,5 @@ inline: true
 related_posts: false
 lang: fr
 ---
-J’ai eu le plaisir de présenter mon exposé sur *Psychedelic Simulation* lors de **DigiTales**, organisé par le [Prof. Dr. Steffen Moritz](https://clinical-neuropsychology.de/steffen-moritz/).
+
+J’ai eu le plaisir de présenter mon exposé sur _Psychedelic Simulation_ lors de **DigiTales**, organisé par le [Prof. Dr. Steffen Moritz](https://clinical-neuropsychology.de/steffen-moritz/).

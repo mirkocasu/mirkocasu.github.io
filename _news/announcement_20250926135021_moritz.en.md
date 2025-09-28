@@ -5,4 +5,5 @@ inline: true
 related_posts: false
 lang: en
 ---
-I had the pleasure of presenting my talk on *Psychedelic Simulation* at **DigiTales**, hosted by [Prof. Dr. Steffen Moritz](https://clinical-neuropsychology.de/steffen-moritz/).
+
+I had the pleasure of presenting my talk on _Psychedelic Simulation_ at **DigiTales**, hosted by [Prof. Dr. Steffen Moritz](https://clinical-neuropsychology.de/steffen-moritz/).

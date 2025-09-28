@@ -41,7 +41,7 @@ scopus_id: 57374838700 # your profile on Scopus
 # whatsapp_number: # your WhatsApp number (full phone number in international format. Omit any zeroes, brackets, or dashes when adding the phone number in international format.)
 # wikidata_id: # your wikidata id
 # wikipedia_id: # your wikipedia id (Case sensitive)
-work_url: https://web.dmi.unict.it/dottorandi/mirko.casu # work page URL
+work_url: https://web.dmi.unict.it/dottorandi/mirko.casu?eng # work page URL
 # x_username: # your X handle
 # youtube_id: # your youtube channel id (youtube.com/@<youtube_id>)
 # zotero_username: # your zotero username

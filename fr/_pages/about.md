@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /fr/
-subtitle: Psychologue clinicien, doctorant en informatique à l'Université de Catane.
+subtitle: <a href="https://areariservata.psy.it/albo/iscritto/mirko_casu_218564" target="_blank" rel="noopener">Psychologue clinicien</a>, doctorant en informatique à l'Université de Catane.
 lang: fr
 
 profile:

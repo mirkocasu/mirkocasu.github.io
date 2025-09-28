@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-python3 tools/create_news.py --title "slug-per-filename" --interactive --date "2025-08-24T12:00:00+02:00" --auto-push
+python3 tools/create_news.py --title "moritz" --interactive --date "2025-09-25T12:00:00+02:00" --auto-push
 """
 import argparse
 import datetime

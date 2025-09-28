@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /it/
-subtitle: Psicologo clinico, dottorando in Informatica presso l'Università di Catania.
+subtitle: <a href="https://areariservata.psy.it/albo/iscritto/mirko_casu_218564" target="_blank" rel="noopener">Psicologo clinico</a>, dottorando in Informatica presso l'Università di Catania.
 lang: it
 
 profile:
