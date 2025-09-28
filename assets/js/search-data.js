@@ -30,6 +30,27 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
+        },{id: "nav-activités-de-recherche",
+          title: "activités de recherche",
+          description: "activités de recherche académique incluant conférences, ateliers, numéros spéciaux et engagements scientifiques.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/fr/activites-de-recherche/";
+          },
+        },{id: "nav-attività-di-ricerca",
+          title: "attività di ricerca",
+          description: "attività di ricerca accademica inclusi conferenze, workshop, special issue e impegni scientifici.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/it/attivita-di-ricerca/";
+          },
+        },{id: "nav-research-activities",
+          title: "research activities",
+          description: "academic research activities including conferences, workshops, special issues, and scholarly engagements.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/research-activities/";
+          },
         },{id: "news-j-ai-eu-le-plaisir-de-participer-au-podcast-medics-in-tech-pour-discuter-de-la-manière-dont-l-ia-transforme-le-traitement-des-addictions-de-la-détection-du-comportement-de-fumer-à-l-utilisation-de-la-réalité-virtuelle-et-des-applications-mobiles",
           title: 'J’ai eu le plaisir de participer au podcast Medics in Tech pour discuter...',
           description: "",
@@ -205,7 +226,7 @@ ninja.data = [{
         title: 'Work',
         section: 'Socials',
         handler: () => {
-          window.open("https://web.dmi.unict.it/dottorandi/mirko.casu", "_blank");
+          window.open("https://web.dmi.unict.it/dottorandi/mirko.casu?eng", "_blank");
         },
       },{
       id: 'light-theme',
