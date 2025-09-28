@@ -362,6 +362,25 @@ _styles: >
         <div class="activity-side">
           <span class="activity-tag activity-tag--workshop">Atelier</span>
           <div class="activity-thumb">
+            <img src="{{ '/assets/img/research_activ_prevs/wstaormina25.webp' | relative_url }}" alt="Affiche du Workshop on Emerging Challenges and Innovations in ICT in the Era of AI" loading="lazy">
+          </div>
+          <div class="activity-date">11 mars 2025</div>
+        </div>
+        <div class="activity-body">
+          <div class="activity-heading">
+            <h5 class="activity-title">Workshop on Emerging Challenges and Innovations in ICT in the Era of AI</h5>
+          </div>
+          <div class="activity-meta">
+            <span class="activity-role activity-role--workshop">Participant</span>
+            <span>University of Catania, Messina · Taormina (Italy)</span>
+          </div>
+          <p class="activity-description">Participation à l'atelier conjoint « Emerging Challenges and Innovations in ICT in the Era of AI », organisé par les Universités de Catane et Messine.</p>
+        </div>
+      </div>
+      <div class="activity-card">
+        <div class="activity-side">
+          <span class="activity-tag activity-tag--workshop">Atelier</span>
+          <div class="activity-thumb">
             <img src="{{ '/assets/img/research_activ_prevs/firstws24.webp' | relative_url }}" alt="Affiche du First Workshop on Generative AI &amp; Computer Vision" loading="lazy">
           </div>
           <div class="activity-date">19 mars 2024</div>
