@@ -8,4 +8,6 @@ lang: fr
 
 J'ai commencé une période de Visiting PhD à l'École polytechnique fédérale de Lausanne (EPFL), à Lausanne, Suisse. Je travaillerai sous la supervision du Prof. Andrea Cavallaro et rejoindrai le groupe de recherche LIDIAP.
 
-Je suis enthousiaste à l'idée de collaborer avec l'équipe LIDIAP et de contribuer aux activités de recherche pendant cette période de visite.
+J'ai commencé une période de Visiting PhD à l'École polytechnique fédérale de Lausanne ([EPFL](https://people.epfl.ch/mirko.casu?lang=en)), à Lausanne, Suisse. Je travaillerai sous la supervision du Prof. Andrea Cavallaro et rejoindrai le groupe de recherche LIDIAP.
+
+Vous pouvez consulter mon profil EPFL ici : https://people.epfl.ch/mirko.casu?lang=en
