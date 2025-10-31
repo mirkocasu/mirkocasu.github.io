@@ -219,7 +219,7 @@ To remove the publications, you can:
 
 - delete the [\_bibliography](_bibliography/) directory
 - delete the publications page [\_pages/publications.md](_pages/publications.md)
-- remove reference to publications page in our [\_pages/dropdown.md](_pages/dropdown.md)
+- remove reference to publications page in `_pages/dropdown.md`
 - remove `Jekyll Scholar` section in the [\_config.yml](_config.yml) file
 
 You can also:
