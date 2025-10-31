@@ -86,19 +86,19 @@ _styles: >
 <div class="research-activities">
   <!-- Conferences and Talks Section -->
   <div class="activity-section">
-  <h3 class="section-title">conferences & talks</h3>
+  <h3 class="section-title" data-i18n="research_conferences_talks">conferences & talks</h3>
     <div class="activity-list">
       <div class="activity-card">
         <div class="activity-side">
           <span class="activity-tag activity-tag--conference">Conference</span>
           <div class="activity-thumb">
-            <img src="{{ '/assets/img/research_activ_prevs/icaisf.webp' | relative_url }}" alt="Cover for ICAISF 2025" loading="lazy">
+            <img src="{{ '/assets/img/research_activ_prevs/icaisf.webp' | relative_url }}" alt="Cover for ICAISF-2025" loading="lazy">
           </div>
-          <div class="activity-date">Oct 26-27, 2025</div>
+          <div class="activity-date">Dec 19-20, 2025</div>
         </div>
         <div class="activity-body">
             <div class="activity-heading">
-              <h5 class="activity-title">ICAISF 2025</h5>
+              <h5 class="activity-title">ICAISF-2025</h5>
           </div>
           <div class="activity-meta">
             <span class="activity-role activity-role--conference">Scientific Committee</span>
@@ -107,6 +107,30 @@ _styles: >
           <p class="activity-description">Scientific Committee member for ICAISF 2025, the 2nd International Conference on AI and Emerging Technology For Sustainable Future.</p>
           <div class="activity-links">
             <a class="activity-btn secondary" href="https://www.icaisf.com/index.html" target="_blank" rel="noopener">icaisf.com</a>
+          </div>
+        </div>
+      </div>
+      <div class="activity-card">
+        <div class="activity-side">
+          <span class="activity-tag activity-tag--conference">Conference</span>
+          <div class="activity-thumb">
+            <img src="{{ '/assets/img/research_activ_prevs/acmmm25.webp' | relative_url }}" alt="Cover for ACM Multimedia 2025" loading="lazy">
+          </div>
+          <div class="activity-date">Oct 27-31, 2025</div>
+        </div>
+        <div class="activity-body">
+          <div class="activity-heading">
+            <h5 class="activity-title">ACM Multimedia 2025</h5>
+          </div>
+          <div class="activity-meta">
+            <span class="activity-role activity-role--conference">Track Co-Chair &amp; Dataset Committee</span>
+            <span>ACM SIGMM · Dublin (Ireland)</span>
+          </div>
+          <p class="activity-description">Participated as track co-chair for the <strong>DFF-2025 Workshop</strong> (Deepfake Forensics) and as member of the dataset committee for the <strong>AADD-2025 Grand Challenge</strong> (Adversarial Attacks on Deepfake Detectors).</p>
+          <div class="activity-links">
+            <a class="activity-btn secondary" href="https://acmmm2025.org/" target="_blank" rel="noopener">acmmm2025.org</a>
+            <a class="activity-btn secondary" href="https://dl.acm.org/doi/abs/10.1145/3746027.3762241" target="_blank" rel="noopener">DFF-2025</a>
+            <a class="activity-btn secondary" href="https://dl.acm.org/doi/10.1145/3746027.3761983" target="_blank" rel="noopener">AADD-2025</a>
           </div>
         </div>
       </div>
@@ -287,7 +311,7 @@ _styles: >
 
   <!-- Workshops & Challenges Section -->
   <div class="activity-section">
-  <h3 class="section-title">workshops & challenges</h3>
+  <h3 class="section-title" data-i18n="research_workshops_challenges">workshops & challenges</h3>
     <div class="activity-list">
       <div class="activity-card">
         <div class="activity-side">
@@ -393,7 +417,7 @@ _styles: >
 
   <!-- Summer Schools Section -->
   <div class="activity-section">
-  <h3 class="section-title">summer schools</h3>
+  <h3 class="section-title" data-i18n="research_summer_schools">summer schools</h3>
     <div class="activity-list">
       <div class="activity-card">
         <div class="activity-side">
@@ -444,7 +468,7 @@ _styles: >
 
   <!-- Other Events Section -->
   <div class="activity-section">
-  <h3 class="section-title">other events</h3>
+  <h3 class="section-title" data-i18n="research_other_events">other events</h3>
     <div class="activity-list">
       <div class="activity-card">
         <div class="activity-side">
@@ -558,7 +582,7 @@ _styles: >
 
   <!-- Editorial Work Section -->
   <div class="activity-section">
-  <h3 class="section-title">editorial work</h3>
+  <h3 class="section-title" data-i18n="research_editorial_work">editorial work</h3>
     <div class="activity-list">
       <div class="activity-card">
         <div class="activity-side">

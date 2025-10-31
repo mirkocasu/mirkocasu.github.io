@@ -7,7 +7,7 @@ lang: it
 
 profile:
   align: right
-  image: prof_pic2.JPG
+  image: prof_pic2.webp
   image_circular: true
 
 selected_papers: true

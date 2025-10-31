@@ -6,7 +6,7 @@ subtitle: <a href="https://areariservata.psy.it/albo/iscritto/mirko_casu_218564"
 
 profile:
   align: right
-  image: prof_pic2.JPG
+  image: prof_pic2.webp
   image_circular: true # crops the image to make it circular
 #  more_info: >
 #    <p>Department of Mathematics and Computer Science</p>

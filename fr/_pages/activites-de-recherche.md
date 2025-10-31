@@ -100,13 +100,13 @@ _styles: >
         <div class="activity-side">
           <span class="activity-tag activity-tag--conference">Conférence</span>
           <div class="activity-thumb">
-            <img src="{{ '/assets/img/research_activ_prevs/icaisf.webp' | relative_url }}" alt="Visuel d'ICAISF 2025" loading="lazy">
+            <img src="{{ '/assets/img/research_activ_prevs/icaisf.webp' | relative_url }}" alt="Visuel d'ICAISF-2025" loading="lazy">
           </div>
-          <div class="activity-date">26-27 oct 2025</div>
+          <div class="activity-date">19-20 déc 2025</div>
         </div>
         <div class="activity-body">
           <div class="activity-heading">
-            <h5 class="activity-title">ICAISF 2025</h5>
+            <h5 class="activity-title">ICAISF-2025</h5>
           </div>
           <div class="activity-meta">
             <span class="activity-role activity-role--conference">Scientific Committee</span>
@@ -115,6 +115,30 @@ _styles: >
           <p class="activity-description">Membre du Scientific Committee pour ICAISF 2025, the 2nd International Conference on AI and Emerging Technology For Sustainable Future.</p>
           <div class="activity-links">
             <a class="activity-btn secondary" href="https://www.icaisf.com/index.html" target="_blank" rel="noopener">icaisf.com</a>
+          </div>
+        </div>
+      </div>
+      <div class="activity-card">
+        <div class="activity-side">
+          <span class="activity-tag activity-tag--conference">Conférence</span>
+          <div class="activity-thumb">
+            <img src="{{ '/assets/img/research_activ_prevs/acmmm25.webp' | relative_url }}" alt="Visuel d'ACM Multimedia 2025" loading="lazy">
+          </div>
+          <div class="activity-date">27-31 oct 2025</div>
+        </div>
+        <div class="activity-body">
+          <div class="activity-heading">
+            <h5 class="activity-title">ACM Multimedia 2025</h5>
+          </div>
+          <div class="activity-meta">
+            <span class="activity-role activity-role--conference">Track Co-Chair &amp; Comité du jeu de données</span>
+            <span>ACM SIGMM · Dublin (Irlande)</span>
+          </div>
+          <p class="activity-description">Participation en tant que co-président du <strong>DFF-2025 Workshop</strong> (Deepfake Forensics) et membre du comité des jeux de données pour le <strong>AADD-2025 Grand Challenge</strong> (Adversarial Attacks on Deepfake Detectors).</p>
+          <div class="activity-links">
+            <a class="activity-btn secondary" href="https://acmmm2025.org/" target="_blank" rel="noopener">acmmm2025.org</a>
+            <a class="activity-btn secondary" href="https://dl.acm.org/doi/abs/10.1145/3746027.3762241" target="_blank" rel="noopener">DFF-2025</a>
+            <a class="activity-btn secondary" href="https://dl.acm.org/doi/10.1145/3746027.3761983" target="_blank" rel="noopener">AADD-2025</a>
           </div>
         </div>
       </div>
