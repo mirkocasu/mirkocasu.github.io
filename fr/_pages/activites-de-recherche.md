@@ -100,7 +100,7 @@ _styles: >
         <div class="activity-side">
           <span class="activity-tag activity-tag--conference">Conférence</span>
           <div class="activity-thumb">
-            <img src="{{ '/assets/img/research_activ_prevs/icaisf.webp' | relative_url }}" alt="Visuel d'ICAISF-2025" loading="lazy">
+            <img src="/assets/img/research_activ_prevs/icaisf.webp" alt="Visuel d'ICAISF-2025" loading="lazy">
           </div>
           <div class="activity-date">19-20 déc 2025</div>
         </div>
@@ -122,7 +122,7 @@ _styles: >
         <div class="activity-side">
           <span class="activity-tag activity-tag--conference">Conférence</span>
           <div class="activity-thumb">
-            <img src="{{ '/assets/img/research_activ_prevs/acmmm25.webp' | relative_url }}" alt="Visuel d'ACM Multimedia 2025" loading="lazy">
+            <img src="/assets/img/research_activ_prevs/acmmm25.webp" alt="Visuel d'ACM Multimedia 2025" loading="lazy">
           </div>
           <div class="activity-date">27-31 oct 2025</div>
         </div>
@@ -146,7 +146,7 @@ _styles: >
         <div class="activity-side">
           <span class="activity-tag activity-tag--webinar">Webinaire</span>
           <div class="activity-thumb">
-            <img src="{{ '/assets/img/research_activ_prevs/digitales.webp' | relative_url }}" alt="Visuel du webinaire DigiTales - Neues zu digitalen Tools für psychische Erkrankungen" loading="lazy">
+            <img src="/assets/img/research_activ_prevs/digitales.webp" alt="Visuel du webinaire DigiTales - Neues zu digitalen Tools für psychische Erkrankungen" loading="lazy">
           </div>
           <div class="activity-date">25 sept 2025</div>
         </div>
@@ -164,7 +164,7 @@ _styles: >
         <div class="activity-side">
           <span class="activity-tag activity-tag--conference">Conférence</span>
           <div class="activity-thumb">
-            <img src="{{ '/assets/img/research_activ_prevs/metroxraine24.webp' | relative_url }}" alt="Session poster à IEEE MetroXRAINE 2024" loading="lazy">
+            <img src="/assets/img/research_activ_prevs/metroxraine24.webp" alt="Session poster à IEEE MetroXRAINE 2024" loading="lazy">
           </div>
           <div class="activity-date">21-23 oct 2024</div>
         </div>
@@ -186,7 +186,7 @@ _styles: >
           <div class="activity-side">
             <span class="activity-tag activity-tag--conference">Congrès</span>
             <div class="activity-thumb">
-              <img src="{{ '/assets/img/research_activ_prevs/psicocantiere24.webp' | relative_url }}" alt="Affiche de Psicologia in Cantiere 2024" loading="lazy">
+              <img src="/assets/img/research_activ_prevs/psicocantiere24.webp" alt="Affiche de Psicologia in Cantiere 2024" loading="lazy">
             </div>
             <div class="activity-date">12 oct 2024</div>
           </div>
@@ -208,7 +208,7 @@ _styles: >
         <div class="activity-side">
           <span class="activity-tag activity-tag--conference">Congrès</span>
           <div class="activity-thumb">
-              <img src="{{ '/assets/img/research_activ_prevs/aip24.webp' | relative_url }}" alt="Affiche du AIP Clinical &amp; Dynamic Psychology Congress 2024" loading="lazy">
+              <img src="/assets/img/research_activ_prevs/aip24.webp" alt="Affiche du AIP Clinical &amp; Dynamic Psychology Congress 2024" loading="lazy">
           </div>
           <div class="activity-date">12-15 sept 2024</div>
         </div>
@@ -230,7 +230,7 @@ _styles: >
         <div class="activity-side">
           <span class="activity-tag activity-tag--conference">Congrès</span>
           <div class="activity-thumb">
-            <img src="{{ '/assets/img/research_activ_prevs/gfn24.webp' | relative_url }}" alt="Présentation au Global Forum on Nicotine 2024" loading="lazy">
+            <img src="/assets/img/research_activ_prevs/gfn24.webp" alt="Présentation au Global Forum on Nicotine 2024" loading="lazy">
           </div>
           <div class="activity-date">13-15 juin 2024</div>
         </div>
@@ -252,7 +252,7 @@ _styles: >
         <div class="activity-side">
           <span class="activity-tag activity-tag--conference">Conférence</span>
           <div class="activity-thumb">
-            <img src="{{ '/assets/img/research_activ_prevs/notobaccoday24.webp' | relative_url }}" alt="Session interactive au No Tobacco Day 2024" loading="lazy">
+            <img src="/assets/img/research_activ_prevs/notobaccoday24.webp" alt="Session interactive au No Tobacco Day 2024" loading="lazy">
           </div>
           <div class="activity-date">30 mai 2024</div>
         </div>
@@ -274,7 +274,7 @@ _styles: >
         <div class="activity-side">
           <span class="activity-tag activity-tag--conference">Conférence</span>
           <div class="activity-thumb">
-            <img src="{{ '/assets/img/research_activ_prevs/europedigitalpsy24.webp' | relative_url }}" alt="Affiche de la European Conference of Digital Psychology 2024" loading="lazy">
+            <img src="/assets/img/research_activ_prevs/europedigitalpsy24.webp" alt="Affiche de la European Conference of Digital Psychology 2024" loading="lazy">
           </div>
           <div class="activity-date">21-22 mars 2024</div>
         </div>
@@ -296,7 +296,7 @@ _styles: >
         <div class="activity-side">
           <span class="activity-tag activity-tag--conference">Conférence</span>
           <div class="activity-thumb">
-            <img src="{{ '/assets/img/research_activ_prevs/icann17.webp' | relative_url }}" alt="Affiche d'ICANN 2017" loading="lazy">
+            <img src="/assets/img/research_activ_prevs/icann17.webp" alt="Affiche d'ICANN 2017" loading="lazy">
           </div>
           <div class="activity-date">11-14 sept 2017</div>
         </div>
@@ -325,7 +325,7 @@ _styles: >
         <div class="activity-side">
           <span class="activity-tag activity-tag--workshop">Atelier</span>
           <div class="activity-thumb">
-            <img src="{{ '/assets/img/research_activ_prevs/ijcnn25.webp' | relative_url }}" alt="Affiche du VERIMEDIA Workshop 2025" loading="lazy">
+            <img src="/assets/img/research_activ_prevs/ijcnn25.webp" alt="Affiche du VERIMEDIA Workshop 2025" loading="lazy">
           </div>
           <div class="activity-date">30 juin - 5 juil 2025</div>
         </div>
@@ -346,7 +346,7 @@ _styles: >
         <div class="activity-side">
           <span class="activity-tag activity-tag--workshop">Challenge</span>
           <div class="activity-thumb">
-            <img src="{{ '/assets/img/research_activ_prevs/fhda25.webp' | relative_url }}" alt="Affiche du FHDA Challenge 2025" loading="lazy">
+            <img src="/assets/img/research_activ_prevs/fhda25.webp" alt="Affiche du FHDA Challenge 2025" loading="lazy">
           </div>
           <div class="activity-date">25 juin 2025</div>
         </div>
@@ -367,7 +367,7 @@ _styles: >
         <div class="activity-side">
           <span class="activity-tag activity-tag--workshop">Atelier</span>
           <div class="activity-thumb">
-            <img src="{{ '/assets/img/research_activ_prevs/secondws25.webp' | relative_url }}" alt="Affiche du Second Workshop on Generative AI &amp; Computer Vision" loading="lazy">
+            <img src="/assets/img/research_activ_prevs/secondws25.webp" alt="Affiche du Second Workshop on Generative AI &amp; Computer Vision" loading="lazy">
           </div>
           <div class="activity-date">11 avr 2025</div>
         </div>
@@ -386,7 +386,7 @@ _styles: >
         <div class="activity-side">
           <span class="activity-tag activity-tag--workshop">Atelier</span>
           <div class="activity-thumb">
-            <img src="{{ '/assets/img/research_activ_prevs/wstaormina25.webp' | relative_url }}" alt="Affiche du Workshop on Emerging Challenges and Innovations in ICT in the Era of AI" loading="lazy">
+            <img src="/assets/img/research_activ_prevs/wstaormina25.webp" alt="Affiche du Workshop on Emerging Challenges and Innovations in ICT in the Era of AI" loading="lazy">
           </div>
           <div class="activity-date">11 mars 2025</div>
         </div>
@@ -405,7 +405,7 @@ _styles: >
         <div class="activity-side">
           <span class="activity-tag activity-tag--workshop">Atelier</span>
           <div class="activity-thumb">
-            <img src="{{ '/assets/img/research_activ_prevs/firstws24.webp' | relative_url }}" alt="Affiche du First Workshop on Generative AI &amp; Computer Vision" loading="lazy">
+            <img src="/assets/img/research_activ_prevs/firstws24.webp" alt="Affiche du First Workshop on Generative AI &amp; Computer Vision" loading="lazy">
           </div>
           <div class="activity-date">19 mars 2024</div>
         </div>
@@ -431,7 +431,7 @@ _styles: >
         <div class="activity-side">
           <span class="activity-tag activity-tag--school">École d'Été</span>
           <div class="activity-thumb">
-            <img src="{{ '/assets/img/research_activ_prevs/ifoss25.webp' | relative_url }}" alt="Affiche d'IFOSS 2025" loading="lazy">
+            <img src="/assets/img/research_activ_prevs/ifoss25.webp" alt="Affiche d'IFOSS 2025" loading="lazy">
           </div>
           <div class="activity-date">13-19 juil 2025</div>
         </div>
@@ -453,7 +453,7 @@ _styles: >
         <div class="activity-side">
           <span class="activity-tag activity-tag--school">École d'Été</span>
           <div class="activity-thumb">
-            <img src="{{ '/assets/img/research_activ_prevs/ifoss24.webp' | relative_url }}" alt="Affiche d'IFOSS 2024" loading="lazy">
+            <img src="/assets/img/research_activ_prevs/ifoss24.webp" alt="Affiche d'IFOSS 2024" loading="lazy">
           </div>
           <div class="activity-date">14-20 juil 2024</div>
         </div>
@@ -482,7 +482,7 @@ _styles: >
         <div class="activity-side">
           <span class="activity-tag activity-tag--event">Événement</span>
           <div class="activity-thumb">
-            <img src="{{ '/assets/img/research_activ_prevs/sharper25.webp' | relative_url }}" alt="Affiche de SHARPER Night 2025" loading="lazy">
+            <img src="/assets/img/research_activ_prevs/sharper25.webp" alt="Affiche de SHARPER Night 2025" loading="lazy">
           </div>
           <div class="activity-date">26 sept 2025</div>
         </div>
@@ -504,7 +504,7 @@ _styles: >
         <div class="activity-side">
           <span class="activity-tag activity-tag--event">Événement</span>
           <div class="activity-thumb">
-            <img src="{{ '/assets/img/research_activ_prevs/wmf25.webp' | relative_url }}" alt="Affiche de We Make Future 2025" loading="lazy">
+            <img src="/assets/img/research_activ_prevs/wmf25.webp" alt="Affiche de We Make Future 2025" loading="lazy">
           </div>
           <div class="activity-date">4-6 juin 2025</div>
         </div>
@@ -526,7 +526,7 @@ _styles: >
         <div class="activity-side">
           <span class="activity-tag activity-tag--event">Événement</span>
           <div class="activity-thumb">
-            <img src="{{ '/assets/img/research_activ_prevs/welcomephd24.webp' | relative_url }}" alt="Affiche de Welcome Ph.D. Day 2024" loading="lazy">
+            <img src="/assets/img/research_activ_prevs/welcomephd24.webp" alt="Affiche de Welcome Ph.D. Day 2024" loading="lazy">
           </div>
           <div class="activity-date">9 déc 2024</div>
         </div>
@@ -545,7 +545,7 @@ _styles: >
         <div class="activity-side">
           <span class="activity-tag activity-tag--event">Événement</span>
           <div class="activity-thumb">
-            <img src="{{ '/assets/img/research_activ_prevs/sharper24.webp' | relative_url }}" alt="Affiche de SHARPER Night 2024" loading="lazy">
+            <img src="/assets/img/research_activ_prevs/sharper24.webp" alt="Affiche de SHARPER Night 2024" loading="lazy">
           </div>
           <div class="activity-date">27 sept 2024</div>
         </div>
@@ -567,7 +567,7 @@ _styles: >
         <div class="activity-side">
           <span class="activity-tag activity-tag--event">Événement</span>
           <div class="activity-thumb">
-            <img src="{{ '/assets/img/research_activ_prevs/didacta23.webp' | relative_url }}" alt="Affiche de Didacta Italia – Sicilian Edition" loading="lazy">
+            <img src="/assets/img/research_activ_prevs/didacta23.webp" alt="Affiche de Didacta Italia – Sicilian Edition" loading="lazy">
           </div>
           <div class="activity-date">12-14 oct 2023</div>
         </div>
@@ -596,7 +596,7 @@ _styles: >
         <div class="activity-side">
           <span class="activity-tag activity-tag--editorial">Special Issue</span>
           <div class="activity-thumb">
-            <img src="{{ '/assets/img/research_activ_prevs/digprog.webp' | relative_url }}" alt="Visuel du numéro spécial Digital Health Innovations &amp; Psychological Well-being" loading="lazy">
+            <img src="/assets/img/research_activ_prevs/digprog.webp" alt="Visuel du numéro spécial Digital Health Innovations &amp; Psychological Well-being" loading="lazy">
           </div>
           <div class="activity-date">31 août 2025</div>
         </div>

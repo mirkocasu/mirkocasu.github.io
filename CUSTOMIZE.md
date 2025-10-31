@@ -24,8 +24,8 @@ The project is structured as follows, focusing on the main components that you w
 ├── 📂 _news/: the news that will appear in the news section in the about page
 ├── 📂 _pages/: contains the pages of the website
 |   └── 📄 404.md: 404 page (page not found)
-├── 📂 _posts/: contains the blog posts
-├── 📂 _projects/: contains the projects
+├── 📂 _posts/ (optional): create this folder to enable the blog feature
+├── 📂 _projects/ (optional): create this folder to publish projects
 └── 📂 _sass/: contains the SASS files that define the style of the website
     ├── 📄 _base.scss: base style of the website
     ├── 📄 _cv.scss: style of the CV page
@@ -59,13 +59,13 @@ You can create new pages by adding new Markdown files in the [\_pages](_pages/) 
 
 ## Creating new blog posts
 
-To create a new blog post, you can add a new Markdown file in the [\_posts](_posts/) directory. The [name of the file must follow](https://jekyllrb.com/docs/posts/#creating-posts) the format `YYYY-MM-DD-title.md`. The easiest way to do this is to copy an existing blog post and modify it. Note that some blog posts have optional fields in the [frontmatter](https://jekyllrb.com/docs/front-matter/) that are used to enable specific behaviors or functions.
+To create a new blog post, add a Markdown file under the `_posts/` directory (create the folder first if it is missing). The [name of the file must follow](https://jekyllrb.com/docs/posts/#creating-posts) the format `YYYY-MM-DD-title.md`. The easiest way to do this is to copy an existing blog post and modify it. Note that some blog posts have optional fields in the [frontmatter](https://jekyllrb.com/docs/front-matter/) that are used to enable specific behaviors or functions.
 
-If you want to create blog posts that are not ready to be published, but you want to track it with git, you can create a [\_drafts](https://jekyllrb.com/docs/posts/#drafts) directory and store them there.
+If you want to create blog posts that are not ready to be published, but you want to track them with git, you can create a `_drafts/` directory and store them there.
 
 ## Creating new projects
 
-You can create new projects by adding new Markdown files in the [\_projects](_projects/) directory. The easiest way to do this is to copy an existing project and modify it.
+You can create new projects by adding new Markdown files in the `_projects/` directory. Create the folder first if it is missing; the easiest way to do this is to copy an existing project file and modify it.
 
 ## Adding some news
 
@@ -75,7 +75,7 @@ You can add news in the about page by adding new Markdown files in the [\_news](
 
 This Jekyll theme implements `collections` to let you break up your work into categories. The theme comes with two default collections: `news` and `projects`. Items from the `news` collection are automatically displayed on the home page. Items from the `projects` collection are displayed on a responsive grid on projects page.
 
-You can easily create your own collections, apps, short stories, courses, or whatever your creative work is. To do this, edit the collections in the [\_config.yml](_config.yml) file, create a corresponding folder, and create a landing page for your collection, similar to [\_pages/projects.md](_pages/projects.md).
+You can easily create your own collections, apps, short stories, courses, or whatever your creative work is. To do this, edit the collections in the [_config.yml](_config.yml) file, create a corresponding folder, and create a landing page for your collection (for example, by adding `_pages/projects.md`).
 
 ## Adding a new publication
 
@@ -173,21 +173,21 @@ Here is a list of the main components that you may want to delete, and how to do
 
 To remove the blog, you have to:
 
-- delete [\_posts](_posts/) directory
-- delete blog page [\_pages/blog.md](_pages/blog.md)
-- remove reference to blog page in our [\_pages/dropdown.md](_pages/dropdown.md)
-- remove the `latest_posts` part in [\_pages/about.md](_pages/about.md)
-- remove the `Blog` section in the [\_config.yml](_config.yml) file and the related parts, like the `jekyll-archives`
+- delete the `_posts/` directory
+- delete blog page `_pages/blog.md`
+- remove reference to blog page in `_pages/dropdown.md`
+- remove the `latest_posts` part in [_pages/about.md](_pages/about.md)
+- remove the `Blog` section in the [_config.yml](_config.yml) file and the related parts, like the `jekyll-archives`
 
 You can also:
 
-- delete [\_includes/latest_posts.liquid](_includes/latest_posts.liquid)
-- delete [\_includes/related_posts.liquid](_includes/related_posts.liquid)
-- delete [\_layouts/archive-category.liquid](_layouts/archive-category.liquid)
-- delete [\_layouts/archive-tag.liquid](_layouts/archive-tag.liquid)
-- delete [\_layouts/archive-year.liquid](_layouts/archive-year.liquid)
-- delete [\_plugins/external-posts.rb](_plugins/external-posts.rb)
-- remove the `jekyll-archives` gem from the [Gemfile](Gemfile) and the `plugins` section in [\_config.yml](_config.yml)
+- delete `_includes/latest_posts.liquid`
+- delete `_includes/related_posts.liquid`
+- delete `_layouts/archive-category.liquid`
+- delete `_layouts/archive-tag.liquid`
+- delete `_layouts/archive-year.liquid`
+- delete `_plugins/external-posts.rb`
+- remove the `jekyll-archives` gem from the [Gemfile](Gemfile) and the `plugins` section in [_config.yml](_config.yml)
 - remove the `classifier-reborn` gem from the [Gemfile](Gemfile)
 
 ### Removing the news section
@@ -203,15 +203,15 @@ To remove the news section, you can:
 
 To remove the projects, you can:
 
-- delete the [\_projects](_projects/) directory
-- delete the projects page [\_pages/projects.md](_pages/projects.md)
-- remove reference to projects page in our [\_pages/dropdown.md](_pages/dropdown.md)
-- remove projects part in the `Collections` section in the [\_config.yml](_config.yml) file
+- delete the `_projects/` directory
+- delete the projects page `_pages/projects.md`
+- remove reference to projects page in `_pages/dropdown.md`
+- remove projects part in the `Collections` section in the [_config.yml](_config.yml) file
 
 You can also:
 
-- delete [\_includes/projects_horizontal.liquid](_includes/projects_horizontal.liquid)
-- delete [\_includes/projects.liquid](_includes/projects.liquid)
+- delete `_includes/projects_horizontal.liquid`
+- delete `_includes/projects.liquid`
 
 ### Removing the publications page
 
@@ -237,8 +237,8 @@ You can also:
 
 To remove the repositories, you can:
 
-- delete the repositories page [\_pages/repositories.md](_pages/repositories.md)
-- delete [\_includes/repository/](_includes/repository/) directory
+- delete the repositories page `_pages/repositories.md`
+- delete the `_includes/repository/` directory
 
 ## Adding Token for Lighthouse Badger
 

@@ -92,7 +92,7 @@ _styles: >
         <div class="activity-side">
           <span class="activity-tag activity-tag--conference">Conference</span>
           <div class="activity-thumb">
-            <img src="{{ '/assets/img/research_activ_prevs/icaisf.webp' | relative_url }}" alt="Cover for ICAISF-2025" loading="lazy">
+            <img src="/assets/img/research_activ_prevs/icaisf.webp" alt="Cover for ICAISF-2025" loading="lazy">
           </div>
           <div class="activity-date">Dec 19-20, 2025</div>
         </div>
@@ -114,7 +114,7 @@ _styles: >
         <div class="activity-side">
           <span class="activity-tag activity-tag--conference">Conference</span>
           <div class="activity-thumb">
-            <img src="{{ '/assets/img/research_activ_prevs/acmmm25.webp' | relative_url }}" alt="Cover for ACM Multimedia 2025" loading="lazy">
+            <img src="/assets/img/research_activ_prevs/acmmm25.webp" alt="Cover for ACM Multimedia 2025" loading="lazy">
           </div>
           <div class="activity-date">Oct 27-31, 2025</div>
         </div>
@@ -138,7 +138,7 @@ _styles: >
         <div class="activity-side">
           <span class="activity-tag activity-tag--webinar">Webinar</span>
           <div class="activity-thumb">
-            <img src="{{ '/assets/img/research_activ_prevs/digitales.webp' | relative_url }}" alt="Cover for the DigiTales webinar" loading="lazy">
+            <img src="/assets/img/research_activ_prevs/digitales.webp" alt="Cover for the DigiTales webinar" loading="lazy">
           </div>
           <div class="activity-date">Sep 25, 2025</div>
         </div>
@@ -156,7 +156,7 @@ _styles: >
         <div class="activity-side">
           <span class="activity-tag activity-tag--conference">Conference</span>
           <div class="activity-thumb">
-            <img src="{{ '/assets/img/research_activ_prevs/metroxraine24.webp' | relative_url }}" alt="Poster session at IEEE MetroXRAINE 2024" loading="lazy">
+            <img src="/assets/img/research_activ_prevs/metroxraine24.webp" alt="Poster session at IEEE MetroXRAINE 2024" loading="lazy">
           </div>
           <div class="activity-date">Oct 21-23, 2024</div>
         </div>
@@ -178,7 +178,7 @@ _styles: >
         <div class="activity-side">
           <span class="activity-tag activity-tag--conference">Congress</span>
           <div class="activity-thumb">
-            <img src="{{ '/assets/img/research_activ_prevs/psicocantiere24.webp' | relative_url }}" alt="Poster for Psicologia in Cantiere 2024" loading="lazy">
+            <img src="/assets/img/research_activ_prevs/psicocantiere24.webp" alt="Poster for Psicologia in Cantiere 2024" loading="lazy">
           </div>
           <div class="activity-date">Oct 12, 2024</div>
         </div>
@@ -200,7 +200,7 @@ _styles: >
         <div class="activity-side">
           <span class="activity-tag activity-tag--conference">Congress</span>
           <div class="activity-thumb">
-            <img src="{{ '/assets/img/research_activ_prevs/aip24.webp' | relative_url }}" alt="Poster for AIP Clinical &amp; Dynamic Psychology Congress 2024" loading="lazy">
+            <img src="/assets/img/research_activ_prevs/aip24.webp" alt="Poster for AIP Clinical &amp; Dynamic Psychology Congress 2024" loading="lazy">
           </div>
           <div class="activity-date">Sep 12-15, 2024</div>
         </div>
@@ -222,7 +222,7 @@ _styles: >
         <div class="activity-side">
           <span class="activity-tag activity-tag--conference">Congress</span>
           <div class="activity-thumb">
-            <img src="{{ '/assets/img/research_activ_prevs/gfn24.webp' | relative_url }}" alt="Presentation at the Global Forum on Nicotine 2024" loading="lazy">
+            <img src="/assets/img/research_activ_prevs/gfn24.webp" alt="Presentation at the Global Forum on Nicotine 2024" loading="lazy">
           </div>
           <div class="activity-date">Jun 13-15, 2024</div>
         </div>
@@ -244,7 +244,7 @@ _styles: >
         <div class="activity-side">
           <span class="activity-tag activity-tag--conference">Conference</span>
           <div class="activity-thumb">
-            <img src="{{ '/assets/img/research_activ_prevs/notobaccoday24.webp' | relative_url }}" alt="Interactive session at No Tobacco Day 2024" loading="lazy">
+            <img src="/assets/img/research_activ_prevs/notobaccoday24.webp" alt="Interactive session at No Tobacco Day 2024" loading="lazy">
           </div>
           <div class="activity-date">May 30, 2024</div>
         </div>
@@ -266,7 +266,7 @@ _styles: >
         <div class="activity-side">
           <span class="activity-tag activity-tag--conference">Conference</span>
           <div class="activity-thumb">
-            <img src="{{ '/assets/img/research_activ_prevs/europedigitalpsy24.webp' | relative_url }}" alt="Poster for the European Conference of Digital Psychology 2024" loading="lazy">
+            <img src="/assets/img/research_activ_prevs/europedigitalpsy24.webp" alt="Poster for the European Conference of Digital Psychology 2024" loading="lazy">
           </div>
           <div class="activity-date">Mar 21-22, 2024</div>
         </div>
@@ -288,7 +288,7 @@ _styles: >
         <div class="activity-side">
           <span class="activity-tag activity-tag--conference">Conference</span>
           <div class="activity-thumb">
-            <img src="{{ '/assets/img/research_activ_prevs/icann17.webp' | relative_url }}" alt="Poster for ICANN 2017" loading="lazy">
+            <img src="/assets/img/research_activ_prevs/icann17.webp" alt="Poster for ICANN 2017" loading="lazy">
           </div>
           <div class="activity-date">Sep 11-14, 2017</div>
         </div>
@@ -317,7 +317,7 @@ _styles: >
         <div class="activity-side">
           <span class="activity-tag activity-tag--workshop">Workshop</span>
           <div class="activity-thumb">
-            <img src="{{ '/assets/img/research_activ_prevs/ijcnn25.webp' | relative_url }}" alt="Poster for VERIMEDIA Workshop 2025" loading="lazy">
+            <img src="/assets/img/research_activ_prevs/ijcnn25.webp" alt="Poster for VERIMEDIA Workshop 2025" loading="lazy">
           </div>
           <div class="activity-date">Jun 30-Jul 5, 2025</div>
         </div>
@@ -338,7 +338,7 @@ _styles: >
         <div class="activity-side">
           <span class="activity-tag activity-tag--workshop">Challenge</span>
           <div class="activity-thumb">
-            <img src="{{ '/assets/img/research_activ_prevs/fhda25.webp' | relative_url }}" alt="Poster for FHDA Challenge 2025" loading="lazy">
+            <img src="/assets/img/research_activ_prevs/fhda25.webp" alt="Poster for FHDA Challenge 2025" loading="lazy">
           </div>
           <div class="activity-date">Jun 25, 2025</div>
         </div>
@@ -359,7 +359,7 @@ _styles: >
         <div class="activity-side">
           <span class="activity-tag activity-tag--workshop">Workshop</span>
           <div class="activity-thumb">
-            <img src="{{ '/assets/img/research_activ_prevs/secondws25.webp' | relative_url }}" alt="Poster for the Second Workshop on Generative AI &amp; Computer Vision" loading="lazy">
+            <img src="/assets/img/research_activ_prevs/secondws25.webp" alt="Poster for the Second Workshop on Generative AI &amp; Computer Vision" loading="lazy">
           </div>
           <div class="activity-date">Apr 11, 2025</div>
         </div>
@@ -378,7 +378,7 @@ _styles: >
         <div class="activity-side">
           <span class="activity-tag activity-tag--workshop">Workshop</span>
           <div class="activity-thumb">
-            <img src="{{ '/assets/img/research_activ_prevs/wstaormina25.webp' | relative_url }}" alt="Poster for the Workshop on Emerging Challenges and Innovations in ICT in the Era of AI" loading="lazy">
+            <img src="/assets/img/research_activ_prevs/wstaormina25.webp" alt="Poster for the Workshop on Emerging Challenges and Innovations in ICT in the Era of AI" loading="lazy">
           </div>
           <div class="activity-date">Mar 11, 2025</div>
         </div>
@@ -397,7 +397,7 @@ _styles: >
         <div class="activity-side">
           <span class="activity-tag activity-tag--workshop">Workshop</span>
           <div class="activity-thumb">
-            <img src="{{ '/assets/img/research_activ_prevs/firstws24.webp' | relative_url }}" alt="Poster for the First Workshop on Generative AI &amp; Computer Vision" loading="lazy">
+            <img src="/assets/img/research_activ_prevs/firstws24.webp" alt="Poster for the First Workshop on Generative AI &amp; Computer Vision" loading="lazy">
           </div>
           <div class="activity-date">Mar 19, 2024</div>
         </div>
@@ -423,7 +423,7 @@ _styles: >
         <div class="activity-side">
           <span class="activity-tag activity-tag--school">Summer School</span>
           <div class="activity-thumb">
-            <img src="{{ '/assets/img/research_activ_prevs/ifoss25.webp' | relative_url }}" alt="Poster for IFOSS 2025" loading="lazy">
+            <img src="/assets/img/research_activ_prevs/ifoss25.webp" alt="Poster for IFOSS 2025" loading="lazy">
           </div>
           <div class="activity-date">Jul 13-19, 2025</div>
         </div>
@@ -445,7 +445,7 @@ _styles: >
         <div class="activity-side">
           <span class="activity-tag activity-tag--school">Summer School</span>
           <div class="activity-thumb">
-            <img src="{{ '/assets/img/research_activ_prevs/ifoss24.webp' | relative_url }}" alt="Poster for IFOSS 2024" loading="lazy">
+            <img src="/assets/img/research_activ_prevs/ifoss24.webp" alt="Poster for IFOSS 2024" loading="lazy">
           </div>
           <div class="activity-date">Jul 14-20, 2024</div>
         </div>
@@ -474,7 +474,7 @@ _styles: >
         <div class="activity-side">
           <span class="activity-tag activity-tag--event">Event</span>
           <div class="activity-thumb">
-            <img src="{{ '/assets/img/research_activ_prevs/sharper25.webp' | relative_url }}" alt="Poster for SHARPER Night 2025" loading="lazy">
+            <img src="/assets/img/research_activ_prevs/sharper25.webp" alt="Poster for SHARPER Night 2025" loading="lazy">
           </div>
           <div class="activity-date">Sep 26, 2025</div>
         </div>
@@ -496,7 +496,7 @@ _styles: >
         <div class="activity-side">
           <span class="activity-tag activity-tag--event">Event</span>
           <div class="activity-thumb">
-            <img src="{{ '/assets/img/research_activ_prevs/wmf25.webp' | relative_url }}" alt="Poster for We Make Future 2025" loading="lazy">
+            <img src="/assets/img/research_activ_prevs/wmf25.webp" alt="Poster for We Make Future 2025" loading="lazy">
           </div>
           <div class="activity-date">Jun 4-6, 2025</div>
         </div>
@@ -518,7 +518,7 @@ _styles: >
         <div class="activity-side">
           <span class="activity-tag activity-tag--event">Event</span>
           <div class="activity-thumb">
-            <img src="{{ '/assets/img/research_activ_prevs/welcomephd24.webp' | relative_url }}" alt="Poster for Welcome Ph.D. Day 2024" loading="lazy">
+            <img src="/assets/img/research_activ_prevs/welcomephd24.webp" alt="Poster for Welcome Ph.D. Day 2024" loading="lazy">
           </div>
           <div class="activity-date">Dec 9, 2024</div>
         </div>
@@ -537,7 +537,7 @@ _styles: >
         <div class="activity-side">
           <span class="activity-tag activity-tag--event">Event</span>
           <div class="activity-thumb">
-            <img src="{{ '/assets/img/research_activ_prevs/sharper24.webp' | relative_url }}" alt="Poster for SHARPER Night 2024" loading="lazy">
+            <img src="/assets/img/research_activ_prevs/sharper24.webp" alt="Poster for SHARPER Night 2024" loading="lazy">
           </div>
           <div class="activity-date">Sep 27, 2024</div>
         </div>
@@ -559,7 +559,7 @@ _styles: >
         <div class="activity-side">
           <span class="activity-tag activity-tag--event">Event</span>
           <div class="activity-thumb">
-            <img src="{{ '/assets/img/research_activ_prevs/didacta23.webp' | relative_url }}" alt="Poster for Didacta Italia – Sicilian Edition" loading="lazy">
+            <img src="/assets/img/research_activ_prevs/didacta23.webp" alt="Poster for Didacta Italia – Sicilian Edition" loading="lazy">
           </div>
           <div class="activity-date">Oct 12-14, 2023</div>
         </div>
@@ -588,7 +588,7 @@ _styles: >
         <div class="activity-side">
           <span class="activity-tag activity-tag--editorial">Special Issue</span>
           <div class="activity-thumb">
-            <img src="{{ '/assets/img/research_activ_prevs/digprog.webp' | relative_url }}" alt="Cover for the Digital Health Innovations &amp; Psychological Well-being special issue" loading="lazy">
+            <img src="/assets/img/research_activ_prevs/digprog.webp" alt="Cover for the Digital Health Innovations &amp; Psychological Well-being special issue" loading="lazy">
           </div>
           <div class="activity-date">Aug 31, 2025</div>
         </div>
