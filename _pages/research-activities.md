@@ -94,17 +94,17 @@ _styles: >
           <div class="activity-thumb">
             <img src="/assets/img/research_activ_prevs/icaisf.webp" alt="Cover for ICAISF-2025" loading="lazy">
           </div>
-          <div class="activity-date">Dec 19-20, 2025</div>
+          <div class="activity-date">July 24-25, 2026</div>
         </div>
         <div class="activity-body">
             <div class="activity-heading">
-              <h5 class="activity-title">ICAISF-2025</h5>
+              <h5 class="activity-title">ICAISF-2026</h5>
           </div>
           <div class="activity-meta">
             <span class="activity-role activity-role--conference">Scientific Committee</span>
             <span>University of Catania, Istinye University · Catania (Italy)</span>
           </div>
-          <p class="activity-description">Scientific Committee member for ICAISF 2025, the 2nd International Conference on AI and Emerging Technology For Sustainable Future.</p>
+          <p class="activity-description">Scientific Committee member for ICAISF 2026, the 2nd International Conference on AI and Emerging Technology For Sustainable Future.</p>
           <div class="activity-links">
             <a class="activity-btn secondary" href="https://www.icaisf.com/index.html" target="_blank" rel="noopener">icaisf.com</a>
           </div>

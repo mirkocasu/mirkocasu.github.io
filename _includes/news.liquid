@@ -109,7 +109,7 @@
             <td>
               <div class="news-item" style="color: var(--global-text-color);">
                 {% if item.inline %}
-                  <span>{{ item.content | remove: '<p>' | remove: '</p>' | emojify }}</span>
+                  <span>{{ item.content | markdownify | remove: '<p>' | remove: '</p>' | emojify }}</span>
                 {% else %}
                   <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
                 {% endif %}
