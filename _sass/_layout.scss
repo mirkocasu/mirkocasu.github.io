@@ -221,19 +221,58 @@ html[data-theme="dark"] .card.glass {
         border: 1px solid rgba(255, 255, 255, 0.06);
         background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
 
+        .metric-icon {
+          width: 36px;
+          height: 36px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: var(--global-theme-color);
+          margin-bottom: 0.35rem;
+        }
+
         .metric-value {
           font-size: 1.6rem;
           font-weight: 800;
           color: var(--global-text-color);
           letter-spacing: -0.02em;
-          margin-bottom: 0.2rem;
+          margin-bottom: 0.15rem;
+          min-height: 1.5em;
+          transition: color 180ms ease, transform 220ms ease;
         }
 
         .metric-label {
           font-size: 0.88rem;
           color: var(--global-muted-color);
         }
+
+        /* loading state shows subtle spinner inside icon */
+        &.loading {
+          .metric-icon svg { opacity: 0.35; transform-origin: center; animation: spin 1.2s linear infinite; }
+          .metric-value { color: var(--global-muted-color); }
+        }
+
+        &.loaded {
+          .metric-value { transform: translateY(-3px); }
+        }
+
+        /* small accent top stripe to match .metric before behavior */
+        &:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 8px;
+          right: 8px;
+          height: 6px;
+          border-top-left-radius: 8px;
+          border-top-right-radius: 8px;
+          background: var(--global-theme-color);
+          pointer-events: none;
+          opacity: 0.95;
+        }
       }
+
+      @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 
       @media (max-width: 760px) {
         .metric { padding: 0.6rem 0.6rem; }
