@@ -201,6 +201,45 @@ html[data-theme="dark"] .card.glass {
       font-style: italic;
     }
 
+    /* Daily visitor counter - aligned with author metric box styling */
+    .daily-visitor-counter {
+      margin-top: 1rem;
+
+      .metrics-grid-single {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.9rem;
+      }
+
+      .metric {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0.8rem 0.8rem;
+        @include glass-surface($blur: 6px, $trans: 0.14, $radius: 10px);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+
+        .metric-value {
+          font-size: 1.6rem;
+          font-weight: 800;
+          color: var(--global-text-color);
+          letter-spacing: -0.02em;
+          margin-bottom: 0.2rem;
+        }
+
+        .metric-label {
+          font-size: 0.88rem;
+          color: var(--global-muted-color);
+        }
+      }
+
+      @media (max-width: 760px) {
+        .metric { padding: 0.6rem 0.6rem; }
+      }
+    }
+
     @media (max-width: 760px) {
       .metrics-grid {
         grid-template-columns: 1fr;

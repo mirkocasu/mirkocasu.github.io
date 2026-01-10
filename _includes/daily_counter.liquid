@@ -1,0 +1,14 @@
+<div class="daily-visitor-counter-wrap" aria-hidden="false">
+  <section id="daily-visitor-counter" class="daily-visitor-counter" aria-label="Daily visits">
+    <div class="metrics-grid-single">
+      <div class="metric">
+        <div class="metric-value" id="daily-counter-value">—</div>
+        <div class="metric-label" id="daily-counter-label">
+          {% if current_lang == 'it' %}Visite oggi{% elsif current_lang == 'fr' %}Visites aujourd'hui{% else %}Visits today{% endif %}
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script src="{{ '/assets/js/daily_counter.js' | relative_url }}" defer></script>
