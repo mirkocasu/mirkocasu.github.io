@@ -201,34 +201,6 @@ html[data-theme="dark"] .card.glass {
       font-style: italic;
     }
 
-    /* Minimal daily counter: small centered rectangular box with rounded corners and thin border */
-    .daily-visitor-counter {
-      margin: 0.5rem 0;
-      text-align: center;
-
-      .daily-counter-box {
-        display: inline-block;
-        padding: 0.15rem 0.4rem;
-        border: 1px solid #43BEAA;
-        background: transparent;
-        border-radius: 6px;
-        box-sizing: border-box;
-        line-height: 1;
-      }
-
-      #daily-counter-number {
-        display: inline-block;
-        font-weight: 600;
-        color: #43BEAA;
-        font-size: 0.85rem;
-        line-height: 1;
-        vertical-align: middle;
-      }
-
-      /* subtle loading state: dim number */
-      .daily-counter-box.loading #daily-counter-number { opacity: 0.45; }
-    }
-
     @media (max-width: 760px) {
       .metrics-grid {
         grid-template-columns: 1fr;
@@ -236,28 +208,56 @@ html[data-theme="dark"] .card.glass {
       text-align: center;
       .metrics-meta {
         text-align: center;
-        /* stack the small metadata items on narrow viewports to avoid overlap and horizontal overflow */
         display: flex;
-        /* reduce vertical spacing on very small screens so content follows navbar closely */
-        body {
-          padding-top: 4px; /* if any top padding remains, keep it minimal */
-          padding-bottom: 12px;
-        }
-
-        .content-glass-wrapper {
-          margin: 0.4rem auto;
-        }
         flex-direction: column;
         gap: 0.25rem;
         justify-content: center;
         align-items: center;
       }
-      /* ensure the source link and updated timestamp are full-width/stacked */
       .author-metrics-wrap #author-metrics .metrics-source,
       .author-metrics-wrap #author-metrics .metrics-updated {
         display: block;
       }
     }
+  }
+}
+
+/* Minimal daily counter: small centered rectangular box with rounded corners and thin border */
+.daily-visitor-counter-wrap {
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  margin: 3.5rem 0 -2.5rem 0 !important;
+}
+
+.daily-visitor-counter {
+  text-align: center !important;
+
+  .daily-counter-box {
+    display: inline-block !important;
+    padding: 0.2rem 0.6rem !important;
+    border: 1px solid #43beaa !important;
+    background: transparent !important;
+    border-radius: 6px !important;
+    box-sizing: border-box !important;
+    line-height: 1 !important;
+  }
+
+  #daily-counter-number {
+    display: inline-block !important;
+    font-weight: 600 !important;
+    color: #43beaa !important;
+    font-size: 0.9rem !important;
+    min-width: 1.5rem !important;
+    line-height: 1 !important;
+    vertical-align: middle !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* subtle loading state: dim number */
+  .daily-counter-box.loading #daily-counter-number {
+    opacity: 0.45 !important;
   }
 }
 
