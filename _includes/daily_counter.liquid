@@ -1,24 +1,9 @@
 <div class="daily-visitor-counter-wrap" aria-hidden="false">
   <section id="daily-visitor-counter" class="daily-visitor-counter" aria-label="Daily visits">
-    <div class="metrics-grid-single">
-      <div class="metric metric-visitor loading" role="status" aria-live="polite">
-        <div class="metric-icon" aria-hidden="true">
-          <!-- eye icon -->
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M12 5C7 5 2.73 8.11 1 12c1.73 3.89 6 7 11 7s9.27-3.11 11-7c-1.73-3.89-6-7-11-7zm0 10a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" fill="currentColor"/>
-            <circle cx="12" cy="12" r="2" fill="white" fill-opacity="0.1"/>
-          </svg>
-        </div>
-        <div class="metric-value" id="daily-counter-value" aria-atomic="true">—</div>
-        <div class="metric-label" id="daily-counter-label">
-          {% if current_lang == 'it' %}Visite oggi{% elsif current_lang == 'fr' %}Visites aujourd'hui{% else %}Visits today{% endif %}
-        </div>
-        <div class="metric-meta" id="daily-counter-meta" style="display:none;">
-          {% if current_lang == 'it' %}aggiornato oggi{% elsif current_lang == 'fr' %}mis à jour aujourd'hui{% else %}updated today{% endif %}
-        </div>
-      </div>
+    <div class="daily-counter-box" id="daily-counter-box" role="status" aria-live="polite" aria-atomic="true">
+      <span id="daily-counter-number">—</span>
     </div>
   </section>
 </div>
 
-<script src="{{ '/assets/js/daily_counter.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/daily_counter.js' | relative_url }}" defer></script> 

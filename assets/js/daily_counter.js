@@ -15,12 +15,13 @@
   }
 
   document.addEventListener('DOMContentLoaded', async function(){
-    var elValue = document.getElementById('daily-counter-value');
-    var elWrap = document.querySelector('.metric-visitor');
-    var elMeta = document.getElementById('daily-counter-meta');
-    if(!elValue || !elWrap) return;
+    var elNumber = document.getElementById('daily-counter-number');
+    var elBox = document.getElementById('daily-counter-box');
+    if(!elNumber || !elBox) return;
 
-    elWrap.classList.add('loading');
+    // show small loading state by dimming number
+    elBox.classList.add('loading');
+
     var host = (location.hostname || 'site').replace(/\./g,'-').replace(/:/g,'-');
     var today = new Date().toISOString().slice(0,10); // YYYY-MM-DD
     var namespace = 'site-' + host;
@@ -31,17 +32,16 @@
       if(!res.ok) throw new Error('Network');
       var json = await res.json();
       var newVal = Number(json.value || 0);
-      var prev = Number((elValue.textContent||'0').replace(/[^0-9]/g,'')) || 0;
-      animateCount(elValue, prev, newVal, 600);
-      setTimeout(function(){ elWrap.classList.remove('loading'); elWrap.classList.add('loaded'); if(elMeta) elMeta.style.display='block'; }, 650);
+      var prev = Number((elNumber.textContent||'0').replace(/[^0-9]/g,'')) || 0;
+      animateCount(elNumber, prev, newVal, 500);
+      setTimeout(function(){ elBox.classList.remove('loading'); elBox.classList.add('loaded'); }, 550);
     } catch(err){
-      // fallback: attempt to read value
       try {
         var r2 = await fetch('https://api.countapi.xyz/get/' + encodeURIComponent(namespace) + '/' + encodeURIComponent(key));
-        if(r2.ok){ var j2 = await r2.json(); var v = Number(j2.value||0); elValue.textContent = fmt(v); }
-        else elValue.textContent = '—';
-      } catch(e){ elValue.textContent = '—'; }
-      elWrap.classList.remove('loading');
+        if(r2.ok){ var j2 = await r2.json(); var v = Number(j2.value||0); elNumber.textContent = fmt(v); }
+        else elNumber.textContent = '—';
+      } catch(e){ elNumber.textContent = '—'; }
+      elBox.classList.remove('loading');
       console.error('Daily counter error', err);
     }
   });

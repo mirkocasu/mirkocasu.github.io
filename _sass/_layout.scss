@@ -201,81 +201,38 @@ html[data-theme="dark"] .card.glass {
       font-style: italic;
     }
 
-    /* Daily visitor counter - aligned with author metric box styling */
+    /* Minimal daily counter: small centered rectangular box with rounded corners and thin border */
     .daily-visitor-counter {
       margin-top: 1rem;
+      text-align: center; /* center the box horizontally */
 
-      .metrics-grid-single {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 0.9rem;
+      .daily-counter-box {
+        display: inline-block;
+        padding: 0.25rem 0.6rem;
+        border: 1px solid #43BEAA;
+        background: transparent;
+        border-radius: 8px;
+        min-width: 56px;
+        box-sizing: border-box;
       }
 
-      .metric {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 0.8rem 0.8rem;
-        @include glass-surface($blur: 6px, $trans: 0.14, $radius: 10px);
-        border: 1px solid rgba(255, 255, 255, 0.06);
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
-
-        .metric-icon {
-          width: 36px;
-          height: 36px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          color: var(--global-theme-color);
-          margin-bottom: 0.35rem;
-        }
-
-        .metric-value {
-          font-size: 1.6rem;
-          font-weight: 800;
-          color: var(--global-text-color);
-          letter-spacing: -0.02em;
-          margin-bottom: 0.15rem;
-          min-height: 1.5em;
-          transition: color 180ms ease, transform 220ms ease;
-        }
-
-        .metric-label {
-          font-size: 0.88rem;
-          color: var(--global-muted-color);
-        }
-
-        /* loading state shows subtle spinner inside icon */
-        &.loading {
-          .metric-icon svg { opacity: 0.35; transform-origin: center; animation: spin 1.2s linear infinite; }
-          .metric-value { color: var(--global-muted-color); }
-        }
-
-        &.loaded {
-          .metric-value { transform: translateY(-3px); }
-        }
-
-        /* small accent top stripe to match .metric before behavior */
-        &:before {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 8px;
-          right: 8px;
-          height: 6px;
-          border-top-left-radius: 8px;
-          border-top-right-radius: 8px;
-          background: var(--global-theme-color);
-          pointer-events: none;
-          opacity: 0.95;
-        }
+      #daily-counter-number {
+        display: inline-block;
+        font-weight: 700;
+        color: #43BEAA;
+        font-size: 1rem;
+        line-height: 1;
+        vertical-align: middle;
+        min-width: 40px;
+        text-align: center;
       }
 
-      @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+      /* subtle loading state: dim number */
+      .daily-counter-box.loading #daily-counter-number { opacity: 0.45; }
 
       @media (max-width: 760px) {
-        .metric { padding: 0.6rem 0.6rem; }
+        .daily-counter-box { padding: 0.2rem 0.5rem; min-width: 48px; }
+        #daily-counter-number { font-size: 0.95rem; }
       }
     }
 
