@@ -35,12 +35,27 @@
     var today = new Date().toISOString().slice(0, 10); // YYYY-MM-DD
     var namespace = "site-" + host;
     var key = "visits-" + today;
+    var storageKey = "voted-" + namespace + "-" + key;
 
     try {
-      // Switch to a more reliable API (counterapi.dev)
-      var res = await fetch("https://api.counterapi.dev/v1/" + encodeURIComponent(namespace) + "/" + encodeURIComponent(key) + "/up", {
-        method: "GET",
-      });
+      var res;
+      var hasVoted = localStorage.getItem(storageKey);
+
+      if (!hasVoted) {
+        // Increment for new unique visitor today
+        res = await fetch("https://api.counterapi.dev/v1/" + encodeURIComponent(namespace) + "/" + encodeURIComponent(key) + "/up", {
+          method: "GET",
+        });
+        if (res.ok) {
+          localStorage.setItem(storageKey, "1");
+        }
+      } else {
+        // Just fetch current count for returning visitor
+        res = await fetch("https://api.counterapi.dev/v1/" + encodeURIComponent(namespace) + "/" + encodeURIComponent(key), {
+          method: "GET",
+        });
+      }
+
       if (!res.ok) throw new Error("Network");
       var json = await res.json();
       var newVal = Number(json.count || 0);
