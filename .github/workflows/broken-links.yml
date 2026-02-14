@@ -49,4 +49,5 @@ jobs:
         with:
           fail: true
           # excluded specific external URLs that return 415/timeout for HEAD requests but are reachable
-          args: --user-agent 'curl/7.54' --exclude-url 'https://www.oprs.it/evento/psicologia-in-cantiere/' --exclude-url 'https://clinical-neuropsychology.de/steffen-moritz/' --exclude-url 'https://samothrace.eu/' --exclude-path README.md --exclude-path _pages/404.md --exclude-path _pages/blog.md --exclude-path _posts/2018-12-22-distill.md --exclude-path _posts/2023-04-24-videos.md --verbose --no-progress './**/*.md' './**/*.html'
+          # use `--exclude` (supported by this lychee version) to ignore links that cause false positives
+          args: --user-agent 'curl/7.54' --exclude 'https://www.oprs.it/evento/psicologia-in-cantiere/' --exclude 'https://clinical-neuropsychology.de/steffen-moritz/' --exclude 'https://samothrace.eu/' --exclude-path README.md --exclude-path _pages/404.md --exclude-path _pages/blog.md --exclude-path _posts/2018-12-22-distill.md --exclude-path _posts/2023-04-24-videos.md --verbose --no-progress './**/*.md' './**/*.html'
