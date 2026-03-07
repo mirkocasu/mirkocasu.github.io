@@ -32,6 +32,7 @@
 
 
 
+
   <!-- OpenGraph -->
   <meta property="og:site_name" content="Mirko Casu">
   <meta property="og:type" content="website">
@@ -53,6 +54,9 @@
     <meta name="twitter:image" content="https://mirkocasu.github.io/assets/img/logo-min2.webp">
   
   
+    <meta name="twitter:site" content="@bricioladigelo">
+    <meta name="twitter:creator" content="@bricioladigelo">
+  
 
 
 
@@ -65,9 +69,10 @@
 
 
 <!-- Fonts & Icons -->
+<link rel="preload" href="/assets/fonts/satoshi/Satoshi-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/satoshi/Satoshi-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link defer rel="stylesheet" href="/assets/css/academicons.min.css?f0b7046b84e425c55f3463ac249818f5">
 <link defer rel="stylesheet" href="/assets/css/scholar-icons.css?62b2ac103a88034e6882a5be5f3e2772">
-<link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap">
 
 <!-- Code Syntax Highlighting -->
 <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light">
@@ -85,7 +90,7 @@
 <link rel="canonical" href="https://mirkocasu.github.io/news/announcement_20250824161714_news-ifoss-2025.en/">
 
 <!-- Dark Mode -->
-<script src="/assets/js/theme.js?e62ffa93d496eadb9145bb907ff8b861"></script>
+<script src="/assets/js/theme.js?efdf0f63c080f4a308b4574a85c5de59"></script>
 
   <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark">
   <script>
@@ -106,24 +111,39 @@
   <!-- Body -->
   <body class=" sticky-bottom-footer">
     <!-- Header -->
-    <header>
-  <!-- Nav Bar -->
+    
+
+
+
+  
+
+  
+    
+    
+
+
+
+<header>
   <nav id="navbar" class="navbar navbar-light navbar-expand-sm glass " role="navigation">
     <div class="container">
       
-        <a class="navbar-brand title font-weight-lighter glass" href="/">
-          
-            
-              <span class="font-weight-bold">Mirko</span>
-            
-            
-            
-              <span class="surname">Casu</span>
-            
-          
-        </a>
+  <a class="navbar-brand title font-weight-lighter glass" href="/">
+    
       
-      <!-- Navbar Toggle -->
+        <span class="font-weight-bold">
+          Mirko
+        </span>
+      
+      
+      
+      
+        <span class="surname">Casu</span>
+      
+    
+  </a>
+
+
+
       <button class="navbar-toggler collapsed ml-auto glass" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar top-bar"></span>
@@ -133,178 +153,58 @@
 
       <div class="collapse navbar-collapse text-right" id="navbarNav">
         <ul class="navbar-nav ml-auto flex-nowrap">
-          
+  <li class="nav-item ">
+    <a class="nav-link" href="/">about
+    </a>
+  </li>
 
-          <!-- About -->
-          <li class="nav-item ">
-            <a class="nav-link" href="/">about
-              
-            </a>
-          </li>
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="/publications/">publications
+          </a>
+        </li>
+      
+    
+  
+    
+      
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="/research-activities/">research activities
+          </a>
+        </li>
+      
+    
+  
 
-          <!-- Other pages -->
-          
-          
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-              
-              
-                
-            
-              
-              
-              
-                
-                <li class="nav-item ">
-                  <a class="nav-link" href="/publications/">publications
-                  </a>
-                </li>
-              
-            
-          
-            
-              
-              
-                
-            
-              
-              
-                
-            
-              
-              
-                
-            
-              
-              
-              
-                
-                <li class="nav-item ">
-                  <a class="nav-link" href="/research-activities/">research activities
-                  </a>
-                </li>
-              
-            
-          
-          
-          
-            <!-- Theme toggle removed: site is dark-only -->
-          
-          <!-- Language switcher as last nav item (link-based for pre-translated sites) -->
-          <li class="nav-item">
-            <div id="lang-switch" class="lang-switch" aria-label="Language switch">
-              
-                <a id="lang-current" class="lang-current" href="/">🇬🇧</a>
-              
-              <div id="lang-options" class="lang-options" role="menu" aria-hidden="true">
-                <a class="lang-option" href="/">🇬🇧 English</a>
-                <a class="lang-option" href="/it/">🇮🇹 Italiano</a>
-                <a class="lang-option" href="/fr/">🇫🇷 Français</a>
-              </div>
-            </div>
-          </li>
-        </ul>
+  
+</ul>
+
       </div>
     </div>
   </nav>
   
 </header>
-
-<script>
-  // Minimal toggle for the language dropdown: hidden by default, shown when clicking the current flag.
-  (function () {
-    document.addEventListener('DOMContentLoaded', function () {
-      var current = document.getElementById('lang-current');
-      var opts = document.getElementById('lang-options');
-      if (!current || !opts) return;
-      current.addEventListener('click', function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-        // toggle open class instead of relying on inline style
-        var isOpen = opts.classList.toggle('open');
-        opts.setAttribute('aria-hidden', !isOpen);
-      });
-      // Prevent clicks inside the options from bubbling and being closed immediately
-      opts.addEventListener('click', function (e) {
-        e.stopPropagation();
-      });
-      // Close when clicking outside
-      document.addEventListener('click', function (e) {
-        if (!opts.contains(e.target) && e.target !== current) {
-          if (opts.classList.contains('open')) {
-            opts.classList.remove('open');
-            opts.setAttribute('aria-hidden', 'true');
-          }
-        }
-      });
-
-      // Centralized closer for the language options
-      function closeLangOptions() {
-        if (!opts) return;
-        if (opts.classList.contains('open')) {
-          opts.classList.remove('open');
-          opts.setAttribute('aria-hidden', 'true');
-        }
-      }
-
-      // If the mobile navbar collapse opens, ensure the language popup is closed.
-      var navCollapse = document.getElementById('navbarNav');
-      var navToggler = document.querySelector('.navbar-toggler');
-      if (navCollapse) {
-        // Prefer binding to Bootstrap events via jQuery if available (reliable).
-        if (window.jQuery && typeof window.jQuery === 'function') {
-          try {
-            window.jQuery(navCollapse).on('show.bs.collapse', closeLangOptions);
-          } catch (err) {
-            // ignore and fall back
-          }
-        }
-        // Also bind a click handler on the toggler as a simple fallback.
-        if (navToggler) {
-          navToggler.addEventListener('click', function () {
-            // close immediately so the popup isn't visible when the navbar expands
-            closeLangOptions();
-          });
-        }
-        // Existing MutationObserver fallback (keeps previous behavior)
-        var mo = new MutationObserver(function (mutations) {
-          mutations.forEach(function (m) {
-            if (m.attributeName === 'class') {
-              if (navCollapse.classList.contains('show')) {
-                closeLangOptions();
-              }
-            }
-          });
-        });
-        mo.observe(navCollapse, { attributes: true, attributeFilter: ['class'] });
-      }
-    });
-  })();
-</script>
 
 
     <!-- Content -->
@@ -369,8 +269,6 @@
     </div>
   </footer>
 
-<!-- i18n runtime removed: site now uses pre-translated pages under /it/ and /fr/ -->
-
 
     <!-- JavaScripts -->
     <!-- jQuery -->
@@ -417,7 +315,7 @@
 
 <!-- Load Common JS -->
 <script src="/assets/js/no_defer.js?2781658a0a2b13ed609542042a859126"></script>
-<script defer src="/assets/js/common.js?e0514a05c5c95ac1a93a8dfd5249b92e"></script>
+<script defer src="/assets/js/common.js?e9aaf475e6babe91e07bbba988422f72"></script>
 <script defer src="/assets/js/copy_code.js?12775fdf7f95e901d7119054556e495f" type="text/javascript"></script>
 
 <!-- Jupyter Open External Links New Tab -->
