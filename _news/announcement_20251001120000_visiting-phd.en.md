@@ -6,4 +6,4 @@ related_posts: false
 lang: en
 ---
 
-I have started a Visiting PhD period at the École polytechnique fédérale de Lausanne ([EPFL](https://people.epfl.ch/mirko.casu?lang=en)), in Lausanne, Switzerland. I will be working under the supervision of [Prof. Andrea Cavallaro](https://people.epfl.ch/andrea.cavallaro) and joining the [LIDIAP](https://www.epfl.ch/labs/idiap/) research group.
+I have started a Visiting PhD period at [EPFL](https://people.epfl.ch/mirko.casu?lang=en), in Lausanne, Switzerland. I will be working under the supervision of [Prof. Andrea Cavallaro](https://people.epfl.ch/andrea.cavallaro) and joining the [MINTS](https://search.epfl.ch/?filter=unit&q=MINTS/) Lab.

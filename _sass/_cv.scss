@@ -15,6 +15,27 @@ table.table-cv {
   }
 }
 
+.cv-date-badge {
+  min-width: 75px;
+}
+
+.cv-date-column-compact {
+  width: 75px;
+}
+
+.cv-secondary-text {
+  font-size: 0.95rem;
+}
+
+.cv-secondary-text-italic {
+  font-style: italic;
+}
+
+.cv-cell-top-center {
+  vertical-align: top;
+  text-align: center;
+}
+
 a.btncv {
   color: var(--global-text-color) !important;
   border: 1px solid var(--global-text-color) !important;

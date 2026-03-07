@@ -14,12 +14,6 @@ layout: default
     <p class="desc">{{ page.subtitle }}</p>
   </header>
 
-  {% assign current_lang = page.lang | default: 'en' %}
-  {% if current_lang == 'en' %}
-    {% assign lang_prefix = '' %}
-  {% else %}
-    {% assign lang_prefix = '/' | append: current_lang %}
-  {% endif %}
   <article>
     {% if page.profile %}
       <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
@@ -40,10 +34,8 @@ layout: default
           <div class="more-info">{{ page.profile.more_info }}</div>
         {% endif %}
 
-        <!-- Sezione delle icone social spostata qui e ridimensionata -->
-        <div class="social">
-          <div class="contact-icons" style="font-size: 1.9em;">
-            <!-- Modificato da 1.9em a 1.5em -->
+        <div class="social profile-social">
+          <div class="contact-icons">
             {% include social.liquid %}
           </div>
         </div>
@@ -54,43 +46,27 @@ layout: default
 
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}
-      <h2>
-        {% assign news_path = lang_prefix | append: '/news/' %}
-        <a href="{{ news_path | relative_url }}" style="color: inherit">news</a>
+      <h2 class="home-section-title">
+        <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
       </h2>
       {% include news.liquid limit=true %}
     {% endif %}
 
     <!-- Latest posts -->
     {% if page.latest_posts and page.latest_posts.enabled %}
-      <h2>
-        {% assign blog_path = lang_prefix | append: '/blog/' %}
-        <a href="{{ blog_path | relative_url }}" style="color: inherit">latest posts</a>
+      <h2 class="home-section-title">
+        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
       </h2>
       {% include latest_posts.liquid %}
     {% endif %}
 
     <!-- Selected papers -->
     {% if page.selected_papers %}
-      <h2 class="selected-pubs-title">
-        {% assign pubs_path = lang_prefix | append: '/publications/' %}
-        <a href="{{ pubs_path | relative_url }}" style="color: inherit">
-          {%- if current_lang == 'it' -%}
-            pubblicazioni selezionate
-          {%- elsif current_lang == 'fr' -%}
-            publications sélectionnées
-          {%- else -%}
-            selected publications
-          {%- endif -%}
-        </a>
+      <h2 class="home-section-title selected-pubs-title">
+        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
       </h2>
       {% include selected_papers.liquid %}
     {% endif %}
-
-    <!-- Author metrics (Google Scholar / Scopus) -->
-    {% include author_metrics.liquid %}
-
-    <!-- Rimosso il secondo blocco delle icone social -->
 
     {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
       {% include newsletter.liquid center=true %}

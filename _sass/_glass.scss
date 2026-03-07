@@ -331,7 +331,8 @@ ol.bibliography .title,
    rounded corners matching publication action buttons and use the publication
    action color. They remain collapsible via the existing `.hidden` / `.hidden.open` rules. */
 .publications ol.bibliography li div.abstract.hidden,
-.publications ol.bibliography li div.award.hidden {
+.publications ol.bibliography li div.award.hidden,
+.publications ol.bibliography li div.bibtex.hidden {
   /* Completely hide closed boxes: remove border, padding and pointer events so they don't occupy space */
   border: none !important;
   padding: 0 !important;
@@ -342,7 +343,8 @@ ol.bibliography .title,
 }
 
 .publications ol.bibliography li div.abstract.hidden.open,
-.publications ol.bibliography li div.award.hidden.open {
+.publications ol.bibliography li div.award.hidden.open,
+.publications ol.bibliography li div.bibtex.hidden.open {
   /* When opened, show the solid rounded box matching publication action buttons */
   border: 1px solid var(--publication-action-bg) !important;
   border-radius: 6px !important;

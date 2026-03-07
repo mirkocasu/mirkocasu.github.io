@@ -1,0 +1,6 @@
+{%- assign config = site.data.social_platforms[include.platform] -%}
+{%- if config and config.same_as != false and config.url -%}
+  {{- config.url | replace: '__VALUE__', include.value -}}
+{%- elsif include.value.url -%}
+  {{- include.value.url -}}
+{%- endif -%}

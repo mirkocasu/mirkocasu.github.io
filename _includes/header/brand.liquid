@@ -1,0 +1,27 @@
+{% if include.is_home %}
+  {% if site.enable_navbar_social %}
+    <div class="navbar-brand social">{% include social.liquid %}</div>
+  {% endif %}
+{% else %}
+  <a
+    class="navbar-brand title font-weight-lighter {% unless page.url contains '/publications' %}glass{% endunless %}"
+    href="{{ include.home_path | relative_url }}"
+  >
+    {% if site.title == 'blank' %}
+      {% if site.first_name %}
+        <span class="font-weight-bold">
+          {{ site.first_name }}
+        </span>
+      {% endif %}
+      {% if site.first_name and site.last_name %} {% endif %}
+      {% if site.middle_name %}
+        {{ site.middle_name }}
+      {% endif %}
+      {% if site.last_name %}
+        <span class="surname">{{ site.last_name }}</span>
+      {% endif %}
+    {% else %}
+      {{- site.title -}}
+    {% endif %}
+  </a>
+{% endif %}

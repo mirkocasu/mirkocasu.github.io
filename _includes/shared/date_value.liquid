@@ -1,0 +1,18 @@
+{%- assign mode = include.mode | default: 'range' -%}
+{%- assign present_label = include.present_label | default: 'Present' -%}
+
+{%- if mode == 'range' -%}
+  {%- if include.start and include.start != '' -%}
+    {%- assign start_date = include.start | split: '-' | slice: 0, 2 | join: '.' -%}
+    {%- assign end_date = include.end | split: '-' | slice: 0, 2 | join: '.' | default: present_label -%}
+    {{- start_date | append: ' - ' | append: end_date -}}
+  {%- endif -%}
+{%- elsif mode == 'date' -%}
+  {%- if include.value and include.value != '' -%}
+    {{- include.value | split: '-' | join: '.' -}}
+  {%- endif -%}
+{%- elsif mode == 'year' -%}
+  {{- include.value -}}
+{%- else -%}
+  {{- include.value -}}
+{%- endif -%}

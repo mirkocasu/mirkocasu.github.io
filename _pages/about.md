@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href="https://areariservata.psy.it/albo/iscritto/mirko_casu_218564" target="_blank" rel="noopener">Clinical Psychologist</a>, PhD Student in Computer Science @ University of Catania.
+subtitle: <a href="https://areariservata.psy.it/albo/iscritto/mirko_casu_218564" target="_blank" rel="noopener">Clinical Psychologist</a>, PhD Student in Computer Science @ <a href="https://www.unict.it/en" target="_blank" rel="noopener">University of Catania</a>
 
 profile:
   align: right
@@ -19,23 +19,62 @@ social: false # includes social icons at the bottom of the page
 announcements:
   enabled: true # includes a list of news items
   scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
+  limit: 3 # leave blank to include all the news in the `_news` folder
 ---
 
 <p>
-  <span data-i18n="about_preamble_part1">Hello there! I'm a clinical psychologist and a PhD student in Computer Science at the University of Catania, where I work on the </span>
-  <a href="https://samothrace.eu/" target="_blank" rel="noopener">SiciliAn MicronanOTecH Research And Innovation CEnter</a>
-  <span data-i18n="about_preamble_part2"> (SAMOTHRACE) project and am a member of the </span>
-  <a href="https://iplab.dmi.unict.it/mfs/" target="_blank" rel="noopener">Multimedia Security & Forensics</a>
-  <span data-i18n="about_preamble_part3"> group at the </span>
-  <a href="https://iplab.dmi.unict.it/" target="_blank" rel="noopener">Image Processing Laboratory</a>
-  <span data-i18n="about_preamble_part4"> (IPLab). My interdisciplinary research connects psychology with technology, exploring artificial intelligence, deepfakes, cognitive bias, digital forensics, eHealth, mHealth, and virtual reality applications.</span>
+  <span data-i18n="about_preamble_part1">
+    I'm a clinical psychologist and a PhD student in Computer Science at the
+    <a href="https://www.unict.it/en" target="_blank" rel="noopener">University of Catania</a>,
+    where I work on the
+  </span>
+  <a href="https://samothrace.eu/" target="_blank" rel="noopener">SAMOTHRACE</a>
+  <span data-i18n="about_preamble_part2">
+    project and am a member of
+  </span>
+  <a href="https://iplab.dmi.unict.it/" target="_blank" rel="noopener">IPLab</a>'s
+  <a href="https://iplab.dmi.unict.it/mfs/" target="_blank" rel="noopener">Multimedia Security &amp; Forensics</a>
+  <span data-i18n="about_preamble_part3">
+    group. I'm interested in autoregressive and diffusion language models, AI agents, and the interlink between these systems and psychology, mental health, and human safety.
+  </span>
 </p>
 
 <p>
-  <span data-i18n="about_education_part1">Previously, I earned a Bachelor's Degree in Psychological Science from the </span>
+  <span data-i18n="about_visiting_part1">
+    I am also a visiting PhD researcher at
+  </span>
+  <a href="https://www.epfl.ch/" target="_blank" rel="noopener">EPFL</a>
+  <span data-i18n="about_visiting_part2">
+    in Lausanne, under the supervision of
+  </span>
+  <a href="https://people.epfl.ch/andrea.cavallaro" target="_blank" rel="noopener">Prof. Andrea Cavallaro</a>
+  <span data-i18n="about_visiting_part3">
+    in the
+  </span>
+  <a href="https://search.epfl.ch/?filter=unit&q=MINTS" target="_blank" rel="noopener">MINTS</a>
+  <span data-i18n="about_visiting_part4">
+    lab.
+  </span>
+</p>
+
+<p>
+  <span data-i18n="about_background_part1">
+    Before starting my PhD, I trained in psychology, earning a bachelor's degree in Psychological Science from the
+  </span>
   <a href="https://www.uniss.it/en" target="_blank" rel="noopener">University of Sassari</a>
-  <span data-i18n="about_education_part2"> in 2019, and a Master's Degree in Clinical Psychology from the </span>
-  <a href="https://www.unict.it/en" target="_blank" rel="noopener">University of Catania</a>
-  <span data-i18n="about_education_part3"> in 2023. My internships focused on Lacanian psychoanalytic, cognitive-behavioral, and systemic-relational approaches.</span>
+  <span data-i18n="about_background_part2">
+    and a master's degree in Clinical Psychology from the
+  </span>
+  <a href="https://www.unict.it/en" target="_blank" rel="noopener">University of Catania</a>.
+</p>
+
+<p>
+  <span data-i18n="about_personal_part1">
+    Outside research, I also enjoy
+  </span>
+  <a href="https://500px.com/p/m1rkocasu" target="_blank" rel="noopener">photography</a>
+  <span data-i18n="about_personal_part2">
+    and
+  </span>
+  <a href="https://steamcommunity.com/id/bricioladigelo/" target="_blank" rel="noopener">gaming</a>.
 </p>

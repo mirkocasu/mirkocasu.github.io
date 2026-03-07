@@ -1,0 +1,180 @@
+acm_id:
+  title: ACM DL
+  icon: ai ai-acm
+  url: https://dl.acm.org/profile/__VALUE__/
+blogger_url:
+  title: Blogger
+  icon: fa-brands fa-blogger-b
+  url: __VALUE__
+bluesky_url:
+  title: Bluesky
+  icon: fa-brands fa-bluesky
+  url: __VALUE__
+dblp_url:
+  title: DBLP
+  icon: ai ai-dblp
+  url: __VALUE__
+discord_id:
+  title: Discord
+  icon: fa-brands fa-discord
+  url: https://discord.com/users/__VALUE__
+email:
+  title: email
+  icon: fa-solid fa-envelope
+  same_as: false
+facebook_id:
+  title: Facebook
+  icon: fa-brands fa-facebook
+  url: https://facebook.com/__VALUE__
+flickr_id:
+  title: Flickr
+  icon: fa-brands fa-flickr
+  url: https://www.flickr.com/__VALUE__
+github_username:
+  title: GitHub
+  icon: fa-brands fa-github
+  url: https://github.com/__VALUE__
+gitlab_username:
+  title: GitLab
+  icon: fa-brands fa-gitlab
+  url: https://gitlab.com/__VALUE__
+ieee_id:
+  title: IEEE Xplore
+  icon: ai ai-ieee
+  url: https://ieeexplore.ieee.org/author/__VALUE__/
+inspirehep_id:
+  title: Inspire HEP
+  icon: ai ai-inspire
+  url: https://inspirehep.net/authors/__VALUE__
+instagram_id:
+  title: Instagram
+  icon: fa-brands fa-instagram
+  url: https://instagram.com/__VALUE__
+kaggle_id:
+  title: Kaggle
+  icon: fa-brands fa-kaggle
+  url: https://www.kaggle.com/__VALUE__
+keybase_username:
+  title: Keybase
+  icon: fa-brands fa-keybase
+  url: https://keybase.io/__VALUE__
+lastfm_id:
+  title: Last FM
+  icon: fa-brands fa-lastfm
+  url: https://www.last.fm/user/__VALUE__
+lattes_id:
+  title: Lattes
+  icon: ai ai-lattes
+  url: http://lattes.cnpq.br/__VALUE__
+  target_blank: true
+leetcode_id:
+  title: LeetCode
+  icon: si si-leetcode
+  url: https://leetcode.com/u/__VALUE__/
+  target_blank: true
+linkedin_username:
+  title: LinkedIn
+  icon: fa-brands fa-linkedin
+  url: https://www.linkedin.com/in/__VALUE__
+mastodon_username:
+  title: Mastodon
+  icon: fa-brands fa-mastodon
+  url: https://__VALUE__
+  rel: me
+medium_username:
+  title: Medium
+  icon: fa-brands fa-medium
+  url: https://medium.com/@__VALUE__
+orcid_id:
+  title: ORCID
+  icon: ai ai-orcid
+  url: https://orcid.org/__VALUE__
+osf_id:
+  title: Open Science Framework
+  icon: ai ai-osf
+  url: https://osf.io/__VALUE__/
+pinterest_id:
+  title: Pinterest
+  icon: fa-brands fa-pinterest
+  url: https://www.pinterest.com/__VALUE__
+publons_id:
+  title: Publons
+  icon: ai ai-publons
+  url: https://publons.com/a/__VALUE__/
+quora_username:
+  title: Quora
+  icon: fa-brands fa-quora
+  url: https://www.quora.com/profile/__VALUE__
+research_gate_profile:
+  title: ResearchGate
+  icon: ai ai-researchgate
+  url: https://www.researchgate.net/profile/__VALUE__/
+rss_icon:
+  title: RSS Feed
+  icon: fa-solid fa-square-rss
+  same_as: false
+scholar_userid:
+  title: Google Scholar
+  icon: ai ai-google-scholar
+  url: https://scholar.google.com/citations?user=__VALUE__
+scopus_id:
+  title: Scopus
+  icon: ai ai-scopus
+  url: https://www.scopus.com/authid/detail.uri?authorId=__VALUE__
+semanticscholar_id:
+  title: Semantic Scholar
+  icon: ai ai-semantic-scholar
+  url: https://www.semanticscholar.org/author/__VALUE__
+spotify_id:
+  title: Spotify
+  icon: fa-brands fa-spotify
+  url: https://open.spotify.com/user/__VALUE__
+stackoverflow_id:
+  title: Stackoverflow
+  icon: fa-brands fa-stack-overflow
+  url: https://stackoverflow.com/users/__VALUE__
+strava_userid:
+  title: Strava
+  icon: fa-brands fa-strava
+  url: https://www.strava.com/athletes/__VALUE__
+telegram_username:
+  title: Telegram
+  icon: fa-brands fa-telegram
+  url: https://telegram.me/__VALUE__
+unsplash_id:
+  title: Unsplash
+  icon: fa-brands fa-unsplash
+  url: https://unsplash.com/@__VALUE__
+wechat_qr:
+  title: WeChat
+  icon: fa-brands fa-weixin
+  same_as: false
+whatsapp_number:
+  title: whatsapp
+  icon: fa-brands fa-whatsapp
+  url: https://wa.me/__VALUE__
+  same_as: false
+wikidata_id:
+  title: Wikidata
+  icon: fa-solid fa-barcode
+  url: https://www.wikidata.org/wiki/__VALUE__
+wikipedia_id:
+  title: Wikipedia
+  icon: fa-brands fa-wikipedia-w
+  url: https://wikipedia.org/wiki/User:__VALUE__
+work_url:
+  title: Work
+  icon: fa-solid fa-briefcase
+  url: __VALUE__
+x_username:
+  title: X
+  icon: fa-brands fa-x-twitter
+  url: https://twitter.com/__VALUE__
+youtube_id:
+  title: YouTube
+  icon: fa-brands fa-youtube
+  url: https://youtube.com/@__VALUE__
+zotero_username:
+  title: Zotero
+  icon: ai ai-zotero
+  url: https://www.zotero.org/__VALUE__
