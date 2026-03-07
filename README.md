@@ -10,6 +10,7 @@ This website is built with Jekyll and based on the
 ## Overview
 
 The site includes:
+
 - a short bio and academic background
 - publications and news
 - project and research-related pages
