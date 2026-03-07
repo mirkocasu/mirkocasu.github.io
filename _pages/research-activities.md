@@ -26,6 +26,7 @@ _styles: >
   .research-activities .activity-thumb { width: 100%; max-width: 120px; aspect-ratio: 4 / 3; border-radius: 6px !important; overflow: hidden; background: linear-gradient(135deg, rgba(15,51,44,0.25), rgba(15,23,42,0.2)); display: flex; align-items: center; justify-content: center; }
   .research-activities .activity-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 6px !important; }
   .research-activities .activity-date { display: inline-flex; align-items: center; justify-content: center; width: 100%; padding: 0.3rem 0.55rem; border-radius: 6px !important; font-size: 0.58rem; font-weight: 600; background: rgba(15,23,42,0.06); color: #1f2937; text-transform: uppercase; letter-spacing: 0.02em; align-self: flex-start; text-align: center; line-height: 1.1; }
+  .research-activities .activity-mobile-pills { display: none; }
   .research-activities .activity-body { flex: 1 1 auto; display: flex; flex-direction: column; gap: 0.6rem; }
   .research-activities .activity-heading { display: flex; justify-content: space-between; gap: 0.75rem; align-items: flex-start; }
   .research-activities .activity-title { font-size: 1.08rem; font-weight: 680; color: #111827; margin: 0; }
@@ -47,25 +48,34 @@ _styles: >
   .research-activities a { text-decoration: none; }
   .research-activities a:hover { text-decoration: underline; }
   @media (max-width: 992px) {
-  .research-activities .activity-card { flex-direction: column; align-items: stretch; gap: 0.9rem; }
-  .research-activities .activity-side { width: 100%; flex-direction: row; flex-wrap: wrap; justify-content: center; align-items: center; gap: 0.75rem; text-align: center; }
+  .research-activities .activity-card { flex-direction: row; align-items: flex-start; gap: 1rem; }
+  .research-activities .activity-side { flex: 0 0 112px; width: 112px; max-width: 112px; flex-direction: column; flex-wrap: nowrap; justify-content: flex-start; align-items: stretch; gap: 0.5rem; text-align: left; padding-top: 0.05rem; }
   .research-activities .activity-tag,
   .research-activities .activity-thumb,
-  .research-activities .activity-date { flex: 0 0 clamp(96px, 33vw, 120px); width: clamp(96px, 33vw, 120px); max-width: 120px; }
-  .research-activities .activity-date { align-self: center; }
+  .research-activities .activity-date { flex: 0 0 auto; width: 100%; max-width: 112px; }
+  .research-activities .activity-date { align-self: stretch; }
+  .research-activities .activity-mobile-pills { display: flex; flex-direction: column; gap: 0.35rem; width: 100%; max-width: 112px; }
+  .research-activities .activity-mobile-pills:empty { display: none; }
+  .research-activities .activity-mobile-pills .activity-role { display: inline-flex; align-items: center; justify-content: center; width: 100%; align-self: stretch; text-align: center; }
+  .research-activities .activity-mobile-pills .activity-links { display: flex; flex-direction: column; gap: 0.35rem; width: 100%; }
+  .research-activities .activity-mobile-pills .activity-links .activity-btn { width: 100%; justify-content: center; align-self: stretch; }
   }
   @media (max-width: 640px) {
   .research-activities .activity-heading { flex-direction: column; align-items: flex-start; gap: 0.4rem; }
-  .research-activities .activity-side { width: 100%; max-width: none; flex: 0 0 100%; flex-direction: column; align-items: stretch; text-align: left; gap: 0.65rem; }
+  .research-activities .activity-card { gap: 0.9rem; padding: 0.95rem 0; }
+  .research-activities .activity-side { flex: 0 0 104px; width: 104px; max-width: 104px; flex-direction: column; align-items: stretch; text-align: left; gap: 0.38rem; padding-top: 0; }
   .research-activities .activity-tag,
   .research-activities .activity-thumb,
-  .research-activities .activity-date { width: 100%; max-width: none; flex: 0 0 100%; }
-  .research-activities .activity-thumb { aspect-ratio: 4 / 3; }
+  .research-activities .activity-date { width: 100%; max-width: 104px; flex: 0 0 auto; }
+  .research-activities .activity-thumb { height: 82px; aspect-ratio: auto; }
   .research-activities .activity-tag,
-  .research-activities .activity-date { display: flex; justify-content: center; align-items: center; text-align: center; width: 100%; max-width: 100%; flex: 0 0 100%; align-self: stretch; margin-inline: 0; }
+  .research-activities .activity-date { display: flex; justify-content: center; align-items: center; text-align: center; width: 100%; max-width: 104px; flex: 0 0 auto; align-self: stretch; margin-inline: 0; padding: 0.22rem 0.35rem; }
+  .research-activities .activity-mobile-pills { max-width: 104px; }
+  .research-activities .activity-body { min-width: 0; gap: 0.5rem; }
+  .research-activities .activity-title { margin-top: -0.12rem; font-size: clamp(1rem, 4.8vw, 1.22rem); line-height: 1.18; }
   .research-activities .activity-role,
   .research-activities .activity-btn { width: auto; max-width: 100%; flex: 0 0 auto; align-self: flex-start; }
-  .research-activities .activity-meta { justify-content: flex-start; align-items: center; gap: 0.45rem; text-align: left; }
+  .research-activities .activity-meta { justify-content: flex-start; align-items: center; gap: 0.35rem; font-size: 0.84rem; text-align: left; }
   .research-activities .activity-links { width: 100%; justify-content: flex-start; flex-direction: row; flex-wrap: wrap; gap: 0.45rem; }
   }
   @media (prefers-color-scheme: dark) {
@@ -192,7 +202,7 @@ _styles: >
           </div>
           <p class="activity-description">Presented the smartwatch-based dual diagnosis project at the 24th National AIP Congress of the Clinical and Dynamic Psychology Section.</p>
           <div class="activity-links">
-            <a class="activity-btn secondary" href="https://web.archive.org/web/20241116114405/https://aipclinicadinamica2024.it/" target="_blank" rel="noopener">aipclinicadinamica2024.it (archive)</a>
+            <a class="activity-btn secondary" href="https://web.archive.org/web/20241116114405/https://aipclinicadinamica2024.it/" target="_blank" rel="noopener">Website</a>
           </div>
         </div>
       </div>
@@ -236,7 +246,7 @@ _styles: >
           </div>
           <p class="activity-description">Presented the Fondazione Samothrace-backed study <strong>&ldquo;AI in Action: Pioneering an Algorithm for Smoke-Free Living through Wearable Tech&rdquo;</strong> with Prof. Pasquale Caponnetto at the virtual forum 2nd European Conference <strong>&ldquo;Psychology and AI: New Horizons&rdquo;</strong>.</p>
           <div class="activity-links">
-            <a class="activity-btn secondary" href="https://digitalpsychology.eu/" target="_blank" rel="noopener">digitalpsychology.eu</a>
+            <a class="activity-btn secondary" href="https://digitalpsychology.eu/" target="_blank" rel="noopener">Website</a>
           </div>
         </div>
       </div>
