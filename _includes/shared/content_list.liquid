@@ -1,0 +1,22 @@
+{% if include.items %}
+  <ul class="{{ include.list_class | default: 'items' }}">
+    {% for current_item in include.items %}
+      <li>
+        {% if current_item.contents %}
+          {% if current_item.title %}
+            <span class="{{ include.title_class | default: 'item-title' }}">{{ current_item.title }}</span>
+          {% endif %}
+          <ul class="{{ include.nested_list_class | default: 'subitems' }}">
+            {% for subitem in current_item.contents %}
+              <li>
+                <span class="{{ include.nested_item_class | default: 'subitem' }}">{{ subitem }}</span>
+              </li>
+            {% endfor %}
+          </ul>
+        {% else %}
+          <span class="{{ include.item_class | default: 'item' }}">{{ current_item }}</span>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+{% endif %}

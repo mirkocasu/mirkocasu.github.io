@@ -1,0 +1,47 @@
+{%- assign platform = include.platform -%}
+{%- assign value = include.value -%}
+{%- assign config = site.data.social_platforms[platform] -%}
+
+{%- if platform == 'email' -%}
+  <a href="mailto:{{ value | encode_email }}" title="email"><i class="fa-solid fa-envelope"></i></a>
+{%- elsif platform == 'rss_icon' -%}
+  <a href="{{ site.baseurl }}/feed.xml" title="RSS Feed"><i class="fa-solid fa-square-rss"></i></a>
+{%- elsif platform == 'wechat_qr' -%}
+  <a id="WeChatBtn" title="WeChat"><i class="fa-brands fa-weixin"></i></a>
+  <div id="WeChatMod" class="wechat-modal">
+    <img src="{{ value | prepend: 'assets/img/' | relative_url }}" alt="WeChat QR" id="WeChatQR">
+  </div>
+  <script defer src="{{ '/assets/js/wechat.js' | relative_url | bust_file_cache }}" type="text/javascript"></script>
+{%- elsif config and config.url -%}
+  {%- assign href = config.url | replace: '__VALUE__', value -%}
+  {%- capture rel_value -%}
+    {%- if config.target_blank -%}noopener noreferrer{%- endif -%}
+    {%- if config.rel -%}{% if config.target_blank %} {% endif %}{{ config.rel }}{%- endif -%}
+  {%- endcapture -%}
+  <a
+    href="{{ href }}"
+    {%- if config.target_blank %}
+      target="_blank"
+    {%- endif -%}
+    {%- assign rel_value = rel_value | strip -%}
+    {%- if rel_value != blank %}
+      rel="{{ rel_value }}"
+    {%- endif -%}
+    title="{{ config.title }}"
+    ><i class="{{ config.icon }}"></i
+  ></a>
+{%- elsif value.url -%}
+  <a href="{{ value.url }}" title="{{ value.title }}">
+    {%- assign file_ext = value.logo | split: '.' | last -%}
+    {%- if file_ext == 'svg' -%}
+      <svg>
+        <image xlink:href="{% if value.logo contains '://' %}{{ value.logo }}{% else %}{{ value.logo | relative_url }}{% endif %}" />
+      </svg>
+    {%- else -%}
+      <img
+        src="{% if value.logo contains '://' %}{{ value.logo }}{% else %}{{ value.logo | relative_url }}{% endif %}"
+        alt="{{ value.title }}"
+      >
+    {%- endif -%}
+  </a>
+{%- endif -%}

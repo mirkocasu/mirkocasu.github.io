@@ -72,12 +72,19 @@ let applyTheme = () => {
 };
 
 let setHighlight = (theme) => {
+  const highlightThemeLight = document.getElementById("highlight_theme_light");
+  const highlightThemeDark = document.getElementById("highlight_theme_dark");
+
+  if (!highlightThemeLight || !highlightThemeDark) {
+    return;
+  }
+
   if (theme == "dark") {
-    document.getElementById("highlight_theme_light").media = "none";
-    document.getElementById("highlight_theme_dark").media = "";
+    highlightThemeLight.media = "none";
+    highlightThemeDark.media = "";
   } else {
-    document.getElementById("highlight_theme_dark").media = "none";
-    document.getElementById("highlight_theme_light").media = "";
+    highlightThemeDark.media = "none";
+    highlightThemeLight.media = "";
   }
 };
 
@@ -230,6 +237,42 @@ let initTheme = () => {
 let applyCustomButtonClassToPublications = () => {
   const selectors = [".publications .links a", ".publications .list-group-item a", ".publications ol.bibliography li .links a.btn"];
 
+  const layoutPublicationMobileActions = () => {
+    const isMobile = window.matchMedia("(max-width: 575.98px)").matches;
+
+    document.querySelectorAll(".publications ol.bibliography li").forEach((item) => {
+      const mobileHost = item.querySelector(".publication-mobile-actions");
+      const desktopHost = item.querySelector(".publication-desktop-actions");
+      const mobileDetailsHost = item.querySelector(".publication-mobile-details-host");
+      const desktopDetailsHost = item.querySelector(".publication-details-desktop-host");
+      const hiddenContent = item.querySelector(".publication-hidden-content");
+      const links = item.querySelector(".links");
+      const badges = item.querySelector(".badges");
+
+      if (!mobileHost || !desktopHost) {
+        return;
+      }
+
+      const targetHost = isMobile ? mobileHost : desktopHost;
+
+      if (links && links.parentElement !== targetHost) {
+        targetHost.appendChild(links);
+      }
+
+      if (badges && badges.parentElement !== targetHost) {
+        targetHost.appendChild(badges);
+      }
+
+      if (mobileDetailsHost && desktopDetailsHost && hiddenContent) {
+        const detailsTargetHost = isMobile ? mobileDetailsHost : desktopDetailsHost;
+
+        if (hiddenContent.parentElement !== detailsTargetHost) {
+          detailsTargetHost.appendChild(hiddenContent);
+        }
+      }
+    });
+  };
+
   const applyClass = () => {
     selectors.forEach((sel) => {
       document.querySelectorAll(sel).forEach((el) => {
@@ -238,6 +281,8 @@ let applyCustomButtonClassToPublications = () => {
         }
       });
     });
+
+    layoutPublicationMobileActions();
   };
 
   // Run once now, and again after DOMContentLoaded to catch late-inserted elements.
@@ -253,6 +298,12 @@ let applyCustomButtonClassToPublications = () => {
       applyClass();
     });
     obs.observe(pub, { childList: true, subtree: true });
+  });
+
+  window.addEventListener("resize", () => {
+    window.requestAnimationFrame(() => {
+      applyClass();
+    });
   });
 };
 

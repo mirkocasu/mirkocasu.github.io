@@ -1,0 +1,19 @@
+{% if include.items %}
+  <div class="{{ include.container_class | default: 'container-links ml-1 ml-md-4' }}">
+    {% for current_item in include.items %}
+      {% if current_item.link %}
+        <div class="container-link-button">
+          <a href="{{ current_item.link }}" target="_blank" class="btn btn-sm btn-glass z-depth-0">
+            {% if current_item.linkname %}
+              {{ current_item.linkname }}
+            {% elsif current_item.name %}
+              {{ current_item.name }}
+            {% else %}
+              doc
+            {% endif %}
+          </a>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+{% endif %}

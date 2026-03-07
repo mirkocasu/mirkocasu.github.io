@@ -1,19 +1,37 @@
 $(document).ready(function () {
+  const getPublicationContainer = (trigger) => {
+    const listItem = $(trigger).closest("li");
+    if (listItem.length) {
+      return listItem;
+    }
+
+    return $(trigger).closest(".row");
+  };
+
   // add toggle functionality to abstract, award and bibtex buttons
-  $("a.abstract").click(function () {
-    $(this).parent().parent().find(".abstract.hidden").toggleClass("open");
-    $(this).parent().parent().find(".award.hidden.open").toggleClass("open");
-    $(this).parent().parent().find(".bibtex.hidden.open").toggleClass("open");
+  $(document).on("click", "a.abstract", function (event) {
+    event.preventDefault();
+    const container = getPublicationContainer(this);
+
+    container.find(".abstract.hidden").toggleClass("open");
+    container.find(".award.hidden.open").toggleClass("open");
+    container.find(".bibtex.hidden.open").toggleClass("open");
   });
-  $("a.award").click(function () {
-    $(this).parent().parent().find(".abstract.hidden.open").toggleClass("open");
-    $(this).parent().parent().find(".award.hidden").toggleClass("open");
-    $(this).parent().parent().find(".bibtex.hidden.open").toggleClass("open");
+  $(document).on("click", "a.award", function (event) {
+    event.preventDefault();
+    const container = getPublicationContainer(this);
+
+    container.find(".abstract.hidden.open").toggleClass("open");
+    container.find(".award.hidden").toggleClass("open");
+    container.find(".bibtex.hidden.open").toggleClass("open");
   });
-  $("a.bibtex").click(function () {
-    $(this).parent().parent().find(".abstract.hidden.open").toggleClass("open");
-    $(this).parent().parent().find(".award.hidden.open").toggleClass("open");
-    $(this).parent().parent().find(".bibtex.hidden").toggleClass("open");
+  $(document).on("click", "a.bibtex", function (event) {
+    event.preventDefault();
+    const container = getPublicationContainer(this);
+
+    container.find(".abstract.hidden.open").toggleClass("open");
+    container.find(".award.hidden.open").toggleClass("open");
+    container.find(".bibtex.hidden").toggleClass("open");
   });
   $("a").removeClass("waves-effect waves-light");
 

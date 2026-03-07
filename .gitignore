@@ -3,7 +3,7 @@ _site
 .sass-cache
 .jekyll-cache
 .jekyll-metadata
-.DS_store
+.DS_Store
 .ruby-version
 .tweet-cache
 Gemfile.lock
@@ -11,18 +11,9 @@ assets/libs/
 node_modules/
 vendor
 .idea
-# local dev / generated
 .venv/
-node_modules/
 _site/
 readme_preview/
 lighthouse_results/
 .DS_Store
-
-# local dev / generated
-.venv/
-node_modules/
-_site/
-readme_preview/
-lighthouse_results/
-.DS_Store
+jekyll.log

@@ -92,28 +92,6 @@ _styles: >
         <div class="activity-side">
           <span class="activity-tag activity-tag--conference">Conference</span>
           <div class="activity-thumb">
-            <img src="/assets/img/research_activ_prevs/icaisf.webp" alt="Cover for ICAISF-2025" loading="lazy">
-          </div>
-          <div class="activity-date">July 24-25, 2026</div>
-        </div>
-        <div class="activity-body">
-            <div class="activity-heading">
-              <h5 class="activity-title">ICAISF-2026</h5>
-          </div>
-          <div class="activity-meta">
-            <span class="activity-role activity-role--conference">Scientific Committee</span>
-            <span>University of Catania, Istinye University · Catania (Italy)</span>
-          </div>
-          <p class="activity-description">Scientific Committee member for ICAISF 2026, the 2nd International Conference on AI and Emerging Technology For Sustainable Future.</p>
-          <div class="activity-links">
-            <a class="activity-btn secondary" href="https://www.icaisf.com/index.html" target="_blank" rel="noopener">icaisf.com</a>
-          </div>
-        </div>
-      </div>
-      <div class="activity-card">
-        <div class="activity-side">
-          <span class="activity-tag activity-tag--conference">Conference</span>
-          <div class="activity-thumb">
             <img src="/assets/img/research_activ_prevs/acmmm25.webp" alt="Cover for ACM Multimedia 2025" loading="lazy">
           </div>
           <div class="activity-date">Oct 27-31, 2025</div>
@@ -244,28 +222,6 @@ _styles: >
         <div class="activity-side">
           <span class="activity-tag activity-tag--conference">Conference</span>
           <div class="activity-thumb">
-            <img src="/assets/img/research_activ_prevs/notobaccoday24.webp" alt="Interactive session at No Tobacco Day 2024" loading="lazy">
-          </div>
-          <div class="activity-date">May 30, 2024</div>
-        </div>
-        <div class="activity-body">
-          <div class="activity-heading">
-            <h5 class="activity-title">No Tobacco Day 2024</h5>
-          </div>
-          <div class="activity-meta">
-            <span class="activity-role activity-role--conference">Speaker</span>
-            <span>CoEHAR · Catania (Italy)</span>
-          </div>
-          <p class="activity-description">Led an interactive session with students, presenting the <strong>"AI in Action: Pioneering an Algorithm for Smoke-Free Living Through Wearable Tech"</strong> project.</p>
-          <div class="activity-links">
-            <a class="activity-btn secondary" href="https://web.archive.org/web/20250114002430/https://www.coehar.it/evento/notobacco-day-2024/" target="_blank" rel="noopener">Event details (archive)</a>
-          </div>
-        </div>
-      </div>
-      <div class="activity-card">
-        <div class="activity-side">
-          <span class="activity-tag activity-tag--conference">Conference</span>
-          <div class="activity-thumb">
             <img src="/assets/img/research_activ_prevs/europedigitalpsy24.webp" alt="Poster for the European Conference of Digital Psychology 2024" loading="lazy">
           </div>
           <div class="activity-date">Mar 21-22, 2024</div>
@@ -281,28 +237,6 @@ _styles: >
           <p class="activity-description">Presented the Fondazione Samothrace-backed study <strong>&ldquo;AI in Action: Pioneering an Algorithm for Smoke-Free Living through Wearable Tech&rdquo;</strong> with Prof. Pasquale Caponnetto at the virtual forum 2nd European Conference <strong>&ldquo;Psychology and AI: New Horizons&rdquo;</strong>.</p>
           <div class="activity-links">
             <a class="activity-btn secondary" href="https://digitalpsychology.eu/" target="_blank" rel="noopener">digitalpsychology.eu</a>
-          </div>
-        </div>
-      </div>
-      <div class="activity-card">
-        <div class="activity-side">
-          <span class="activity-tag activity-tag--conference">Conference</span>
-          <div class="activity-thumb">
-            <img src="/assets/img/research_activ_prevs/icann17.webp" alt="Poster for ICANN 2017" loading="lazy">
-          </div>
-          <div class="activity-date">Sep 11-14, 2017</div>
-        </div>
-        <div class="activity-body">
-          <div class="activity-heading">
-            <h5 class="activity-title">ICANN 2017</h5>
-          </div>
-          <div class="activity-meta">
-            <span class="activity-role activity-role--conference">Hosting Staff</span>
-            <span>European Neural Network Society (ENNS) · Alghero (Italy)</span>
-          </div>
-          <p class="activity-description">Supported the 26th edition of the International Conference on Artificial Neural Networks (ICANN), the leading European conference on artificial neural networks.</p>
-          <div class="activity-links">
-            <a class="activity-btn secondary" href="https://web.archive.org/web/20170911053138/http://www.icann2017.org/" target="_blank" rel="noopener">icann2017.org (archive)</a>
           </div>
         </div>
       </div>
@@ -353,63 +287,6 @@ _styles: >
           <div class="activity-links">
             <a class="activity-btn secondary" href="https://mfs-iplab.github.io/fhda-challenge/" target="_blank" rel="noopener">Challenge website</a>
           </div>
-        </div>
-      </div>
-      <div class="activity-card">
-        <div class="activity-side">
-          <span class="activity-tag activity-tag--workshop">Workshop</span>
-          <div class="activity-thumb">
-            <img src="/assets/img/research_activ_prevs/secondws25.webp" alt="Poster for the Second Workshop on Generative AI &amp; Computer Vision" loading="lazy">
-          </div>
-          <div class="activity-date">Apr 11, 2025</div>
-        </div>
-        <div class="activity-body">
-          <div class="activity-heading">
-            <h5 class="activity-title">Second Workshop on Generative AI &amp; Computer Vision</h5>
-          </div>
-          <div class="activity-meta">
-            <span class="activity-role activity-role--workshop">Poster Presenter</span>
-            <span>University of Catania · Catania (Italy)</span>
-          </div>
-          <p class="activity-description">Presented poster on "Impostor Bias" research (published in <em>Forensic Science International: Digital Investigation</em>) at the Second Workshop on Generative AI &amp; Computer Vision.</p>
-        </div>
-      </div>
-      <div class="activity-card">
-        <div class="activity-side">
-          <span class="activity-tag activity-tag--workshop">Workshop</span>
-          <div class="activity-thumb">
-            <img src="/assets/img/research_activ_prevs/wstaormina25.webp" alt="Poster for the Workshop on Emerging Challenges and Innovations in ICT in the Era of AI" loading="lazy">
-          </div>
-          <div class="activity-date">Mar 11, 2025</div>
-        </div>
-        <div class="activity-body">
-          <div class="activity-heading">
-            <h5 class="activity-title">Workshop on Emerging Challenges and Innovations in ICT in the Era of AI</h5>
-          </div>
-          <div class="activity-meta">
-            <span class="activity-role activity-role--workshop">Participant</span>
-            <span>University of Catania, Messina · Taormina (Italy)</span>
-          </div>
-          <p class="activity-description">Participated in the joint workshop &ldquo;Emerging Challenges and Innovations in ICT in the Era of AI,&rdquo; organized by the Universities of Catania and Messina.</p>
-        </div>
-      </div>
-      <div class="activity-card">
-        <div class="activity-side">
-          <span class="activity-tag activity-tag--workshop">Workshop</span>
-          <div class="activity-thumb">
-            <img src="/assets/img/research_activ_prevs/firstws24.webp" alt="Poster for the First Workshop on Generative AI &amp; Computer Vision" loading="lazy">
-          </div>
-          <div class="activity-date">Mar 19, 2024</div>
-        </div>
-        <div class="activity-body">
-          <div class="activity-heading">
-            <h5 class="activity-title">First Workshop on Generative AI &amp; Computer Vision</h5>
-          </div>
-          <div class="activity-meta">
-            <span class="activity-role activity-role--workshop">Poster Presenter</span>
-            <span>University of Catania · Catania (Italy)</span>
-          </div>
-          <p class="activity-description">Joined the first workshop focused on generative AI and computer vision advances curated by Prof. Sebastiano Battiato.</p>
         </div>
       </div>
     </div>
@@ -474,28 +351,6 @@ _styles: >
         <div class="activity-side">
           <span class="activity-tag activity-tag--event">Event</span>
           <div class="activity-thumb">
-            <img src="/assets/img/research_activ_prevs/sharper25.webp" alt="Poster for SHARPER Night 2025" loading="lazy">
-          </div>
-          <div class="activity-date">Sep 26, 2025</div>
-        </div>
-        <div class="activity-body">
-          <div class="activity-heading">
-            <h5 class="activity-title">SHARPER Night 2025</h5>
-          </div>
-          <div class="activity-meta">
-            <span class="activity-role activity-role--event">Demonstrator</span>
-            <span>Catania (Italy)</span>
-          </div>
-          <p class="activity-description">Participated in SHARPER Night 2025 with the DMI stand.</p>
-          <div class="activity-links">
-            <a class="activity-btn secondary" href="https://web.dmi.unict.it/it/notizie/dmi-alla-sharper-night-2025" target="_blank" rel="noopener">Event page</a>
-          </div>
-        </div>
-      </div>
-      <div class="activity-card">
-        <div class="activity-side">
-          <span class="activity-tag activity-tag--event">Event</span>
-          <div class="activity-thumb">
             <img src="/assets/img/research_activ_prevs/wmf25.webp" alt="Poster for We Make Future 2025" loading="lazy">
           </div>
           <div class="activity-date">Jun 4-6, 2025</div>
@@ -512,25 +367,6 @@ _styles: >
           <div class="activity-links">
             <a class="activity-btn secondary" href="https://www.wemakefuture.it/2025/programma/" target="_blank" rel="noopener">Event programme</a>
           </div>
-        </div>
-      </div>
-      <div class="activity-card">
-        <div class="activity-side">
-          <span class="activity-tag activity-tag--event">Event</span>
-          <div class="activity-thumb">
-            <img src="/assets/img/research_activ_prevs/welcomephd24.webp" alt="Poster for Welcome Ph.D. Day 2024" loading="lazy">
-          </div>
-          <div class="activity-date">Dec 9, 2024</div>
-        </div>
-        <div class="activity-body">
-          <div class="activity-heading">
-            <h5 class="activity-title">Welcome Ph.D. Day 2024</h5>
-          </div>
-          <div class="activity-meta">
-            <span class="activity-role activity-role--event">Poster Presenter</span>
-            <span>University of Catania · Catania (Italy)</span>
-          </div>
-          <p class="activity-description">Presented poster on "Impostor Bias" at the inaugural Welcome Ph.D. Day poster session.</p>
         </div>
       </div>
       <div class="activity-card">

@@ -1,0 +1,22 @@
+{% assign column_classes = include.column_classes | default: 'col-xs-2 cl-sm-2 col-md-2 text-center date-column' %}
+<div class="{{ column_classes }}{% if include.compact %} cv-date-column-compact{% endif %}">
+  <table class="table-cv">
+    <tbody>
+      <tr>
+        <td>
+          {% include shared/date_badge.liquid value=include.date %}
+        </td>
+      </tr>
+      {% if include.location %}
+        <tr>
+          <td>
+            <p class="location">
+              <i class="fa-solid fa-location-dot iconlocation"></i>
+              {{ include.location }}
+            </p>
+          </td>
+        </tr>
+      {% endif %}
+    </tbody>
+  </table>
+</div>

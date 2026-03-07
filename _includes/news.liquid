@@ -1,113 +1,31 @@
 <div class="news">
   {% if site.news != blank %}
     {% assign news_size = site.news | size %}
-    {% assign current_lang = page.lang | default: 'en' %}
-    <div
-      class="table-responsive"
-      {% if include.limit and page.announcements.scrollable and news_size > 3 %}
-        style="max-height: 60vw"
-      {% endif %}
-    >
+    {% assign raw_news = site.news | reverse %}
+    {% assign news = raw_news %}
+    {% if include.limit and page.announcements.limit %}
+      {% assign news_limit = page.announcements.limit %}
+    {% else %}
+      {% assign news_limit = news_size %}
+    {% endif %}
+    {% assign news_container_class = 'table-responsive' %}
+    {% if include.limit and page.announcements.scrollable and news_limit > 3 and news_size > news_limit %}
+      {% assign news_container_class = news_container_class | append: ' news-table-scrollable' %}
+    {% endif %}
+    <div class="{{ news_container_class }}">
       <table class="table table-sm table-borderless">
-        {% assign raw_news = site.news | reverse %}
-        {% assign news = raw_news %}
-        {% if include.limit and page.announcements.limit %}
-          {% assign news_limit = page.announcements.limit %}
-        {% else %}
-          {% assign news_limit = news_size %}
-        {% endif %}
         {% assign counter = 0 %}
         {% for item in news %}
-          {% assign item_lang = item.lang | default: 'en' %}
-          {% if item_lang != current_lang %}
-            {% continue %}
-          {% endif %}
           {% assign counter = counter | plus: 1 %}
           {% if counter > news_limit %}
             {% break %}
           {% endif %}
           <tr>
-            <th scope="row" style="width: 20%; color: var(--global-text-color);">
-              {% assign year = item.date | date: '%Y' %}
-              {% assign month_num = item.date | date: '%m' %}
-              {% assign month_index = month_num | plus: 0 %}
-              {% assign day = item.date | date: '%d' | plus: 0 %}
-              {% case month_num %}
-                {% when '01' %}
-                  {% assign m_en = 'Jan' %}
-                  {% assign m_it = 'gennaio' %}
-                  {% assign m_fr = 'janvier' %}
-                {% when '02' %}
-                  {% assign m_en = 'Feb' %}
-                  {% assign m_it = 'febbraio' %}
-                  {% assign m_fr = 'février' %}
-                {% when '03' %}
-                  {% assign m_en = 'Mar' %}
-                  {% assign m_it = 'marzo' %}
-                  {% assign m_fr = 'mars' %}
-                {% when '04' %}
-                  {% assign m_en = 'Apr' %}
-                  {% assign m_it = 'aprile' %}
-                  {% assign m_fr = 'avril' %}
-                {% when '05' %}
-                  {% assign m_en = 'May' %}
-                  {% assign m_it = 'maggio' %}
-                  {% assign m_fr = 'mai' %}
-                {% when '06' %}
-                  {% assign m_en = 'Jun' %}
-                  {% assign m_it = 'giugno' %}
-                  {% assign m_fr = 'juin' %}
-                {% when '07' %}
-                  {% assign m_en = 'Jul' %}
-                  {% assign m_it = 'luglio' %}
-                  {% assign m_fr = 'juillet' %}
-                {% when '08' %}
-                  {% assign m_en = 'Aug' %}
-                  {% assign m_it = 'agosto' %}
-                  {% assign m_fr = 'août' %}
-                {% when '09' %}
-                  {% assign m_en = 'Sep' %}
-                  {% assign m_it = 'settembre' %}
-                  {% assign m_fr = 'septembre' %}
-                {% when '10' %}
-                  {% assign m_en = 'Oct' %}
-                  {% assign m_it = 'ottobre' %}
-                  {% assign m_fr = 'octobre' %}
-                {% when '11' %}
-                  {% assign m_en = 'Nov' %}
-                  {% assign m_it = 'novembre' %}
-                  {% assign m_fr = 'novembre' %}
-                {% when '12' %}
-                  {% assign m_en = 'Dec' %}
-                  {% assign m_it = 'dicembre' %}
-                  {% assign m_fr = 'décembre' %}
-                {% else %}
-                  {% assign m_en = '' %}
-                  {% assign m_it = '' %}
-                  {% assign m_fr = '' %}
-              {% endcase %}
-              {% if current_lang == 'it' %}
-                {% assign month = m_it %}
-              {% elsif current_lang == 'fr' %}
-                {% assign month = m_fr %}
-              {% else %}
-                {% assign month = m_en %}
-              {% endif %}
-              {% if current_lang == 'it' or current_lang == 'fr' %}
-                <span class="news-date" data-i18n-date="{{ item.date | date_to_xmlschema }}">
-                  {{- day }}
-                  {{ month }}
-                  {{ year -}}
-                </span>
-              {% else %}
-                <span class="news-date" data-i18n-date="{{ item.date | date_to_xmlschema }}">
-                  {{- month }}
-                  {{ day }}, {{ year -}}
-                </span>
-              {% endif %}
+            <th scope="row" class="news-date-cell">
+              <span class="news-date">{{ item.date | date: '%b %-d, %Y' }}</span>
             </th>
             <td>
-              <div class="news-item" style="color: var(--global-text-color);">
+              <div class="news-item">
                 {% if item.inline %}
                   <span>{{ item.content | markdownify | remove: '<p>' | remove: '</p>' | emojify }}</span>
                 {% else %}

@@ -108,27 +108,41 @@ html[data-theme="dark"] .card.glass {
       font-size: 0.9rem;
       color: var(--global-muted-color);
 
+      .metrics-meta-section {
+        flex: 1 1 0;
+        min-width: 0;
+      }
+
+      .metrics-meta-section.is-left {
+        text-align: left;
+      }
+
+      .metrics-meta-section.is-right {
+        text-align: right;
+      }
+
+      .metrics-nowrap {
+        display: inline-block;
+        white-space: nowrap;
+      }
+
       .metrics-source {
         text-transform: none;
         color: #5d6062;
         font-weight: 400;
       }
-      /* ensure child spans (like #ss-source) inherit same color/weight */
-      .metrics-source span,
-      .metrics-source #ss-source {
-        color: #5d6062;
-        font-weight: 400;
-      }
-      /* Semantic Scholar link styling - high specificity to avoid global overrides */
-      .author-metrics-wrap #author-metrics .metrics-source .metrics-source-link {
+
+      .metrics-source-link {
         color: #ffffff !important;
-        font-weight: 600 !important; /* semi-bold */
+        font-weight: 600 !important;
         text-decoration: none !important;
         display: inline-block;
       }
-      .author-metrics-wrap #author-metrics .metrics-source .metrics-source-link:hover {
+
+      .metrics-source-link:hover {
         color: #f3d25e !important;
       }
+
       .metrics-updated {
         color: #5d6062;
         font-size: 0.88rem;
@@ -214,9 +228,10 @@ html[data-theme="dark"] .card.glass {
         justify-content: center;
         align-items: center;
       }
-      .author-metrics-wrap #author-metrics .metrics-source,
-      .author-metrics-wrap #author-metrics .metrics-updated {
-        display: block;
+
+      .metrics-meta-section.is-left,
+      .metrics-meta-section.is-right {
+        text-align: center;
       }
     }
   }
@@ -275,6 +290,60 @@ html[data-theme="dark"] .card.glass {
 // News
 .news-item {
   color: var(--global-text-color); /* Imposta il colore del testo delle news */
+}
+
+.news-date-cell {
+  width: 20%;
+  color: var(--global-text-color);
+}
+
+.news-table-scrollable {
+  max-height: 60vw;
+}
+
+.news .table {
+  margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+  .news .table tr {
+    display: block;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--global-divider-color);
+  }
+
+  .news .table tr:last-child {
+    border-bottom: none;
+  }
+
+  .news .table th,
+  .news .table td {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border-top: none;
+  }
+
+  .news-date-cell {
+    width: auto;
+    padding-bottom: 0.3rem !important;
+  }
+
+  .news-date {
+    display: block;
+    font-size: 0.82rem;
+    color: var(--global-text-color-light);
+    letter-spacing: 0.01em;
+  }
+
+  .news-item,
+  .news-title {
+    line-height: 1.45;
+  }
+
+  .news-table-scrollable {
+    max-height: none;
+  }
 }
 
 // TODO: redefine content layout.

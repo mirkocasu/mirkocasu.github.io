@@ -23,12 +23,10 @@
 linkedin_username: m1rkocasu # your LinkedIn user name
 # mastodon_username: # your mastodon instance+username in the format instance.tld/@username
 # medium_username: # your Medium username
-orcid_id: 0000-0001-6975-2241 # your ORCID ID
 # osf_id: # your OSF ID
 # pinterest_id: # your pinterest id
 # publons_id: # your ID on Publons
 # quora_username: # your Quora username
-research_gate_profile: Mirko-Casu # your profile on ResearchGate
 # rss_icon: # set to true to show the RSS icon
 scholar_userid: zpZZ3X4AAAAJ # your Google Scholar ID
 scopus_id: 57374838700 # your profile on Scopus
@@ -41,8 +39,8 @@ scopus_id: 57374838700 # your profile on Scopus
 # whatsapp_number: # your WhatsApp number (full phone number in international format. Omit any zeroes, brackets, or dashes when adding the phone number in international format.)
 # wikidata_id: # your wikidata id
 # wikipedia_id: # your wikipedia id (Case sensitive)
-work_url: https://web.dmi.unict.it/dottorandi/mirko.casu?eng # work page URL
-# x_username: # your X handle
+x_username: bricioladigelo # your X handle
+github_username: mirkocasu # your GitHub user name
 # youtube_id: # your youtube channel id (youtube.com/@<youtube_id>)
 # zotero_username: # your zotero username
 # custom_social: # can be any name here other than the ones already defined above
