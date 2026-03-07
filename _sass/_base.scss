@@ -1088,6 +1088,21 @@ code {
   padding: 3px 3px;
 }
 
+@media (max-width: 991.98px) {
+  .post article > .home-section-title {
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .post article > .home-section-title + .news {
+    margin-top: 0;
+  }
+
+  .post article > .home-section-title + .publications {
+    margin-top: 1.5rem;
+  }
+}
+
 @media (max-width: 767px) {
   .content-glass-wrapper {
     margin: 0.3rem auto 0.75rem;

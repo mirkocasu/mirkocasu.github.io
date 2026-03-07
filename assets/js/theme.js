@@ -307,6 +307,83 @@ let applyCustomButtonClassToPublications = () => {
   });
 };
 
+let layoutResearchActivityMobilePills = () => {
+  const isMobile = window.matchMedia("(max-width: 992px)").matches;
+
+  document.querySelectorAll(".research-activities .activity-card").forEach((item) => {
+    const side = item.querySelector(".activity-side");
+    const role = item.querySelector(".activity-meta .activity-role");
+    const links = item.querySelector(".activity-links");
+
+    if (!side) {
+      return;
+    }
+
+    let mobileHost = item.querySelector(".activity-mobile-pills");
+    if (!mobileHost) {
+      mobileHost = document.createElement("div");
+      mobileHost.className = "activity-mobile-pills";
+      side.appendChild(mobileHost);
+    }
+
+    if (role && !item.querySelector(".activity-role-placeholder")) {
+      const rolePlaceholder = document.createElement("span");
+      rolePlaceholder.className = "activity-role-placeholder";
+      rolePlaceholder.hidden = true;
+      role.parentElement.insertBefore(rolePlaceholder, role);
+    }
+
+    if (links && !item.querySelector(".activity-links-placeholder")) {
+      const linksPlaceholder = document.createElement("span");
+      linksPlaceholder.className = "activity-links-placeholder";
+      linksPlaceholder.hidden = true;
+      links.parentElement.insertBefore(linksPlaceholder, links);
+    }
+
+    const rolePlaceholder = item.querySelector(".activity-role-placeholder");
+    const linksPlaceholder = item.querySelector(".activity-links-placeholder");
+
+    if (isMobile) {
+      if (role && role.parentElement !== mobileHost) {
+        mobileHost.appendChild(role);
+      }
+
+      if (links && links.parentElement !== mobileHost) {
+        mobileHost.appendChild(links);
+      }
+      return;
+    }
+
+    if (role && rolePlaceholder && role.parentElement !== rolePlaceholder.parentElement) {
+      rolePlaceholder.after(role);
+    }
+
+    if (links && linksPlaceholder && links.parentElement !== linksPlaceholder.parentElement) {
+      linksPlaceholder.after(links);
+    }
+  });
+};
+
 // Initialize theme and then apply custom-button wiring
 initTheme();
 applyCustomButtonClassToPublications();
+layoutResearchActivityMobilePills();
+
+document.addEventListener("DOMContentLoaded", () => {
+  layoutResearchActivityMobilePills();
+
+  const activities = document.querySelector(".research-activities");
+  if (!activities) return;
+
+  const obs = new MutationObserver(() => {
+    layoutResearchActivityMobilePills();
+  });
+
+  obs.observe(activities, { childList: true, subtree: true });
+});
+
+window.addEventListener("resize", () => {
+  window.requestAnimationFrame(() => {
+    layoutResearchActivityMobilePills();
+  });
+});
