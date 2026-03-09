@@ -51,7 +51,7 @@ announcements:
   <span data-i18n="about_visiting_part3">
     in the
   </span>
-  <a href="https://search.epfl.ch/?filter=unit&q=MINTS" target="_blank" rel="noopener">MINTS</a>
+  <a href="https://www.epfl.ch/labs/mints/" target="_blank" rel="noopener">MINTS</a>
   <span data-i18n="about_visiting_part4">
     lab.
   </span>
