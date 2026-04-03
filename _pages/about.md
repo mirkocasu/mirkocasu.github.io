@@ -41,9 +41,9 @@ announcements:
 
 <p>
   <span data-i18n="about_visiting_part1">
-    I am also a visiting PhD researcher at
+    I was also a visiting PhD researcher at
   </span>
-  <a href="https://www.epfl.ch/" target="_blank" rel="noopener">EPFL</a>
+  <a href="https://people.epfl.ch/mirko.casu?lang=en" target="_blank" rel="noopener">EPFL</a>
   <span data-i18n="about_visiting_part2">
     in Lausanne, under the supervision of
   </span>
@@ -53,7 +53,7 @@ announcements:
   </span>
   <a href="https://www.epfl.ch/labs/mints/" target="_blank" rel="noopener">MINTS</a>
   <span data-i18n="about_visiting_part4">
-    lab.
+    lab, from the 1st of October, 2025 to the 31st of March, 2026.
   </span>
 </p>
 
