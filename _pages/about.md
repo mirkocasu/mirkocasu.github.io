@@ -32,10 +32,9 @@ announcements:
   <span data-i18n="about_preamble_part2">
     project and am a member of
   </span>
-  <a href="https://iplab.dmi.unict.it/" target="_blank" rel="noopener">IPLab</a>'s
-  <a href="https://iplab.dmi.unict.it/mfs/" target="_blank" rel="noopener">Multimedia Security &amp; Forensics</a>
+  <a href="https://iplab.dmi.unict.it/" target="_blank" rel="noopener">IPLab</a>.
   <span data-i18n="about_preamble_part3">
-    group. I'm interested in autoregressive and diffusion language models, AI agents, and the interlink between these systems and psychology, mental health, and human safety.
+    I'm interested in autoregressive and diffusion language models, AI agents, and the interlink between these systems and psychology, mental health, and human safety.
   </span>
 </p>
 
