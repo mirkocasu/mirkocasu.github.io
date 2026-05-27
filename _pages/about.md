@@ -32,10 +32,9 @@ announcements:
   <span data-i18n="about_preamble_part2">
     project and am a member of
   </span>
-  <a href="https://iplab.dmi.unict.it/" target="_blank" rel="noopener">IPLab</a>'s
-  <a href="https://iplab.dmi.unict.it/mfs/" target="_blank" rel="noopener">Multimedia Security &amp; Forensics</a>
+  <a href="https://iplab.dmi.unict.it/" target="_blank" rel="noopener">IPLab</a>.
   <span data-i18n="about_preamble_part3">
-    group. I'm interested in autoregressive and diffusion language models, AI agents, and the interlink between these systems and psychology, mental health, and human safety.
+    I'm interested in autoregressive and diffusion language models, AI agents, and the interlink between these systems and psychology, mental health, and human safety.
   </span>
 </p>
 
@@ -43,7 +42,7 @@ announcements:
   <span data-i18n="about_visiting_part1">
     I was also a visiting PhD researcher at
   </span>
-  <a href="https://people.epfl.ch/mirko.casu?lang=en" target="_blank" rel="noopener">EPFL</a>
+  <a href="https://web.archive.org/web/20260117114034/https://people.epfl.ch/mirko.casu" target="_blank" rel="noopener">EPFL</a>
   <span data-i18n="about_visiting_part2">
     in Lausanne, under the supervision of
   </span>
