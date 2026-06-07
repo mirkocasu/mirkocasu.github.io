@@ -2,11 +2,11 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href="https://areariservata.psy.it/albo/iscritto/mirko_casu_218564" target="_blank" rel="noopener">Clinical Psychologist</a>, PhD Student in Computer Science @ <a href="https://www.unict.it/en" target="_blank" rel="noopener">University of Catania</a>
+subtitle:
 
 profile:
   align: right
-  image: prof_pic2.webp
+  image: prof_pic3.webp
   image_circular: true # crops the image to make it circular
 #  more_info: >
 #    <p>Department of Mathematics and Computer Science</p>
@@ -19,41 +19,21 @@ social: false # includes social icons at the bottom of the page
 announcements:
   enabled: true # includes a list of news items
   scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 3 # leave blank to include all the news in the `_news` folder
+  limit: 5 # leave blank to include all the news in the `_news` folder
 ---
 
 <p>
-  <span data-i18n="about_preamble_part1">
-    I'm a clinical psychologist and a PhD student in Computer Science at the
-    <a href="https://www.unict.it/en" target="_blank" rel="noopener">University of Catania</a>,
-    where I work on the
-  </span>
-  <a href="https://samothrace.eu/" target="_blank" rel="noopener">SAMOTHRACE</a>
-  <span data-i18n="about_preamble_part2">
-    project and am a member of
-  </span>
+  I'm a <a href="https://areariservata.psy.it/albo/iscritto/mirko_casu_218564" target="_blank" rel="noopener">clinical psychologist</a> and a PhD student in Computer Science at the
+  <a href="https://www.unict.it/en" target="_blank" rel="noopener">University of Catania</a>,
+  where I work on the <a href="https://samothrace.eu/" target="_blank" rel="noopener">SAMOTHRACE</a> project and am a member of
   <a href="https://iplab.dmi.unict.it/" target="_blank" rel="noopener">IPLab</a>.
-  <span data-i18n="about_preamble_part3">
-    I'm interested in autoregressive and diffusion language models, AI agents, and the interlink between these systems and psychology, mental health, and human safety.
-  </span>
+  I recently completed a research visit at <a href="https://web.archive.org/web/20260117114034/https://people.epfl.ch/mirko.casu" target="_blank" rel="noopener">EPFL</a>,
+  under the supervision of <a href="https://people.epfl.ch/andrea.cavallaro" target="_blank" rel="noopener">Prof. Andrea Cavallaro</a>
+  at the <a href="https://www.epfl.ch/labs/mints/" target="_blank" rel="noopener">MINTS Lab</a>.
 </p>
 
 <p>
-  <span data-i18n="about_visiting_part1">
-    I was also a visiting PhD researcher at
-  </span>
-  <a href="https://web.archive.org/web/20260117114034/https://people.epfl.ch/mirko.casu" target="_blank" rel="noopener">EPFL</a>
-  <span data-i18n="about_visiting_part2">
-    in Lausanne, under the supervision of
-  </span>
-  <a href="https://people.epfl.ch/andrea.cavallaro" target="_blank" rel="noopener">Prof. Andrea Cavallaro</a>
-  <span data-i18n="about_visiting_part3">
-    in the
-  </span>
-  <a href="https://www.epfl.ch/labs/mints/" target="_blank" rel="noopener">MINTS</a>
-  <span data-i18n="about_visiting_part4">
-    lab, from the 1st of October, 2025 to the 31st of March, 2026.
-  </span>
+  I'm interested in autoregressive and diffusion language models, AI agents, and the interlink between these systems and psychology, mental health, and human safety.
 </p>
 
 <p>
