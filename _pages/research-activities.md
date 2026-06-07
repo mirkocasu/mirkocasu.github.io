@@ -16,7 +16,7 @@ _styles: >
   .research-activities .activity-card:hover { transform: translateY(-3px); box-shadow: none; }
   .research-activities .activity-side { flex: 0 0 clamp(96px, 14%, 120px); width: clamp(96px, 14%, 120px); max-width: 120px; display: flex; flex-direction: column; align-items: stretch; justify-content: flex-start; gap: 0.55rem; text-align: left; padding-top: 0.145rem; }
   .research-activities .activity-side > * { align-self: stretch; }
-  .research-activities .activity-tag { display: inline-flex; align-items: center; justify-content: center; width: 100%; padding: 0.22rem 0.55rem; border-radius: 6px !important; font-size: 0.58rem; font-weight: 700; letter-spacing: 0.02em; text-transform: uppercase; color: #fff; text-align: center; line-height: 1.1; }
+  .research-activities .activity-tag { display: none; align-items: center; justify-content: center; width: 100%; padding: 0.22rem 0.55rem; border-radius: 6px !important; font-size: 0.58rem; font-weight: 700; letter-spacing: 0.02em; text-transform: uppercase; color: #fff; text-align: center; line-height: 1.1; }
   .research-activities .activity-tag--conference { background: #6366f1; }
   .research-activities .activity-tag--webinar { background: #6366f1; }
   .research-activities .activity-tag--workshop { background: #ef4444; }
@@ -25,13 +25,13 @@ _styles: >
   .research-activities .activity-tag--editorial { background: #8b5cf6; }
   .research-activities .activity-thumb { width: 100%; max-width: 120px; aspect-ratio: 4 / 3; border-radius: 6px !important; overflow: hidden; background: linear-gradient(135deg, rgba(15,51,44,0.25), rgba(15,23,42,0.2)); display: flex; align-items: center; justify-content: center; }
   .research-activities .activity-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 6px !important; }
-  .research-activities .activity-date { display: inline-flex; align-items: center; justify-content: center; width: 100%; padding: 0.3rem 0.55rem; border-radius: 6px !important; font-size: 0.58rem; font-weight: 600; background: rgba(15,23,42,0.06); color: #1f2937; text-transform: uppercase; letter-spacing: 0.02em; align-self: flex-start; text-align: center; line-height: 1.1; }
+  .research-activities .activity-date { display: none; }
   .research-activities .activity-mobile-pills { display: none; }
   .research-activities .activity-body { flex: 1 1 auto; display: flex; flex-direction: column; gap: 0.6rem; }
   .research-activities .activity-heading { display: flex; justify-content: space-between; gap: 0.75rem; align-items: flex-start; }
   .research-activities .activity-title { font-size: 1.08rem; font-weight: 680; color: #111827; margin: 0; }
-  .research-activities .activity-meta { display: flex; flex-wrap: wrap; gap: 0.45rem; align-items: center; color: #4b5563; font-size: 0.9rem; }
-  .research-activities .activity-role { background: #272B31; color: #eaf3ff; padding: 0.22rem 0.55rem; border-radius: 6px !important; font-size: 0.58rem; font-weight: 700; letter-spacing: 0.02em; text-transform: uppercase; line-height: 1.1; }
+  .research-activities .activity-meta { display: none; }
+  .research-activities .activity-role { display: none; }
   .research-activities .activity-role--conference,
   .research-activities .activity-role--webinar { color: #8488FF; }
   .research-activities .activity-role--workshop,
@@ -40,7 +40,7 @@ _styles: >
   .research-activities .activity-role--event { color: #4EC8FF; }
   .research-activities .activity-role--editorial { color: #B799FF; }
   .research-activities .activity-description { color: #374151; font-size: 0.9rem; line-height: 1.5; margin: 0; }
-  .research-activities .activity-links { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+  .research-activities .activity-links { display: none; }
   .research-activities .activity-btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.25rem; padding: 0.22rem 0.55rem; border-radius: 6px !important; background: #272B31; color: #43B4A0; font-size: 0.58rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.02em; line-height: 1.1; text-decoration: none; transition: background 0.2s ease, transform 0.2s ease; }
   .research-activities .activity-btn:hover { background: #1F2228; color: #43B4A0; transform: translateY(-1px); text-decoration: none; }
   .research-activities .activity-btn.secondary { background: rgba(39,43,49,0.55); color: #43B4A0; }
@@ -132,7 +132,7 @@ _styles: >
         </div>
         <div class="activity-body">
           <div class="activity-heading">
-            <h5 class="activity-title">DigiTales</h5>
+            <h5 class="activity-title">DigiTales 2025</h5>
           </div>
           <div class="activity-meta">
             <span class="activity-role activity-role--webinar">Speaker</span>
@@ -222,7 +222,7 @@ _styles: >
             <span class="activity-role activity-role--conference">Speaker</span>
             <span>Global Forum on Nicotine Limited · Warsaw (Poland)</span>
           </div>
-          <p class="activity-description">Presented the updated scoping review <strong>"Screening of Digital and Mobile Health Technologies for Improving Smoking Detection and Cessation"</strong> at the GFN 2024, focusing on AI-enabled smartwatch detection for smoking behaviors within the Fondazione Samothrace project.</p>
+          <p class="activity-description">Presented a scoping review on digital and mobile health technologies for smoking detection and cessation, with a focus on AI-enabled smartwatch monitoring.</p>
           <div class="activity-links">
             <a class="activity-btn secondary" href="https://gfn.events/videos/2024/digital-and-mobile-health-innovations-enhancing-smoking-detection-and-cessation/" target="_blank" rel="noopener">Session video</a>
           </div>
@@ -238,13 +238,13 @@ _styles: >
         </div>
         <div class="activity-body">
           <div class="activity-heading">
-            <h5 class="activity-title">European Conference of Digital Psychology</h5>
+            <h5 class="activity-title">European Conference of Digital Psychology 2024</h5>
           </div>
           <div class="activity-meta">
             <span class="activity-role activity-role--conference">Speaker</span>
             <span>Sigmund Freud University Milano · Virtual Forum</span>
           </div>
-          <p class="activity-description">Presented the Fondazione Samothrace-backed study <strong>&ldquo;AI in Action: Pioneering an Algorithm for Smoke-Free Living through Wearable Tech&rdquo;</strong> with Prof. Pasquale Caponnetto at the virtual forum 2nd European Conference <strong>&ldquo;Psychology and AI: New Horizons&rdquo;</strong>.</p>
+          <p class="activity-description">Presented <strong>&ldquo;AI in Action: Pioneering an Algorithm for Smoke-Free Living through Wearable Tech&rdquo;</strong> with Prof. Pasquale Caponnetto.</p>
           <div class="activity-links">
             <a class="activity-btn secondary" href="https://digitalpsychology.eu/" target="_blank" rel="noopener">Website</a>
           </div>
@@ -272,7 +272,7 @@ _styles: >
           <div class="activity-meta">
             <span class="activity-role activity-role--workshop">Speaker</span>
           </div>
-          <p class="activity-description">Showcased <strong>WILD</strong>, a large-scale dataset for synthetic image attribution, at VERIMEDIA &mdash; International Workshop on Media Verification and Integrity, part of the International Joint Conference on Neural Networks (IJCNN) 2025.</p>
+          <p class="activity-description">Presented <strong>WILD</strong>, a large-scale dataset for synthetic image attribution, at the VERIMEDIA Workshop @ IJCNN 2025.</p>
           <div class="activity-links">
             <a class="activity-btn secondary" href="https://2025.ijcnn.org/" target="_blank" rel="noopener">2025.ijcnn.org</a>
           </div>
@@ -395,7 +395,7 @@ _styles: >
             <span class="activity-role activity-role--event">Demonstrator</span>
             <span>Catania (Italy)</span>
           </div>
-          <p class="activity-description">Participated in SHARPER Night 2024 with the DMI stand &ldquo;Images and Smart Cities&rdquo;, presenting a VR demo (Meta Quest 3) integrated with Empatica EmbracePlus smartwatches to elicit and monitor psychophysiological reactions to phobias like acrophobia and claustrophobia.</p>
+          <p class="activity-description">Presented a VR demo (Meta Quest 3) with Empatica EmbracePlus smartwatches to monitor psychophysiological responses to phobias, at the DMI stand &ldquo;Images and Smart Cities&rdquo;.</p>
           <div class="activity-links">
             <a class="activity-btn secondary" href="https://www.sharper-night.it/evento/computer-vision-per-smart-cities/" target="_blank" rel="noopener">Event page</a>
           </div>
@@ -411,7 +411,7 @@ _styles: >
         </div>
         <div class="activity-body">
           <div class="activity-heading">
-            <h5 class="activity-title">Didacta Italia – Sicilian Edition</h5>
+            <h5 class="activity-title">Didacta Italia – Sicilian Edition 2023</h5>
           </div>
           <div class="activity-meta">
             <span class="activity-role activity-role--event">Demonstrator</span>
@@ -445,7 +445,7 @@ _styles: >
           <div class="activity-meta">
             <span class="activity-role activity-role--editorial">Guest Editor</span>
           </div>
-          <p class="activity-description">Guest and Academic editor of the Special Issue "Digital Health Innovations in the Battle Against Psychological Problems: Progress, Hurdles, and Prospects", published on the journal "Exploration of Digital Health Technologies" (Open Exploration).</p>
+          <p class="activity-description">Guest and Academic editor of a special issue on digital mental health innovations, published in <em>Exploration of Digital Health Technologies</em>.</p>
           <div class="activity-links">
             <a class="activity-btn secondary" href="https://www.explorationpub.com/Journals/edht/Special_Issues/287" target="_blank" rel="noopener">Special issue</a>
           </div>

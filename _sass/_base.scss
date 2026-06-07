@@ -125,6 +125,11 @@ a,
 table.table a {
   color: var(--global-theme-color);
 
+  &:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+
   &:hover {
     color: var(--global-theme-color);
     text-decoration: underline;
@@ -923,6 +928,22 @@ footer.sticky-bottom {
         .award {
           color: var(--global-theme-color) !important;
           border: 1px solid var(--global-theme-color);
+        }
+      }
+
+      .honor {
+        display: block;
+        font-size: 0.85em;
+        color: #fcd92d;
+        font-weight: bold;
+        margin-top: 0.25rem;
+
+        a,
+        a:hover,
+        a:visited,
+        a:focus {
+          color: #fcd92d;
+          outline: none;
         }
       }
 
