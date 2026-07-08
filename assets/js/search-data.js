@@ -56,6 +56,9 @@ ninja.data = [{
           section: "News",},{id: "news-digital-technologies-and-artificial-intelligence-in-eating-disorders-has-been-published-in-computers-in-human-behavior-reports",
           title: 'Digital technologies and artificial intelligence in eating disorders has been published in Computers...',
           description: "",
+          section: "News",},{id: "news-fraud-is-not-just-rarity-has-been-published-in-knowledge-based-systems",
+          title: 'Fraud is not just rarity has been published in Knowledge-Based Systems.',
+          description: "",
           section: "News",},{
         id: 'social-email',
         title: 'email',
