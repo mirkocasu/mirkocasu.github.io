@@ -23,11 +23,12 @@ announcements:
 ---
 
 <p>
-  I'm a <a href="https://areariservata.psy.it/albo/iscritto/mirko_casu_218564" target="_blank" rel="noopener">clinical psychologist</a> and a PhD student in Computer Science at the
+  I'm an AI/NLP researcher with a PhD in Computer Science from the
   <a href="https://www.unict.it/en" target="_blank" rel="noopener">University of Catania</a>,
-  where I work on the <a href="https://samothrace.eu/" target="_blank" rel="noopener">SAMOTHRACE</a> project and am a member of
+  where I worked on the <a href="https://samothrace.eu/" target="_blank" rel="noopener">SAMOTHRACE</a> project and am a member of
   <a href="https://iplab.dmi.unict.it/" target="_blank" rel="noopener">IPLab</a>.
-  I recently completed a research visit at <a href="https://web.archive.org/web/20260117114034/https://people.epfl.ch/mirko.casu" target="_blank" rel="noopener">EPFL</a>,
+  I recently completed a research visit at
+  <a href="https://web.archive.org/web/20260117114034/https://people.epfl.ch/mirko.casu" target="_blank" rel="noopener">EPFL</a>,
   under the supervision of <a href="https://people.epfl.ch/andrea.cavallaro" target="_blank" rel="noopener">Prof. Andrea Cavallaro</a>
   at the <a href="https://www.epfl.ch/labs/mints/" target="_blank" rel="noopener">MINTS Lab</a>.
 </p>
@@ -37,13 +38,11 @@ announcements:
 </p>
 
 <p>
-  <span data-i18n="about_background_part1">
-    Before starting my PhD, I trained in psychology, earning a bachelor's degree in Psychological Science from the
-  </span>
+  I am also a
+  <a href="https://areariservata.psy.it/albo/iscritto/mirko_casu_218564" target="_blank" rel="noopener">licensed psychologist</a>,
+  with a bachelor's degree in Psychological Science from the
   <a href="https://www.uniss.it/en" target="_blank" rel="noopener">University of Sassari</a>
-  <span data-i18n="about_background_part2">
-    and a master's degree in Clinical Psychology from the
-  </span>
+  and a master's degree in Clinical Psychology from the
   <a href="https://www.unict.it/en" target="_blank" rel="noopener">University of Catania</a>.
 </p>
 
