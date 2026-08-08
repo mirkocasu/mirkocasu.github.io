@@ -23,7 +23,7 @@ announcements:
 ---
 
 <p>
-  I'm an AI/NLP researcher with a PhD in Computer Science from the
+  I'm an AI researcher with a PhD in Computer Science from the
   <a href="https://www.unict.it/en" target="_blank" rel="noopener">University of Catania</a>,
   where I worked on the <a href="https://samothrace.eu/" target="_blank" rel="noopener">SAMOTHRACE</a> project and am a member of
   <a href="https://iplab.dmi.unict.it/" target="_blank" rel="noopener">IPLab</a>.
@@ -54,5 +54,5 @@ announcements:
   <span data-i18n="about_personal_part2">
     and
   </span>
-  <a href="https://steamcommunity.com/id/bricioladigelo/" target="_blank" rel="noopener">gaming</a>.
+  <a href="https://www.exophase.com/user/bricioladigelo/" target="_blank" rel="noopener">gaming</a>.
 </p>
