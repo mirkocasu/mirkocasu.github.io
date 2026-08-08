@@ -332,6 +332,28 @@ _styles: >
         <div class="activity-side">
           <span class="activity-tag activity-tag--school">Summer School</span>
           <div class="activity-thumb">
+            <img src="/assets/img/research_activ_prevs/ifoss2026.webp" alt="Poster for IFOSS 2026" loading="lazy">
+          </div>
+          <div class="activity-date">Jul 12-18, 2026</div>
+        </div>
+        <div class="activity-body">
+          <div class="activity-heading">
+            <h5 class="activity-title">IFOSS 2026</h5>
+          </div>
+          <div class="activity-meta">
+            <span class="activity-role activity-role--school">Participant &amp; Staff Member</span>
+            <span>University of Catania, Milan, Foggia · Punta Sampieri (Italy)</span>
+          </div>
+          <p class="activity-description">Participation, poster presenter and staff member at the fifth edition of IFOSS – International Forensics Summer School.</p>
+          <div class="activity-links">
+            <a class="activity-btn secondary" href="https://www.ifoss.it/" target="_blank" rel="noopener">ifoss.it</a>
+          </div>
+        </div>
+      </div>
+      <div class="activity-card">
+        <div class="activity-side">
+          <span class="activity-tag activity-tag--school">Summer School</span>
+          <div class="activity-thumb">
             <img src="/assets/img/research_activ_prevs/ifoss25.webp" alt="Poster for IFOSS 2025" loading="lazy">
           </div>
           <div class="activity-date">Jul 13-19, 2025</div>
