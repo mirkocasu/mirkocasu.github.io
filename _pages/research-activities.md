@@ -102,6 +102,28 @@ _styles: >
         <div class="activity-side">
           <span class="activity-tag activity-tag--conference">Conference</span>
           <div class="activity-thumb">
+            <img src="/assets/img/research_activ_prevs/icaisf.webp" alt="Cover for ICAISF 2026" loading="lazy">
+          </div>
+          <div class="activity-date">Jul 24-25, 2026</div>
+        </div>
+        <div class="activity-body">
+          <div class="activity-heading">
+            <h5 class="activity-title">ICAISF 2026</h5>
+          </div>
+          <div class="activity-meta">
+            <span class="activity-role activity-role--conference">Session Chair</span>
+            <span>University of Catania · Catania (Italy)</span>
+          </div>
+          <p class="activity-description">Session chair of Technical Session 6 at the IEEE 2nd International Conference on AI and Emerging Technology For Sustainable Future, held at the Department of Mathematics and Computer Science, University of Catania.</p>
+          <div class="activity-links">
+            <a class="activity-btn secondary" href="https://icaisf.com/schedule.php" target="_blank" rel="noopener">icaisf.com/schedule</a>
+          </div>
+        </div>
+      </div>
+      <div class="activity-card">
+        <div class="activity-side">
+          <span class="activity-tag activity-tag--conference">Conference</span>
+          <div class="activity-thumb">
             <img src="/assets/img/research_activ_prevs/acmmm25.webp" alt="Cover for ACM Multimedia 2025" loading="lazy">
           </div>
           <div class="activity-date">Oct 27-31, 2025</div>
