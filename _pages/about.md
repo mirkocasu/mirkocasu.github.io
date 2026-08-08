@@ -48,7 +48,7 @@ announcements:
 
 <p>
   <span data-i18n="about_personal_part1">
-    Outside research, I also enjoy
+    Outside research, I enjoy
   </span>
   <a href="https://500px.com/p/m1rkocasu" target="_blank" rel="noopener">photography</a>
   <span data-i18n="about_personal_part2">
