@@ -23,7 +23,7 @@ announcements:
 ---
 
 <p>
-  I'm an AI researcher with a PhD in Computer Science from the
+  I'm an AI researcher and PhD candidate in Computer Science at the
   <a href="https://www.unict.it/en" target="_blank" rel="noopener">University of Catania</a>,
   where I worked on the <a href="https://samothrace.eu/" target="_blank" rel="noopener">SAMOTHRACE</a> project and am a member of
   <a href="https://iplab.dmi.unict.it/" target="_blank" rel="noopener">IPLab</a>.
