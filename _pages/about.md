@@ -6,7 +6,7 @@ subtitle:
 
 profile:
   align: right
-  image: prof_pic3.webp
+  image: prof_pic4.webp
   image_circular: true # crops the image to make it circular
 #  more_info: >
 #    <p>Department of Mathematics and Computer Science</p>
