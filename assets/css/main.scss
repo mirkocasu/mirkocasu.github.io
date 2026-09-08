@@ -24,3 +24,43 @@ $max-content-width: {{ site.max_width }};
   "tabler-icons/tabler-icons-filled.scss",
   "tabler-icons/tabler-icons-outline.scss"
 ;
+
+/* Custom social icons */
+.fa-custom-huggingface {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.125em;
+  background-color: currentColor;
+  -webkit-mask-image: url('../img/huggingface.svg');
+  mask-image: url('../img/huggingface.svg');
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+
+  // Fallback for browsers without mask support.
+  @supports not ((mask-image: url('../img/huggingface.svg')) or (-webkit-mask-image: url('../img/huggingface.svg'))) {
+    background-color: transparent;
+    background-image: url('../img/huggingface.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+// Match the theme's social-icon colors: Font Awesome icons are colored via
+// `i::before`, which a background-mask icon doesn't have, so set the color
+// on the element itself (the mask uses `currentColor`).
+.social .contact-icons a {
+  i.fa-custom-huggingface {
+    color: var(--global-text-color);
+    transition: color 0.2s ease-in-out;
+  }
+
+  &:hover i.fa-custom-huggingface {
+    color: var(--global-theme-color);
+  }
+}
