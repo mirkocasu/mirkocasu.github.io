@@ -9,7 +9,14 @@ ninja.data = [{
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "nav-publications",
+  },{id: "nav-blog",
+          title: "blog",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/blog/";
+          },
+        },{id: "nav-publications",
           title: "publications",
           description: "",
           section: "Navigation",
@@ -23,7 +30,29 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/research-activities/";
           },
-        },{id: "news-at-we-make-future-2025-in-bologna-i-represented-the-university-of-catania-and-coehar-presenting-projects-on-ai-based-smoking-detection-and-impostor-bias-in-multimedia-authentication",
+        },{id: "post-il-complesso-di-frankenstein-da-asimov-all-39-etica-dell-39-ia",
+      
+        title: "Il complesso di Frankenstein, da Asimov all&#39;etica dell&#39;IA",
+      
+      description: "Susan Calvin, le Tre Leggi e la paura delle macchine, dai robot positronici ai system prompt di oggi.",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/complesso-di-frankenstein/";
+        
+      },
+    },{id: "post-sycophancy-quando-l-39-ia-ci-dà-sempre-ragione",
+      
+        title: "Sycophancy, quando l&#39;IA ci dà sempre ragione",
+      
+      description: "La compiacenza dei modelli linguistici e i suoi rischi psicologici, dalla rigidità cognitiva alle echo chamber digitali.",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/sycophancy/";
+        
+      },
+    },{id: "news-at-we-make-future-2025-in-bologna-i-represented-the-university-of-catania-and-coehar-presenting-projects-on-ai-based-smoking-detection-and-impostor-bias-in-multimedia-authentication",
           title: 'At We Make Future 2025 in Bologna, I represented the University of Catania...',
           description: "",
           section: "News",},{id: "news-i-have-reached-200-citations-on-google-scholar-with-an-h-index-of-6",
@@ -86,6 +115,13 @@ ninja.data = [{
         section: 'Socials',
         handler: () => {
           window.open("https://github.com/mirkocasu", "_blank");
+        },
+      },{
+        id: 'social-huggingface_username',
+        title: 'Huggingface_username',
+        section: 'Socials',
+        handler: () => {
+          window.open("", "_blank");
         },
       },{
       id: 'light-theme',
