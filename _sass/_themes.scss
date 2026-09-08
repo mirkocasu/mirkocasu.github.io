@@ -67,7 +67,7 @@
 
 html[data-theme="dark"] {
   /* Dark theme adjustments for glass effect */
-  --global-bg-color: rgba(10, 12, 14, 1);
+  --global-bg-color: #0f1114;
   --global-code-bg-color: #{$code-bg-color-dark};
   --global-text-color: rgba(229, 231, 235, 0.95);
   --global-text-color-light: rgba(148, 163, 184, 0.7);
