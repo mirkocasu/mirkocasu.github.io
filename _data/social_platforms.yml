@@ -34,6 +34,10 @@ github_username:
   title: GitHub
   icon: fa-brands fa-github
   url: https://github.com/__VALUE__
+huggingface_username:
+  title: HuggingFace
+  icon: fa-custom-huggingface
+  url: https://huggingface.co/__VALUE__
 gitlab_username:
   title: GitLab
   icon: fa-brands fa-gitlab
