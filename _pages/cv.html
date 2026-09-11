@@ -1,0 +1,679 @@
+---
+layout: none
+permalink: /cv/
+title: cv
+nav: false
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mirko Casu · CV</title>
+    <meta name="description" content="Curriculum vitae of Mirko Casu: AI researcher, PhD in Computer Science at the University of Catania (defence pending), and licensed clinical psychologist." />
+    <link rel="icon" href="/assets/img/favicon.webp" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --ink: #14171b;
+        --ink-2: #3b4148;
+        --ink-3: #6b727a;
+        --rule: #dcd8cf;
+        --paper: #fbfaf7;
+        --backdrop: #0f1114;
+        --accent: #2c6c67;
+        --accent-2: #43b4a0;
+        --c-clin: #c97b4f;
+        --c-dig: #9aa87a;
+        --c-ai: #2c6c67;
+        --serif: "Fraunces", Georgia, "Times New Roman", serif;
+        --sans: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+        --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+      }
+      * { box-sizing: border-box; }
+      html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      body {
+        margin: 0;
+        background: var(--backdrop);
+        color: var(--ink);
+        font-family: var(--sans);
+        font-size: 8.7pt;
+        line-height: 1.42;
+        padding-block: 28px 48px;
+        padding-inline: 16px;
+      }
+      a { color: inherit; text-decoration: none; }
+      a:hover { color: var(--accent); }
+      p { margin: 0; }
+      ul { margin: 0; padding: 0; list-style: none; }
+
+      /* ---------- toolbar (screen only) ---------- */
+      .toolbar {
+        max-width: 210mm;
+        margin: 0 auto 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: wrap;
+        font-family: var(--mono);
+        font-size: 12px;
+        color: #aab2ba;
+      }
+      .toolbar a { color: #aab2ba; }
+      .toolbar a:hover { color: var(--accent-2); }
+      .toolbar .btn {
+        color: var(--backdrop);
+        background: var(--accent-2);
+        padding: 7px 14px;
+        border-radius: 999px;
+        font-weight: 500;
+      }
+      .toolbar .btn:hover { color: var(--backdrop); background: #5fcab7; }
+
+      /* ---------- sheet ---------- */
+      .page {
+        width: 210mm;
+        min-height: 297mm;
+        margin: 0 auto 24px;
+        background: var(--paper);
+        padding: 12mm 13mm 9mm;
+        position: relative;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+        display: flex;
+        flex-direction: column;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 56mm;
+        column-gap: 9mm;
+        flex: 1;
+      }
+      .side { border-left: 1px solid var(--rule); padding-left: 6mm; }
+      .folio {
+        margin-top: 6mm;
+        padding-top: 2.5mm;
+        border-top: 1px solid var(--rule);
+        display: flex;
+        justify-content: space-between;
+        font-family: var(--mono);
+        font-size: 6.8pt;
+        color: var(--ink-3);
+      }
+
+      /* ---------- header ---------- */
+      .head {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 8mm;
+        align-items: end;
+        padding-bottom: 4.5mm;
+        margin-bottom: 5mm;
+        border-bottom: 1.5px solid var(--ink);
+      }
+      .kicker {
+        font-family: var(--mono);
+        font-size: 7.4pt;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 2mm;
+      }
+      h1 {
+        font-family: var(--serif);
+        font-weight: 500;
+        font-size: 34pt;
+        line-height: 0.95;
+        letter-spacing: -0.02em;
+        margin: 0 0 2.5mm;
+        font-variation-settings: "opsz" 144;
+      }
+      .headline {
+        font-family: var(--serif);
+        font-size: 11.5pt;
+        line-height: 1.3;
+        font-weight: 400;
+        color: var(--ink-2);
+      }
+      .headline em { color: var(--accent); font-style: italic; }
+      .photo {
+        width: 25mm;
+        height: 25mm;
+        border-radius: 50%;
+        object-fit: cover;
+        background: #fff;
+        border: 1px solid var(--rule);
+      }
+
+      /* ---------- sections ---------- */
+      h2 {
+        font-family: var(--mono);
+        font-size: 7.2pt;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin: 0 0 2.6mm;
+        display: flex;
+        align-items: center;
+        gap: 2.5mm;
+      }
+      h2::after { content: ""; flex: 1; height: 1px; background: var(--rule); }
+      section + section { margin-top: 4.4mm; }
+      .lede { font-size: 9.3pt; line-height: 1.5; color: var(--ink-2); }
+      .lede strong { color: var(--ink); font-weight: 600; }
+
+      /* research threads */
+      .threads { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 3.5mm; }
+      .thread { border-top: 3px solid var(--c); padding-top: 2mm; }
+      .thread h3 {
+        font-family: var(--serif);
+        font-size: 10pt;
+        font-weight: 600;
+        line-height: 1.2;
+        margin: 0 0 1.2mm;
+      }
+      .thread p { font-size: 8pt; color: var(--ink-2); line-height: 1.4; }
+
+      /* entries */
+      .entry { display: grid; grid-template-columns: 19mm minmax(0, 1fr); column-gap: 3mm; }
+      .entry + .entry { margin-top: 2.8mm; }
+      .when {
+        font-family: var(--mono);
+        font-size: 7pt;
+        color: var(--ink-3);
+        padding-top: 0.6mm;
+        line-height: 1.35;
+      }
+      .what h3 { font-size: 9.2pt; font-weight: 600; margin: 0; line-height: 1.3; }
+      .what .org { color: var(--ink-2); font-size: 8.4pt; }
+      .what .org a { border-bottom: 1px solid var(--rule); }
+      .what ul { margin-top: 1.2mm; }
+      .what li {
+        position: relative;
+        padding-left: 3.2mm;
+        color: var(--ink-2);
+        font-size: 8.3pt;
+      }
+      .what li + li { margin-top: 0.7mm; }
+      .what li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.62em;
+        width: 1.4mm;
+        height: 1px;
+        background: var(--accent);
+      }
+      .what li strong { color: var(--ink); font-weight: 600; }
+
+      /* side column */
+      .side section + section { margin-top: 4.4mm; }
+      .contact li { display: flex; flex-direction: column; }
+      .contact li + li { margin-top: 1.5mm; }
+      .contact .k {
+        font-family: var(--mono);
+        font-size: 6.6pt;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--ink-3);
+      }
+      .contact .v { font-size: 8.2pt; word-break: break-word; }
+
+      .figures { display: grid; grid-template-columns: 1fr 1fr; gap: 3mm 3mm; }
+      .fig b {
+        display: block;
+        font-family: var(--serif);
+        font-size: 19pt;
+        font-weight: 500;
+        line-height: 1;
+        color: var(--ink);
+        font-variation-settings: "opsz" 144;
+      }
+      .fig span { font-size: 7.2pt; color: var(--ink-3); line-height: 1.25; display: block; margin-top: 0.8mm; }
+
+      .chart svg { width: 100%; height: auto; display: block; }
+      .chart text { font-family: var(--mono); font-size: 7.4px; fill: var(--ink-3); text-anchor: middle; }
+      .legend { display: flex; flex-direction: column; gap: 0.9mm; margin-top: 1.8mm; font-size: 7.4pt; color: var(--ink-2); }
+      .legend span { display: inline-flex; align-items: center; gap: 1.8mm; }
+      .legend i { width: 2.4mm; height: 2.4mm; border-radius: 50%; background: var(--c); display: inline-block; }
+      .caption { font-size: 7.2pt; color: var(--ink-3); font-style: italic; margin-top: 1.6mm; line-height: 1.35; }
+
+      .tags { display: flex; flex-wrap: wrap; gap: 1.2mm; }
+      .tags li {
+        font-size: 7.3pt;
+        padding: 0.5mm 1.8mm;
+        border: 1px solid var(--rule);
+        border-radius: 999px;
+        color: var(--ink-2);
+        background: #fff;
+      }
+      .skillgroup + .skillgroup { margin-top: 2mm; }
+      .skillgroup p { font-size: 7.9pt; color: var(--ink-2); line-height: 1.45; }
+      .skillgroup h4 {
+        font-size: 7.6pt;
+        font-weight: 600;
+        margin: 0 0 1.2mm;
+        color: var(--ink);
+      }
+      .plain li { font-size: 8pt; color: var(--ink-2); }
+      .plain li + li { margin-top: 1.3mm; }
+      .plain li b { color: var(--ink); font-weight: 600; }
+      .plain li small { display: block; font-family: var(--mono); font-size: 6.8pt; color: var(--ink-3); }
+
+      /* callout */
+      .callout {
+        background: #eef4f2;
+        border-left: 3px solid var(--accent);
+        padding: 2.6mm 3mm;
+        font-size: 8pt;
+        color: var(--ink-2);
+      }
+      .callout b { color: var(--ink); font-weight: 600; }
+      .callout li + li { margin-top: 1.4mm; }
+
+      /* publications */
+      .pub { display: grid; grid-template-columns: 19mm minmax(0, 1fr); column-gap: 3mm; }
+      .pub + .pub { margin-top: 2.7mm; }
+      .pub .venue {
+        font-family: var(--mono);
+        font-size: 6.9pt;
+        color: var(--ink-3);
+        padding-top: 0.6mm;
+        line-height: 1.35;
+      }
+      .pub .venue b { color: var(--accent); font-weight: 500; display: block; }
+      .pub h3 { font-family: var(--serif); font-size: 9.6pt; font-weight: 600; line-height: 1.25; margin: 0; }
+      .pub .authors { font-size: 7.6pt; color: var(--ink-3); margin-top: 0.4mm; }
+      .pub .authors u { text-decoration: none; color: var(--ink); font-weight: 600; }
+      .pub .note { font-size: 8.1pt; color: var(--ink-2); margin-top: 0.8mm; }
+      .badge {
+        display: inline-block;
+        font-family: var(--mono);
+        font-size: 6.6pt;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: #fff;
+        background: var(--accent);
+        padding: 0.2mm 1.4mm;
+        border-radius: 2px;
+        margin-right: 1mm;
+        vertical-align: 1px;
+      }
+      .more { margin-top: 3mm; font-size: 7.8pt; color: var(--ink-3); }
+      .more a { color: var(--accent); border-bottom: 1px solid currentColor; }
+
+      .rows li { display: grid; grid-template-columns: 19mm minmax(0, 1fr); column-gap: 3mm; font-size: 8.2pt; color: var(--ink-2); }
+      .rows li + li { margin-top: 1.9mm; }
+      .rows .when { padding-top: 0.3mm; }
+      .rows b { color: var(--ink); font-weight: 600; }
+
+      /* ---------- screen: small widths ---------- */
+      @media screen and (max-width: 860px) {
+        body { font-size: 14px; padding-block: 16px 32px; }
+        .page { width: 100%; min-height: 0; padding: 22px 20px; margin-bottom: 16px; }
+        .grid { grid-template-columns: 1fr; }
+        .side { border-left: 0; padding-left: 0; border-top: 1px solid var(--rule); padding-top: 18px; margin-top: 22px; }
+        .head { grid-template-columns: 1fr; }
+        .photo { order: -1; width: 88px; height: 88px; }
+        h1 { font-size: 40px; }
+        .headline { font-size: 19px; }
+        .threads { grid-template-columns: 1fr; }
+        .entry, .pub, .rows li { grid-template-columns: 1fr; }
+        .when, .pub .venue { margin-bottom: 2px; }
+        .pub .venue b { display: inline; margin-right: 6px; }
+        .fig b { font-size: 30px; }
+        .toolbar { font-size: 13px; }
+      }
+
+      /* ---------- print ---------- */
+      @page { size: A4; margin: 0; }
+      @media print {
+        body { background: none; padding: 0; }
+        .toolbar { display: none; }
+        .page { margin: 0; box-shadow: none; height: 297mm; min-height: 0; overflow: hidden; break-after: page; }
+        .page:last-of-type { break-after: auto; }
+        a:hover { color: inherit; }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="toolbar" aria-label="CV actions">
+      <a href="/">← mirkocasu.github.io</a>
+      <a class="btn" href="/assets/pdf/Mirko_Casu_CV.pdf">Download PDF</a>
+    </nav>
+
+    <!-- ================= PAGE 1 ================= -->
+    <article class="page">
+      <header class="head">
+        <div>
+          <div class="kicker">Curriculum Vitae · Last updated September 2026</div>
+          <h1>Mirko Casu</h1>
+          <p class="headline">
+            AI Researcher and Licensed Psychologist.<br />
+            I study the <em>human–AI relationship</em> and its <em>clinical</em> and <em>forensic</em> applications.
+          </p>
+        </div>
+        <img class="photo" src="/assets/img/prof_pic4.webp" alt="Portrait of Mirko Casu" />
+      </header>
+
+      <div class="grid">
+        <main>
+          <section>
+            <h2>Profile</h2>
+            <p class="lede">
+              PhD in Computer Science at the <strong>University of Catania</strong>
+              (IPLab, 2023–2026), recently a visiting researcher at <strong>EPFL</strong>, and a <strong>licensed clinical
+              psychologist</strong>. I introduced the concept of <strong>impostor bias</strong>, a systematic suspicion that what we see
+              online is AI-generated, fuelled by our awareness of what generative AI can do. My work now centres on language models and AI agents, with a focus on
+              mental health and AI safety.
+            </p>
+          </section>
+
+          <section>
+            <h2>Research threads</h2>
+            <div class="threads">
+              <div class="thread" style="--c: var(--c-ai)">
+                <h3>Humans vs. synthetic media</h3>
+                <p>Impostor and automation bias; deepfake detection and attribution benchmarks.</p>
+              </div>
+              <div class="thread" style="--c: var(--c-dig)">
+                <h3>AI for mental health</h3>
+                <p>Chatbots, VR, wearables and mHealth apps for addiction, eating disorders and trauma.</p>
+              </div>
+              <div class="thread" style="--c: var(--accent-2)">
+                <h3>LLMs &amp; AI safety</h3>
+                <p>Evaluation bias in diffusion vs. autoregressive LLMs; human–AI conversational trajectories; psychological profiling of open models.</p>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2>Experience</h2>
+            <div class="entry">
+              <div class="when">Aug 2023 –<br />Jul 2026</div>
+              <div class="what">
+                <h3>PhD Researcher, Computer Science</h3>
+                <div class="org"><a href="https://iplab.dmi.unict.it/">IPLab</a>, University of Catania · Catania, IT</div>
+                <ul>
+                  <li>Designed and ran a <strong>746-participant</strong> mixed-methods study showing human accuracy at spotting AI images sits at chance (47–55.5%), with measurable impostor and automation bias.</li>
+                  <li>Co-built <strong>WILD</strong> (20,000 images, 20 generators) and <strong>SynthForensics</strong> (6,815 videos, 5 text-to-video models), benchmarks where state-of-the-art detectors lose up to 29 AUC points.</li>
+                  <li>Led a scoping review of <strong>49 studies</strong> on wearables, apps and ML for smoking detection and cessation (<em>IEEE JBHI</em>).</li>
+                  <li><a href="https://samothrace.eu/">SAMOTHRACE</a> project: AI for wearables and cognitive bias in forensics.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="entry">
+              <div class="when">Oct 2025 –<br />Mar 2026</div>
+              <div class="what">
+                <h3>Visiting Doctoral Researcher</h3>
+                <div class="org"><a href="https://www.epfl.ch/labs/mints/">MINTS Lab</a>, EPFL · Lausanne, CH · supervisor Prof. Andrea Cavallaro</div>
+                <ul>
+                  <li>Analysed conversational trajectories between humans and AI systems.</li>
+                  <li>Studied evaluation bias in <strong>diffusion LLMs</strong> vs. autoregressive LLMs; paper under submission to <strong>EACL 2027</strong>.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="entry">
+              <div class="when">2021 –<br />2023</div>
+              <div class="what">
+                <h3>Before the PhD</h3>
+                <ul>
+                  <li><strong>Specialist assistant</strong> for pupils with disabilities (I Girasoli coop.); <strong>clinical trainee</strong> in applied psychoanalysis (APA Catania); <strong>videomaker</strong> (UniCT, ECLAT &amp; CoEHAR).</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2>Education</h2>
+            <ul class="rows">
+              <li><span class="when">Aug 2023 – Jul 2026</span><span><b>PhD, Computer Science</b> · University of Catania · defence pending · advisor Prof. S. Battiato · thesis: <em>Human Behaviour as Target and Medium of Artificial Intelligence in Clinical and Forensic Contexts</em></span></li>
+              <li><span class="when">2020 – 2023</span><span><b>MSc, Clinical Psychology</b> · University of Catania · 110/110 cum laude · thesis on a smoking-cessation app (published in <em>BMC Psychology</em>)</span></li>
+              <li><span class="when">2015 – 2019</span><span><b>BSc, Psychological Sciences</b> · University of Sassari · 105/110 · thesis on video games, violence, rehabilitation and addiction</span></li>
+            </ul>
+          </section>
+        </main>
+
+        <aside class="side">
+          <section>
+            <h2>Contact</h2>
+            <ul class="contact">
+              <li><span class="k">Email</span><a class="v" href="mailto:mirko.casu@live.it">mirko.casu@live.it</a><a class="v" href="mailto:mirko.casu@phd.unict.it">mirko.casu@phd.unict.it</a></li>
+              <li><span class="k">Web</span><a class="v" href="https://mirkocasu.github.io">mirkocasu.github.io</a></li>
+              <li><span class="k">Scholar</span><a class="v" href="https://scholar.google.com/citations?user=zpZZ3X4AAAAJ">scholar.google.com · zpZZ3X4AAAAJ</a></li>
+              <li><span class="k">ORCID</span><a class="v" href="https://orcid.org/0000-0001-6975-2241">0000-0001-6975-2241</a></li>
+              <li><span class="k">GitHub · HF · LinkedIn</span><span class="v"><a href="https://github.com/mirkocasu">mirkocasu</a> · <a href="https://huggingface.co/m1rkocasu">m1rkocasu</a> · <a href="https://www.linkedin.com/in/m1rkocasu">in/m1rkocasu</a></span></li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>At a glance</h2>
+            <div class="figures">
+              <div class="fig"><b>28</b><span>papers, preprints &amp; proceedings</span></div>
+              <div class="fig"><b>11</b><span>as first author</span></div>
+              <div class="fig"><b>739</b><span>citations · h-index 10 (Google Scholar)</span></div>
+              <div class="fig"><b>2</b><span>policy mentions: INTERPOL, UK Parliament</span></div>
+            </div>
+          </section>
+
+          <section class="chart">
+            <h2>Trajectory</h2>
+            <svg viewBox="0 0 220 96" role="img" aria-label="Publications per year, 2021 to 2026, coloured by field: early work is clinical psychology, 2024 peaks in digital health, 2025 and 2026 are mostly AI and media forensics.">
+              <line x1="4" y1="80" x2="216" y2="80" stroke="#dcd8cf" stroke-width="0.8" />
+              <circle cx="20" cy="72" r="4.4" fill="var(--c-clin)" />
+              <text x="20" y="91">2021</text>
+              <circle cx="50" cy="72" r="4.4" fill="var(--c-clin)" />
+              <circle cx="62" cy="72" r="4.4" fill="var(--c-clin)" />
+              <circle cx="56" cy="61.5" r="4.4" fill="var(--c-dig)" />
+              <text x="56" y="91">2022</text>
+              <circle cx="86" cy="72" r="4.4" fill="var(--c-clin)" />
+              <circle cx="98" cy="72" r="4.4" fill="var(--c-dig)" />
+              <text x="92" y="91">2023</text>
+              <circle cx="122" cy="72" r="4.4" fill="var(--c-clin)" />
+              <circle cx="134" cy="72" r="4.4" fill="var(--c-clin)" />
+              <circle cx="122" cy="61.5" r="4.4" fill="var(--c-clin)" />
+              <circle cx="134" cy="61.5" r="4.4" fill="var(--c-clin)" />
+              <circle cx="122" cy="51" r="4.4" fill="var(--c-dig)" />
+              <circle cx="134" cy="51" r="4.4" fill="var(--c-dig)" />
+              <circle cx="122" cy="40.5" r="4.4" fill="var(--c-dig)" />
+              <circle cx="134" cy="40.5" r="4.4" fill="var(--c-dig)" />
+              <circle cx="122" cy="30" r="4.4" fill="var(--c-dig)" />
+              <circle cx="134" cy="30" r="4.4" fill="var(--c-dig)" />
+              <circle cx="128" cy="19.5" r="4.4" fill="var(--c-ai)" />
+              <text x="128" y="91">2024</text>
+              <circle cx="158" cy="72" r="4.4" fill="var(--c-dig)" />
+              <circle cx="170" cy="72" r="4.4" fill="var(--c-ai)" />
+              <circle cx="158" cy="61.5" r="4.4" fill="var(--c-ai)" />
+              <circle cx="170" cy="61.5" r="4.4" fill="var(--c-ai)" />
+              <circle cx="158" cy="51" r="4.4" fill="var(--c-ai)" />
+              <circle cx="170" cy="51" r="4.4" fill="var(--c-ai)" />
+              <circle cx="164" cy="40.5" r="4.4" fill="var(--c-ai)" />
+              <text x="164" y="91">2025</text>
+              <circle cx="194" cy="72" r="4.4" fill="var(--c-dig)" />
+              <circle cx="206" cy="72" r="4.4" fill="var(--c-ai)" />
+              <circle cx="194" cy="61.5" r="4.4" fill="var(--c-ai)" />
+              <circle cx="206" cy="61.5" r="4.4" fill="var(--c-ai)" />
+              <text x="200" y="91">2026*</text>
+            </svg>
+            <div class="legend">
+              <span style="--c: var(--c-clin)"><i></i>Clinical &amp; health psychology</span>
+              <span style="--c: var(--c-dig)"><i></i>Digital health technology</span>
+              <span style="--c: var(--c-ai)"><i></i>AI &amp; media forensics</span>
+            </div>
+            <p class="caption">One dot per paper. *2026 to date.</p>
+          </section>
+
+          <section>
+            <h2>Toolkit</h2>
+            <div class="skillgroup">
+              <h4>Machine learning</h4>
+              <p>Python · MLX · Hugging Face · GGUF · hydra-zen · PyTorch · scikit-learn · LLM quantization &amp; evaluation · XAI</p>
+            </div>
+            <div class="skillgroup">
+              <h4>Human-centred research</h4>
+              <p>Experimental design · mixed methods · questionnaire design · inferential statistics (Jamovi) · PRISMA reviews · LLM-assisted screening</p>
+            </div>
+            <div class="skillgroup">
+              <h4>Devices, clinical &amp; more</h4>
+              <p>VR · wearables · mHealth · clinical assessment · web development · data visualisation</p>
+            </div>
+          </section>
+        </aside>
+      </div>
+
+      <footer class="folio"><span>Mirko Casu · Curriculum Vitae · Last updated September 2026</span><span>1 / 2</span></footer>
+    </article>
+
+    <!-- ================= PAGE 2 ================= -->
+    <article class="page">
+      <div class="grid">
+        <main>
+          <section>
+            <h2>Selected publications</h2>
+
+            <div class="pub">
+              <div class="venue"><b>FSI: DI</b>2024</div>
+              <div>
+                <h3><a href="https://doi.org/10.1016/j.fsidi.2024.301795">GenAI mirage: The impostor bias and the deepfake detection challenge in the era of artificial illusions</a></h3>
+                <div class="authors"><u>M. Casu</u>, L. Guarnera, P. Caponnetto, S. Battiato · <em>Forensic Science International: Digital Investigation</em></div>
+                <p class="note"><span class="badge">INTERPOL</span>Introduces impostor bias; cited in INTERPOL guidelines.</p>
+              </div>
+            </div>
+
+            <div class="pub">
+              <div class="venue"><b>Appl. Sci.</b>2024</div>
+              <div>
+                <h3><a href="https://doi.org/10.3390/app14135889">AI Chatbots for Mental Health: A Scoping Review of Effectiveness, Feasibility, and Applications</a></h3>
+                <div class="authors"><u>M. Casu</u>, S. Triscari, S. Battiato, L. Guarnera, P. Caponnetto · <em>Applied Sciences</em></div>
+                <p class="note"><span class="badge">UK Parliament</span>Most-cited paper (280+ citations); in POSTnote 737.</p>
+              </div>
+            </div>
+
+            <div class="pub">
+              <div class="venue"><b>HBET</b>2025</div>
+              <div>
+                <h3><a href="https://doi.org/10.1155/hbe2/9977058">A (Mid)journey Through Reality: Assessing Accuracy, Impostor Bias, and Automation Bias in Human Detection of AI-Generated Images</a></h3>
+                <div class="authors"><u>M. Casu</u>, L. Guarnera, I. Zangara, P. Caponnetto, S. Battiato · <em>Human Behavior and Emerging Technologies</em></div>
+                <p class="note">746 participants, 5 variants, Grad-CAM vs. humans. Open code.</p>
+              </div>
+            </div>
+
+            <div class="pub">
+              <div class="venue"><b>Psych. Int.</b>2024</div>
+              <div>
+                <h3><a href="https://doi.org/10.3390/psycholint6020036">Exploring the Therapeutic Potential of Virtual Reality: A Review on the Simulation of Psychedelic Effects for Treating Psychological Disorders</a></h3>
+                <div class="authors"><u>M. Casu</u>, C. Farrauto, G. Farruggio, S. Bellissima, S. Battiato, P. Caponnetto · <em>Psychology International</em></div>
+                <p class="note">VR-simulated psychedelic states as therapy; basis of my DigiTales talk.</p>
+              </div>
+            </div>
+
+            <div class="pub">
+              <div class="venue"><b>IEEE JBHI</b>2025</div>
+              <div>
+                <h3><a href="https://doi.org/10.1109/JBHI.2025.3549255">Smoking Detection and Cessation: An Updated Scoping Review of Digital and Mobile Health Technologies</a></h3>
+                <div class="authors"><u>M. Casu</u>, F. Guarnera, G. R. M. La Rosa, S. Battiato, P. Caponnetto, R. Polosa, R. Emma · <em>IEEE J. Biomedical and Health Informatics</em></div>
+              </div>
+            </div>
+
+            <div class="pub">
+              <div class="venue"><b>CHBR</b>2026</div>
+              <div>
+                <h3><a href="https://doi.org/10.1016/j.chbr.2026.100963">Digital technologies and artificial intelligence in eating disorders: A scoping review</a></h3>
+                <div class="authors"><u>M. Casu</u>, L. Marletta, C. V. Ragaglia, P. Caponnetto, S. Battiato · <em>Computers in Human Behavior Reports</em></div>
+                <p class="note">7,545 records ranked by an LLM (Nemotron) for human screening.</p>
+              </div>
+            </div>
+
+            <div class="pub">
+              <div class="venue"><b>Book ch.</b>2026</div>
+              <div>
+                <h3><a href="https://hdl.handle.net/20.500.11771/41878">Sistemi di IA ad alto rischio di cui all'Articolo 6, Paragrafo 2</a></h3>
+                <div class="authors"><u>M. Casu</u>, A. Di Pierno, O. Pontorno, I. Zangara, L. Guarnera, S. Battiato, D. Curtotti · in <em>AI Act e Legge nazionale sull'Intelligenza Artificiale</em> (Giuffrè)</div>
+              </div>
+            </div>
+
+            <p class="more">Full list of 28 works, with PDFs and code: <a href="https://mirkocasu.github.io/publications/">mirkocasu.github.io/publications</a></p>
+          </section>
+
+          <section>
+            <h2>Open models &amp; data</h2>
+            <ul class="rows">
+              <li><span class="when">2026</span><span><b><a href="https://huggingface.co/m1rkocasu">Apertus 1.5 8B for Apple silicon</a></b>: 9 MLX quantizations (text &amp; vision) of the Swiss open LLM, benchmarked for perplexity and psychological profile (PsychoBench, ICLR 2024) · 2,100+ downloads last month</span></li>
+              <li><span class="when">2026</span><span><b><a href="https://huggingface.co/datasets/m1rkocasu/a-mid-journey-through-reality">A (Mid)journey dataset</a></b>: 75 stimuli and 11,170 human judgments, with Grad-CAM maps · Hugging Face &amp; GitHub</span></li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Community &amp; service</h2>
+            <ul class="rows">
+              <li><span class="when">2026</span><span><b>Session Chair</b>, Technical Session 6 · IEEE ICAISF 2026, Catania</span></li>
+              <li><span class="when">2025</span><span><b>Track Co-Chair</b>, DFF-2025 Deepfake Forensics Workshop · ACM MM 2025</span></li>
+              <li><span class="when">2025</span><span><b>Dataset Committee</b>, AADD-2025 challenge (13 teams) · ACM MM 2025</span></li>
+              <li><span class="when">2025</span><span><b>Lead Organizer</b>, FHDA challenge · IEEE MetroXRAINE 2025</span></li>
+              <li><span class="when">2023 – 25</span><span><b>Guest Editor</b> (2023–25) &amp; <b>Academic Editor</b> (2024–25), special issue (4 articles) · <em>Exploration of Digital Health Technologies</em></span></li>
+              <li><span class="when">2023 – now</span><span><b>Peer reviewer</b> for MDPI (<em>Healthcare</em>, <em>IJERPH</em>, <em>Psychiatry Int.</em>)</span></li>
+              <li><span class="when">2024 – 26</span><span><b>Speaker &amp; staff</b>, IFOSS Forensics Summer School (3 editions)</span></li>
+            </ul>
+          </section>
+        </main>
+
+        <aside class="side">
+          <section>
+            <h2>Talks</h2>
+            <ul class="plain">
+              <li><b>Psychedelic Simulation</b><small>DigiTales webinar, host Prof. S. Moritz · 2025</small></li>
+              <li><b>WILD dataset</b><small>VERIMEDIA Workshop @ IJCNN · 2025</small></li>
+              <li><b>Digital &amp; mobile health for smoking detection</b><small>Global Forum on Nicotine, Warsaw · 2024</small></li>
+              <li><b>Smartwatch-based dual-diagnosis project</b><small>AIP Clinical &amp; Dynamic Psychology Congress · 2024</small></li>
+              <li><b>Impostor bias</b> (poster)<small>Psicologia in Cantiere, Palermo · 2024</small></li>
+              <li><b>AI for smoke-free living through wearables</b><small>European Conference of Digital Psychology · 2024</small></li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Public engagement</h2>
+            <ul class="plain">
+              <li><b>We Make Future</b>, Bologna<small>Demonstrator for UniCT &amp; CoEHAR · 2025</small></li>
+              <li><b>SHARPER Night</b>, Catania<small>VR + wearable phobia-response demo · 2024</small></li>
+              <li><b>Didacta Italia</b>, Catania<small>For the Sicilian Order of Psychologists · 2023</small></li>
+              <li><b>Essays in Italian</b> on AI sycophancy and the Frankenstein complex<small>mirkocasu.github.io/blog</small></li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Credentials</h2>
+            <ul class="plain">
+              <li><b>Licensed Psychologist</b>, Reg. no. 12260<small>Order of Psychologists of Sicily, Section A · since Sep 2024</small></li>
+              <li><b>IELTS Academic 7.0 (C1)</b><small>2023</small></li>
+              <li><b>Group Relationship Management</b><small>30-hour course · Gestalt Empowerment Italia · 2018</small></li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Languages</h2>
+            <ul class="plain">
+              <li><b>Italian</b>: native</li>
+              <li><b>English</b>: full professional (C1)</li>
+              <li><b>French</b>: basic</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Off the clock</h2>
+            <p class="plain" style="font-size: 8pt; color: var(--ink-2)">
+              Photography (<a href="https://500px.com/p/m1rkocasu" style="border-bottom: 1px solid var(--rule)">500px</a>; official photographer of IFOSS 2026) and video games.
+            </p>
+          </section>
+        </aside>
+      </div>
+
+      <footer class="folio"><span>Mirko Casu · mirko.casu@live.it · mirkocasu.github.io</span><span>2 / 2</span></footer>
+    </article>
+  </body>
+</html>
