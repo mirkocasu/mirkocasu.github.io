@@ -30,6 +30,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/research-activities/";
           },
+        },{id: "nav-cv",
+          title: "cv",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/cv/";
+          },
         },{id: "post-il-complesso-di-frankenstein-da-asimov-all-39-etica-dell-39-ia",
       
         title: "Il complesso di Frankenstein, da Asimov all&#39;etica dell&#39;IA",
