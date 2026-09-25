@@ -95,6 +95,9 @@ ninja.data = [{
           section: "News",},{id: "news-fraud-is-not-just-rarity-has-been-published-in-knowledge-based-systems",
           title: 'Fraud is not just rarity has been published in Knowledge-Based Systems.',
           description: "",
+          section: "News",},{id: "news-synthforensics-has-been-accepted-at-the-neurips-2026-ed-track",
+          title: 'SynthForensics has been accepted at the NeurIPS 2026 ED Track.',
+          description: "",
           section: "News",},{
         id: 'social-email',
         title: 'email',
