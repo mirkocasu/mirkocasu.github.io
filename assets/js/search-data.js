@@ -98,6 +98,9 @@ ninja.data = [{
           section: "News",},{id: "news-synthforensics-has-been-accepted-at-the-neurips-2026-ed-track",
           title: 'SynthForensics has been accepted at the NeurIPS 2026 ED Track.',
           description: "",
+          section: "News",},{id: "news-protocol-aware-on-device-per-image-asd-classification-on-saliency4asd-via-multi-stream-distillation-has-been-published-in-ieee-open-journal-of-the-computer-society",
+          title: 'Protocol-Aware, On-Device Per-Image ASD Classification on Saliency4ASD via Multi-Stream Distillation has been published...',
+          description: "",
           section: "News",},{
         id: 'social-email',
         title: 'email',
