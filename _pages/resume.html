@@ -1,0 +1,103 @@
+---
+layout: none
+permalink: /cv/resume/
+title: resume
+---
+
+{%- assign cv = site.data.curriculum -%}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mirko Casu · Resume</title>
+    <meta
+      name="description"
+      content="Two-page resume of Mirko Casu: AI researcher working on language models, human safety and AI for mental health, and licensed clinical psychologist."
+    />
+    {% include cv/style.liquid doc_label="Resume" %}
+  </head>
+  <body>
+    {% include cv/top.liquid version="resume" pdf="/assets/pdf/Mirko_Casu_Resume.pdf" %}
+    <main class="sheet">
+      {% include cv/top_sheet.liquid %}
+
+      <section>
+        <h2>Profile</h2>
+        <p class="lede">{{ cv.summary }}</p>
+      </section>
+
+      <section>
+        <h2>Experience</h2>
+        {% include cv/experience.liquid skip_early=true %}
+      </section>
+
+      <section>
+        <h2>Selected publications</h2>
+        {%- for k in cv.resume_publications %} {% bibliography --template cv_pub --group_by none --query @*[key={{ k }}] %} {%- endfor %}
+        <p class="more">
+          29 publications in total, with PDFs and code, at <a href="https://mirkocasu.github.io/publications/">mirkocasu.github.io/publications</a>
+        </p>
+      </section>
+
+      <section>
+        <h2>Open models and software</h2>
+        <ul class="rows">
+          {%- for o in cv.open_source %}
+          <li>
+            <span
+              ><b><a href="{{ o.url }}">{{ o.name }}</a></b
+              >: {{ o.detail }}</span
+            >
+            <span class="date">{{ o.year }}</span>
+          </li>
+          {%- endfor %}
+        </ul>
+      </section>
+
+      <section>
+        <h2>Skills</h2>
+        <ul class="skills">
+          {%- for s in cv.skills %}
+          <li><b>{{ s.group }}:</b> {{ s.items }}</li>
+          {%- endfor %}
+          <li><b>Languages:</b> {{ cv.languages }}</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Education</h2>
+        {%- for e in cv.education %}
+        <div class="entry">
+          <div class="entry-top">
+            <span><b>{{ e.degree }}</b> · {{ e.institution }}{% if e.status %} · {{ e.status }}{% endif %}</span>
+            <span class="date">{{ e.dates }}</span>
+          </div>
+          {%- if forloop.first %}
+          <div class="sub">{{ e.notes[0] }}</div>
+          {% endif %}
+        </div>
+        {%- endfor %} {%- for l in cv.licensure %}
+        <div class="entry">
+          <div class="entry-top">
+            <span><b>{{ l.title }}</b> · {{ l.detail }}</span>
+            <span class="date">{{ l.dates }}</span>
+          </div>
+        </div>
+        {%- endfor %}
+      </section>
+
+      <section>
+        <h2>Service and talks</h2>
+        <ul class="rows">
+          {%- for s in cv.service limit: 4 %}
+          <li><span>{{ s.what }}</span><span class="date">{{ s.year }}</span></li>
+          {%- endfor %}
+          <li>
+            <span>6 talks and posters, including the Global Forum on Nicotine and IJCNN 2025 (VERIMEDIA)</span><span class="date">2024 – 2025</span>
+          </li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>

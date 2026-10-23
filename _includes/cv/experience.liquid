@@ -1,0 +1,19 @@
+{%- for e in site.data.curriculum.experience -%}
+  {%- if include.skip_early and forloop.last -%}{%- continue -%}{%- endif -%}
+  <div class="entry">
+    <div class="entry-top">
+      <span
+        ><b>{{ e.role }}</b>{% if e.org %} · {{ e.org }}{% endif %}, {{ e.place -}}
+      </span>
+      <span class="date">{{ e.dates }}</span>
+    </div>
+    {%- if e.host %}
+      <div class="sub">{{ e.host }}</div>
+    {% endif %}
+    <ul class="bullets">
+      {%- for b in e.bullets %}
+        <li>{{ b }}</li>
+      {%- endfor %}
+    </ul>
+  </div>
+{%- endfor -%}

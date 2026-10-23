@@ -1,45 +1,52 @@
 #!/usr/bin/env bash
-# Build assets/pdf/Mirko_Casu_CV.pdf (A4, 2 pages) from _pages/cv.html with headless Chrome.
-# Usage: bin/build_cv.sh   (set CHROME=/path/to/chrome to override the browser)
-# Before running, update the "Last updated" date and the figures (citations, downloads) in _pages/cv.html.
+# Build the CV PDFs (A4) with headless Chrome from the rendered Jekyll pages:
+#   /cv/         -> assets/pdf/Mirko_Casu_CV.pdf      (academic CV, all publications)
+#   /cv/resume/  -> assets/pdf/Mirko_Casu_Resume.pdf  (two-page resume)
+# Content lives in _data/curriculum.yml and _bibliography/papers.bib; update them first.
+# Usage: bin/build_cv.sh   (uses a running `jekyll serve` on port 4000, otherwise runs `jekyll build`;
+#                           set CHROME=/path/to/chrome or CV_BASE=http://host:port to override)
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
-SRC="$ROOT/_pages/cv.html"
-OUT="$ROOT/assets/pdf/Mirko_Casu_CV.pdf"
 CHROME="${CHROME:-/Applications/Google Chrome.app/Contents/MacOS/Google Chrome}"
+BASE="${CV_BASE:-http://127.0.0.1:4000}"
 TMP="$(mktemp -d)"
 trap 'rm -rf "$TMP"' EXIT
 
-# Drop the Jekyll front matter and point site-absolute asset paths at the local checkout.
-awk 'BEGIN{c=0} /^---$/ && c<2 {c++; next} c>=2' "$SRC" \
-  | sed "s#\"/assets/#\"file://$ROOT/assets/#g" > "$TMP/cv.html"
-
-"$CHROME" --headless=new --disable-gpu --no-pdf-header-footer \
-  --virtual-time-budget=8000 --print-to-pdf="$TMP/cv.pdf" "file://$TMP/cv.html" 2>/dev/null
-
-# Optional: set PDF metadata and check the layout (needs PyMuPDF: pip install pymupdf).
-if python3 -c "import fitz" 2>/dev/null; then
-  python3 - "$TMP/cv.pdf" <<'EOF'
-import sys, fitz
-path = sys.argv[1]
-doc = fitz.open(path)
-doc.set_metadata({
-    "title": "Mirko Casu - Curriculum Vitae",
-    "author": "Mirko Casu",
-    "subject": "CV: AI researcher and licensed psychologist",
-    "keywords": "AI, LLM, deepfake forensics, impostor bias, digital mental health, psychology",
-})
-if len(doc) != 2:
-    print(f"warning: {len(doc)} pages, expected 2", file=sys.stderr)
-for i, page in enumerate(doc):
-    hit = page.search_for(f"{i + 1} / {len(doc)}")
-    if not hit or hit[0].y1 > page.rect.y1 - 15:
-        print(f"warning: page {i + 1} content overflows the A4 sheet", file=sys.stderr)
-doc.save(path + ".tmp")
-EOF
-  mv "$TMP/cv.pdf.tmp" "$TMP/cv.pdf"
+if ! curl -sf -o /dev/null "$BASE/cv/"; then
+  echo "No server at $BASE, building the site..."
+  (cd "$ROOT" && bundle exec jekyll build -q)
+  BASE="file://$ROOT/_site"
 fi
 
-cp "$TMP/cv.pdf" "$OUT"
-echo "Wrote $OUT"
+render() { # page path, output file, expected maximum pages
+  local url="$BASE/$1" out="$ROOT/assets/pdf/$2" max="$3"
+  [[ "$BASE" == file://* ]] && url="$BASE/$1index.html"
+  "$CHROME" --headless=new --disable-gpu --no-pdf-header-footer \
+    --virtual-time-budget=10000 --print-to-pdf="$TMP/out.pdf" "$url" 2>/dev/null
+  # Optional: set PDF metadata and check the page count (needs PyMuPDF: pip install pymupdf).
+  if python3 -c "import fitz" 2>/dev/null; then
+    python3 - "$TMP/out.pdf" "$2" "$max" <<'EOF'
+import sys, fitz
+path, name, max_pages = sys.argv[1], sys.argv[2], int(sys.argv[3])
+doc = fitz.open(path)
+kind = "Resume" if "Resume" in name else "Curriculum Vitae"
+doc.set_metadata({
+    "title": f"Mirko Casu - {kind}",
+    "author": "Mirko Casu",
+    "subject": "AI researcher and licensed clinical psychologist",
+    "keywords": "AI, LLM, AI safety, human-AI interaction, digital mental health, deepfake forensics, psychology",
+})
+if len(doc) > max_pages:
+    print(f"warning: {name} has {len(doc)} pages, expected at most {max_pages}", file=sys.stderr)
+doc.save(path + ".tmp")
+print(f"{name}: {len(doc)} pages")
+EOF
+    mv "$TMP/out.pdf.tmp" "$TMP/out.pdf"
+  fi
+  cp "$TMP/out.pdf" "$out"
+  echo "Wrote $out"
+}
+
+render "cv/" Mirko_Casu_CV.pdf 6
+render "cv/resume/" Mirko_Casu_Resume.pdf 2

@@ -1,0 +1,13 @@
+{%- assign cv = site.data.curriculum -%}
+<header class="cv-head">
+  <h1>{{ cv.name }}</h1>
+  <p class="headline">{{ cv.headline }}</p>
+  <ul class="contact">
+    <li>{{ cv.location }}</li>
+    {%- for c in cv.contact %}
+      <li>
+        <a href="{{ c.url }}">{{ c.label }}</a>
+      </li>
+    {%- endfor %}
+  </ul>
+</header>
