@@ -1,0 +1,195 @@
+# Content shared by the academic CV (/cv/) and the two-page resume (/cv/resume/).
+# Publications come from _bibliography/papers.bib; this file only adds what the bib does not hold.
+# After editing, run bin/build_cv.sh to rebuild both PDFs.
+
+updated: October 2026
+
+name: Mirko Casu
+headline: AI Researcher · Licensed Clinical Psychologist
+location: Catania, Italy
+
+contact:
+  - label: mirko.casu@live.it
+    url: mailto:mirko.casu@live.it
+  - label: mirkocasu.github.io
+    url: https://mirkocasu.github.io
+  - label: Google Scholar
+    url: https://scholar.google.com/citations?user=zpZZ3X4AAAAJ
+  - label: ORCID 0000-0001-6975-2241
+    url: https://orcid.org/0000-0001-6975-2241
+  - label: github.com/mirkocasu
+    url: https://github.com/mirkocasu
+  - label: huggingface.co/m1rkocasu
+    url: https://huggingface.co/m1rkocasu
+  - label: linkedin.com/in/m1rkocasu
+    url: https://www.linkedin.com/in/m1rkocasu
+
+# Academic CV: one line of research interests instead of a summary.
+interests: >-
+  Language models and AI agents and their effects on mental health and human safety;
+  bias in human and machine judgement; human perception of synthetic media; AI for clinical psychology.
+
+# Resume: a short profile for readers outside academia.
+summary: >-
+  AI researcher and licensed clinical psychologist, finishing a PhD in Computer Science at the University of
+  Catania. Builds and evaluates AI systems that observe, imitate or judge human behaviour: bias in LLM judges,
+  synthetic-media forensics (NeurIPS 2026), and wearable and conversational AI for mental health. Currently AI
+  research consultant at Eternal Tech; visiting researcher at EPFL in 2025–26; first-author work referenced by
+  INTERPOL and the UK Parliament.
+
+education:
+  - degree: PhD, Computer Science
+    institution: University of Catania
+    status: defence pending
+    dates: 2023 – 2026
+    notes:
+      - "Thesis: <em>Human Behaviour as Target and Medium of Artificial Intelligence in Clinical and Forensic Contexts</em>"
+      - Advisor Prof. Sebastiano Battiato · co-advisor Prof. Pasquale Caponnetto · <a href="https://iplab.dmi.unict.it/">IPLab</a>
+  - degree: MSc, Clinical Psychology
+    institution: University of Catania
+    dates: 2020 – 2023
+    notes:
+      - 110/110 cum laude · thesis on a smoking-cessation app, published in <em>BMC Psychology</em>
+  - degree: BSc, Psychological Sciences
+    institution: University of Sassari
+    dates: 2015 – 2019
+    notes:
+      - 105/110 · thesis on video games, violence, rehabilitation and addiction
+
+experience:
+  - role: AI Research Consultant
+    org: <a href="https://www.eternaltech.ai/">Eternal Tech</a>
+    place: Acireale, Italy
+    dates: Sep 2026 – Present
+    host: Company building AI infrastructure for digital identity, persistent memory and intelligent agents
+    bullets:
+      - Design the evaluation methodology and criteria for a proprietary AI technology, and build the benchmarking system that applies them
+      - Analyse the technology's architecture and write the scientific manuscript reporting its evaluation
+  - role: Visiting Doctoral Researcher
+    org: <a href="https://www.epfl.ch/labs/mints/">MINTS Lab</a>, EPFL
+    place: Lausanne, Switzerland
+    dates: Oct 2025 – Mar 2026
+    host: Host Prof. Andrea Cavallaro
+    bullets:
+      - Ran a controlled comparison of <strong>diffusion and autoregressive LLMs as automated judges</strong>, characterising their evaluation biases; submitted to EACL 2027
+      - Analysed conversational trajectories between people and AI assistants
+  - role: PhD Researcher
+    org: <a href="https://iplab.dmi.unict.it/">IPLab</a>, University of Catania
+    place: Catania, Italy
+    dates: Aug 2023 – Jul 2026
+    host: <a href="https://samothrace.eu/">SAMOTHRACE</a> project · AI for wearables and cognitive bias in forensics
+    bullets:
+      - Built <strong>ORION</strong>, an end-to-end pipeline that detects smoking episodes from wrist motion sensors by fusing 7 classifiers; on 40 participants (leave-one-subject-out) it reached an event-level F1 of 0.966 with no false positives in 29.5 hours of recordings (under review)
+      - Introduced the <strong>impostor bias</strong>, a systematic doubt that real media are authentic, and validated it with 746 participants whose accuracy at spotting AI images sat at chance (47–55.5%)
+      - Co-built two forensic benchmarks, <strong>WILD</strong> (20,000 images, 20 generators) and <strong>SynthForensics</strong> (6,815 videos, 5 text-to-video models; NeurIPS 2026), on which state-of-the-art detectors lose 29 AUC points on average
+      - Co-developed an <strong>on-device autism screening</strong> pipeline from children's gaze, distilled into a 1.6M-parameter ONNX ensemble that runs offline in an open-source Android app
+      - Led scoping reviews on AI chatbots for mental health (300+ citations, cited in UK Parliament POSTnote 737), wearables for smoking detection (49 studies, <em>IEEE JBHI</em>) and AI for eating disorders (7,545 records ranked by an LLM)
+  - role: Early professional experience
+    place: Catania, Italy
+    dates: 2021 – 2023
+    bullets:
+      - Specialist assistant for pupils with disabilities (I Girasoli cooperative); clinical trainee in applied psychoanalysis (APA Catania); videomaker for the University of Catania, ECLAT and CoEHAR
+
+licensure:
+  - title: Licensed Psychologist
+    detail: Order of Psychologists of Sicily, Section A, reg. no. 12260
+    dates: since Sep 2024
+
+# Extra notes on bib entries, keyed by citation key.
+pub_notes:
+  leotta2026synthforensicsmultigeneratorbenchmarkdetecting:
+    status: Accepted, to appear
+  CASU2024301795:
+    impact: Introduced the impostor bias; referenced by INTERPOL (Project SynthWave)
+  app14135889:
+    impact: Cited in UK Parliament POSTnote 737; most-cited paper (300+ citations)
+  https://doi.org/10.1155/hbe2/9977058:
+    impact: 746 participants; open data and code
+
+# Resume: selected publications, in this order.
+resume_publications:
+  - leotta2026synthforensicsmultigeneratorbenchmarkdetecting
+  - "11715963"
+  - https://doi.org/10.1155/hbe2/9977058
+  - bongini2025wildnewinthewildimage
+  - app14135889
+  - CASU2024301795
+
+book_chapters:
+  - title: Sistemi di IA ad alto rischio di cui all'Articolo 6, Paragrafo 2
+    url: https://hdl.handle.net/20.500.11771/41878
+    authors: <b>M. Casu</b>, A. Di Pierno, O. Pontorno, I. Zangara, L. Guarnera, S. Battiato, D. Curtotti
+    venue: In <em>AI Act e Legge nazionale sull'Intelligenza Artificiale</em>, Giuffrè
+    year: 2026
+
+under_review:
+  - title: ORION, smoking-episode detection from wrist motion sensors
+    venue: Manuscript under review
+  - title: Evaluation bias of diffusion and autoregressive LLMs used as automated judges
+    venue: Submitted to EACL 2027 · title withheld during double-blind review
+
+open_source:
+  - name: Apertus 1.5 8B for Apple silicon
+    url: https://huggingface.co/m1rkocasu
+    year: 2026
+    detail: 12 MLX quantizations (text and vision) of the Swiss open LLM, benchmarked for perplexity and psychological profile (PsychoBench); 1,900+ downloads in the last month
+  - name: LLaDA 2 diffusion LLMs
+    url: https://huggingface.co/m1rkocasu
+    year: 2026
+    detail: 4 quantizations of LLaDA 2.1-flash and 2.2-mini, in MLX for Apple silicon and NVFP4 for NVIDIA GPUs
+  - name: ASD Screening Android app
+    url: https://github.com/spatam/ASD-Screening-Android-APP
+    year: 2026
+    detail: Open-source app, ONNX models and training code for the IEEE OJCS paper (Apache-2.0)
+  - name: A (Mid)journey dataset
+    url: https://huggingface.co/datasets/m1rkocasu/a-mid-journey-through-reality
+    year: 2025
+    detail: 75 stimuli and 11,170 human judgements, with Grad-CAM maps
+
+service:
+  - year: "2026"
+    what: <strong>Session Chair</strong>, Technical Session 6, IEEE ICAISF 2026, Catania
+  - year: "2025"
+    what: <strong>Track Co-Chair</strong>, DFF-2025 Deepfake Forensics Workshop, ACM Multimedia 2025
+  - year: "2025"
+    what: <strong>Dataset Committee</strong>, AADD-2025 challenge (13 teams), ACM Multimedia 2025
+  - year: "2025"
+    what: <strong>Lead Organizer</strong>, FHDA challenge, IEEE MetroXRAINE 2025
+  - year: 2023 – 2025
+    what: <strong>Guest Editor</strong> (2023–25) and <strong>Academic Editor</strong> (2024–25), special issue of <em>Exploration of Digital Health Technologies</em> (4 articles)
+  - year: 2023 – Present
+    what: <strong>Reviewer</strong> for MDPI journals (<em>Healthcare</em>, <em>IJERPH</em>, <em>Psychiatry International</em>)
+
+talks:
+  - year: "2025"
+    what: <strong>Psychedelic simulation in virtual reality</strong>, DigiTales webinar, host Prof. Steffen Moritz
+  - year: "2025"
+    what: <strong>WILD dataset</strong>, VERIMEDIA Workshop at IJCNN 2025, Rome
+  - year: "2024"
+    what: <strong>Digital and mobile health for smoking detection</strong>, Global Forum on Nicotine, Warsaw
+  - year: "2024"
+    what: <strong>Smartwatch-based dual-diagnosis project</strong>, AIP Clinical and Dynamic Psychology Congress
+  - year: "2024"
+    what: <strong>AI for smoke-free living through wearables</strong>, European Conference of Digital Psychology
+  - year: "2024"
+    what: <strong>Impostor bias</strong> (poster), Psicologia in Cantiere, Palermo
+
+teaching:
+  - year: 2024 – 2026
+    what: <strong>Speaker and staff</strong>, IFOSS Forensics Summer School (3 editions)
+  - year: "2025"
+    what: <strong>We Make Future</strong>, Bologna · demonstrator for the University of Catania and CoEHAR
+  - year: "2024"
+    what: <strong>SHARPER Night</strong>, Catania · virtual reality and wearable phobia-response demo
+  - year: "2023"
+    what: <strong>Didacta Italia</strong>, Catania · for the Sicilian Order of Psychologists
+
+skills:
+  - group: Machine learning
+    items: Python, PyTorch, Hugging Face, MLX, scikit-learn, ONNX Runtime, LLM evaluation, quantization (MLX, GGUF, NVFP4), knowledge distillation, explainability (Grad-CAM)
+  - group: Human research
+    items: experimental design, mixed methods, questionnaire design, inferential statistics (Jamovi), PRISMA scoping reviews, LLM-assisted screening
+  - group: Clinical and devices
+    items: psychological assessment, virtual reality, wearables, mHealth, Android
+
+languages: Italian (native) · English (C1, IELTS Academic 7.0) · French (basic)

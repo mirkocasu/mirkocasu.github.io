@@ -1,0 +1,21 @@
+{%- assign cv = site.data.curriculum -%}
+<div class="toolbar">
+  <a href="/">← mirkocasu.github.io</a>
+  <nav aria-label="CV versions">
+    <a
+      href="/cv/"
+      {% if include.version == 'cv' %}
+        aria-current="page"
+      {% endif %}
+      >Academic CV</a
+    >
+    <a
+      href="/cv/resume/"
+      {% if include.version == 'resume' %}
+        aria-current="page"
+      {% endif %}
+      >Two-page resume</a
+    >
+    <a class="btn" href="{{ include.pdf }}">Download PDF</a>
+  </nav>
+</div>

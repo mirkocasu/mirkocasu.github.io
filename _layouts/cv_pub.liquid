@@ -1,0 +1,59 @@
+---
+---
+{%- comment -%}
+  One publication in the CV (/cv/ and /cv/resume/). Authors become initials, the site owner is bold,
+  and lists longer than 10 authors keep the first three plus the owner. Notes come from _data/curriculum.yml.
+{%- endcomment -%}
+{%- assign note = site.data.curriculum.pub_notes[entry.key] -%}
+{%- assign n = entry.author_array | size -%}
+{%- capture authors -%}
+  {%- assign shown = 0 -%}
+  {%- assign gap = false -%}
+  {%- for author in entry.author_array -%}
+    {%- assign is_self = false -%}
+    {%- if site.scholar.last_name contains author.last and site.scholar.first_name contains author.first -%}
+      {%- assign is_self = true -%}
+    {%- endif -%}
+    {%- if n <= 10 or forloop.index <= 3 or is_self -%}
+      {%- if gap -%}, …{%- assign gap = false -%}{%- endif -%}
+      {%- if shown > 0 -%}, {% endif -%}
+      {%- capture initials -%}
+        {%- assign parts = author.first | replace: '-', ' -' | split: ' ' -%}
+        {%- for p in parts -%}
+          {%- if p contains '-' -%}-{{ p | remove: '-' | slice: 0 }}.{%- else -%}{%- unless forloop.first -%}&nbsp;{%- endunless -%}{{ p | slice: 0 }}.{%- endif -%}
+        {%- endfor -%}
+      {%- endcapture -%}
+      {%- if is_self -%}<b>{{ initials }}&nbsp;{{ author.last }}</b>{%- else -%}{{ initials }}&nbsp;{{ author.last }}{%- endif -%}
+      {%- assign shown = shown | plus: 1 -%}
+    {%- else -%}
+      {%- assign gap = true -%}
+    {%- endif -%}
+  {%- endfor -%}
+  {%- if gap -%}, et al. ({{ n }} authors){%- endif -%}
+{%- endcapture -%}
+{%- if entry.abbr == 'Preprints' -%}
+  {%- capture venue -%}<em>Preprints.org</em>{%- endcapture -%}
+{%- elsif entry.type == 'article' -%}
+  {%- capture venue -%}<em>{{ entry.journal }}</em>{%- endcapture -%}
+{%- else -%}
+  {%- capture venue -%}In <em>{{ entry.booktitle }}</em>{%- endcapture -%}
+{%- endif -%}
+{%- if entry.doi -%}
+  {%- assign link = entry.doi | prepend: 'https://doi.org/' -%}
+{%- else -%}
+  {%- assign link = entry.html -%}
+{%- endif -%}
+<div class="pub">
+  <div class="pub-title">
+    <a href="{{ link }}">{{ entry.title }}</a>
+  </div>
+  <div class="pub-meta">
+    {{ authors }} · {{ venue }}, {{ entry.year -}}
+    {%- if note.status %}
+      · <span class="status">{{ note.status }}</span>
+    {%- endif %}
+  </div>
+  {%- if note.impact %}
+    <div class="pub-note">{{ note.impact }}</div>
+  {%- endif %}
+</div>
