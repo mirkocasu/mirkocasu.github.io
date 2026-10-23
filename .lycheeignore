@@ -3,4 +3,9 @@ reddit.com
 dl.acm.org
 doi.org/10.1109
 doi.org/10.1155/hbe2/9977058
-doi.org/10.3390/app14135889
+# MDPI DOIs, Google Scholar and Exophase answer 403/429 to automated requests
+doi.org/10.3390
+scholar.google.com
+exophase.com
+# returns HTTP 500 to every client as of 2026-10-23
+digitalpsychology.eu
