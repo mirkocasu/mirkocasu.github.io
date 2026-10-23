@@ -37,15 +37,15 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-il-complesso-di-frankenstein-da-asimov-all-39-etica-dell-39-ia",
+        },{id: "post-l-39-ia-sogna-di-essere-umana",
       
-        title: "Il complesso di Frankenstein, da Asimov all&#39;etica dell&#39;IA",
+        title: "L&#39;IA sogna di essere umana?",
       
-      description: "Susan Calvin, le Tre Leggi e la paura delle macchine, dai robot positronici ai system prompt di oggi.",
+      description: "Da Frankenstein a Susan Calvin, la prefazione della mia tesi di dottorato.",
       section: "Posts",
       handler: () => {
         
-          window.location.href = "/blog/2025/complesso-di-frankenstein/";
+          window.location.href = "/blog/2026/ia-sogna-di-essere-umana/";
         
       },
     },{id: "post-sycophancy-quando-l-39-ia-ci-dà-sempre-ragione",
