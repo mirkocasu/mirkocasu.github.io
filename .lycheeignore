@@ -9,3 +9,6 @@ scholar.google.com
 exophase.com
 # returns HTTP 500 to every client as of 2026-10-23
 digitalpsychology.eu
+# reachable from Italy, but time out from GitHub runners (checked 2026-10-25)
+iplab.dmi.unict.it
+fieradidacta.indire.it
