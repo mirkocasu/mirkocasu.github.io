@@ -34,7 +34,7 @@ announcements:
 </p>
 
 <p>
-  I'm interested in autoregressive and diffusion language models, AI agents, and the interlink between these systems and psychology, mental health, and human safety.
+  I specialise in language models and AI agents, and what they mean for mental health and human safety: how these systems can support people's wellbeing, and how they can put them at risk.
 </p>
 
 <p>
@@ -44,6 +44,7 @@ announcements:
   <a href="https://www.uniss.it/en" target="_blank" rel="noopener">University of Sassari</a>
   and a master's degree in Clinical Psychology from the
   <a href="https://www.unict.it/en" target="_blank" rel="noopener">University of Catania</a>.
+  I use methods from behavioural science to design and evaluate AI systems.
 </p>
 
 <p>
