@@ -1,3 +1,7 @@
+{%- comment -%} Newest first; keep in sync with the entries marked selected={true} in papers.bib. {%- endcomment -%}
+{%- assign selected_keys = 'leotta2026synthforensicsmultigeneratorbenchmarkdetecting,11715963,10918742,app14135889,CASU2024301795' | split: ',' -%}
 <div class="publications">
-  {% bibliography --group_by none --query @*[selected=true]* %}
+  {%- for k in selected_keys %}
+    {% bibliography --group_by none --query @*[key={{ k }}] %}
+  {%- endfor %}
 </div>
