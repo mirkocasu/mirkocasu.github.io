@@ -17,3 +17,7 @@ readme_preview/
 lighthouse_results/
 .DS_Store
 jekyll.log
+
+# Claude Code local files (private, never committed)
+CLAUDE.local.md
+.claude/settings.local.json
