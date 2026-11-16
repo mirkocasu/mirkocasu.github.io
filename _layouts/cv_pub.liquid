@@ -40,12 +40,18 @@
 {%- endif -%}
 {%- if entry.doi -%}
   {%- assign link = entry.doi | prepend: 'https://doi.org/' -%}
-{%- else -%}
+{%- elsif entry.html -%}
   {%- assign link = entry.html -%}
+{%- else -%}
+  {%- assign link = entry.pdf | default: entry.url -%}
 {%- endif -%}
 <div class="pub">
   <div class="pub-title">
-    <a href="{{ link }}">{{ entry.title }}</a>
+    {%- if link %}
+      <a href="{{ link }}">{{ entry.title }}</a>
+    {%- else %}
+      {{ entry.title }}
+    {%- endif %}
   </div>
   <div class="pub-meta">
     {{ authors }} · {{ venue }}, {{ entry.year -}}

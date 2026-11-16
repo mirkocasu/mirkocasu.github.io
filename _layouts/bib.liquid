@@ -123,7 +123,7 @@
           onclick="
               var element = $(this);
               element.attr('title', '');
-              var more_authors_text = element.text() == '{{ more_authors_hide }}' ? '{{ more_authors_show }}' : '{{ more_authors_hide }}';
+              var more_authors_text = element.text() == '{{ more_authors_hide | replace: "'", "\'" | escape }}' ? '{{ more_authors_show | replace: "'", "\'" | escape }}' : '{{ more_authors_hide | replace: "'", "\'" | escape }}';
               var cursorPosition = 0;
               var textAdder = setInterval(function(){
                 element.html(more_authors_text.substring(0, cursorPosition + 1));

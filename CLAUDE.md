@@ -19,6 +19,8 @@ Jekyll with the al-folio theme, deployed to GitHub Pages by GitHub Actions on ev
 
 - Timezone is Europe/Rome: a post dated in the future is not built.
 - CI: `broken-links.yml` (lychee) cannot be run by hand. Flaky external hosts go in `.lycheeignore`; the Liquid CV templates are excluded from its source scan. Workflows are pinned to `ubuntu-24.04` because `ubuntu-latest` has no Ruby 3.3.5.
+- Deploy: only `deploy.yml` publishes, and it replaces `gh-pages` with a single commit, so removed files leave no public copy. Removing a file from `main` does not remove it from `main`'s history; private material that was ever committed needs a history rewrite.
+- Supply chain: `Gemfile.lock` is committed and CI installs with `BUNDLE_FROZEN=true`. After changing `Gemfile`, run `bundle lock` and commit the lockfile. Third-party actions are pinned to commit SHAs with the version in a comment.
 - The CV and resume are standalone pages (`layout: none`) styled by `_includes/cv/style.liquid`.
 - Use `mirko.casu@live.it` as the contact email, never the university address.
 

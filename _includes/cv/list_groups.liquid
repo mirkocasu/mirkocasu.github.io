@@ -26,7 +26,7 @@
               {% endif %}
               {% if item.link %}
                 <td class="list-group-link">
-                  <a href="{{ item.link }}" target="_blank" class="btn btn-sm btn-glass z-depth-0">
+                  <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-glass z-depth-0">
                     {% if item.linkname %}{{ item.linkname }}{% else %}DOC{% endif %}
                   </a>
                 </td>

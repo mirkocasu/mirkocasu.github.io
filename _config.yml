@@ -136,6 +136,8 @@ kramdown:
 include: ["_pages", "_scripts"]
 exclude:
   - bin/
+  - tools/
+  - "*.log"
   - CLAUDE.md
   - CLAUDE.local.md
   - CONTRIBUTING.md
@@ -499,10 +501,6 @@ third_party_libraries:
     url:
       js: "https://cdn.jsdelivr.net/npm/photoswipe@{{version}}/dist/photoswipe-lightbox.esm.min.js"
     version: "5.4.4"
-  polyfill:
-    url:
-      js: "https://cdnjs.cloudflare.com/polyfill/v{{version}}/polyfill.min.js?features=es6"
-    version: "3"
   pseudocode:
     integrity:
       css: "sha256-VwMV//xgBPDyRFVSOshhRhzJRDyBmIACniLPpeXNUdc="

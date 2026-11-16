@@ -3,7 +3,7 @@
     {% for current_item in include.items %}
       {% if current_item.link %}
         <div class="container-link-button">
-          <a href="{{ current_item.link }}" target="_blank" class="btn btn-sm btn-glass z-depth-0">
+          <a href="{{ current_item.link }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-glass z-depth-0">
             {% if current_item.linkname %}
               {{ current_item.linkname }}
             {% elsif current_item.name %}

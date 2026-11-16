@@ -6,7 +6,6 @@ _site
 .DS_Store
 .ruby-version
 .tweet-cache
-Gemfile.lock
 assets/libs/
 node_modules/
 vendor
@@ -16,7 +15,7 @@ _site/
 readme_preview/
 lighthouse_results/
 .DS_Store
-jekyll.log
+*.log
 
 # Claude Code local files (private, never committed)
 CLAUDE.local.md
